@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShareWillow Navigation</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="font-body">
+    <div class="page-wrapper">
+      <header
+        id="main-header"
+        class="nav-component fixed top-4 nav-desktop:top-8 inset-x-0 z-50 w-full px-4 sm:px-7"
+        role="banner"
+      >
+        <div
+          class="max-w-90rem mx-auto bg-white rounded-[1.25rem] lg:py-4 lg:px-[18px] py-2 px-3 flex items-center justify-between relative z-50"
+        >
+          <!-- LOGO -->
+          <div class="flex items-center">
+            <a
+              href="/"
+              aria-label="ShareWillow Home"
+              class="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm lg:max-w-[182px] max-w-[156px]"
+            >
+              <img
+                src="./src/assets/Logo.svg"
+                alt="ShareWillow Logo"
+                width="140"
+                height="28"
+                decoding="async"
+                class="h-6 md:h-7 w-auto object-contain"
+              />
+            </a>
+          </div>
+
+          <!-- DESKTOP NAVIGATION MENU (Visible > 991px) -->
+          <nav
+            aria-label="Main Navigation"
+            class="hidden nav-desktop:flex items-center gap-6 lg:gap-8 text-brand-espresso font-medium text-[1rem] tracking-[-0.54px]"
+          >
+            <ul class="flex items-center gap-6 lg:gap-8">
+              <!-- Solutions Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Solutions</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Dropdown Menu Wrapper with pt-5 invisible bridge -->
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 z-50 transition-all duration-200 pt-6"
+                >
+                  <div
+                    class="w-72 bg-white rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium">For Companies</span>
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium text-brand-espresso"
+                            >For Employees</span
+                          >
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium text-brand-espresso"
+                            >Plan Design Consultation</span
+                          >
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Resources Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Resources</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                >
+                  <div
+                    class="w-72 bg-white rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Blog & Insights</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Case Studies</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Incentive Calculator</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Documentation</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Industries Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Industries</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                >
+                  <div
+                    class="w-72 bg-white rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Technology & SaaS</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Manufacturing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Healthcare</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Professional Services</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a
+                  href="#pricing"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >Features</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- DESKTOP CTA BUTTONS (Hidden <= 991px) -->
+          <div class="hidden nav-desktop:flex items-center gap-3">
+            <a
+              href="/login"
+              class="bg-brand-lemon leading-[1] tracking-[-.03375rem] text-black px-5 py-3 rounded-full hover:bg-brand-light-lemon transition-all h-[2.875rem] flex items-center"
+              >Sign in</a
+            >
+            <a
+              href="/signup"
+              class="bg-brand-espresso-500 leading-[1] tracking-[-.03375rem] px-5 py-3 rounded-full hover:bg-brand-espresso-300 transition-all text-white h-[2.875rem] flex items-center"
+              >Sign Up Now</a
+            >
+          </div>
+
+          <!-- HAMBURGER / CLOSE BUTTON (Visible <= 991px) -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="nav-desktop:hidden bg-black text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none cursor-pointer"
+            aria-label="Toggle Mobile Menu"
+            aria-expanded="false"
+          >
+            <svg
+              id="hamburger-icon"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-5 h-5 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- FULLSCREEN MOBILE NAV DRAWER (<= 991px) -->
+        <div
+          id="mobile-drawer"
+          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-18 pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
+        >
+          <nav
+            aria-label="Mobile Navigation"
+            class="w-full mx-auto bg-white rounded-3xl p-6 shadow-sm"
+          >
+            <ul
+              class="flex flex-col divide-y divide-gray-100 text-brand-espresso font-medium text-lg"
+            >
+              <!-- Solutions Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Solutions</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >For Companies</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >For Employees</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Plan Design Consultation</a
+                  >
+                </div>
+              </li>
+
+              <!-- Resources Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Resources</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Blog & Insights</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Case Studies</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Incentive Calculator</a
+                  >
+                </div>
+              </li>
+
+              <!-- Industries Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Industries</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Technology & SaaS</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Manufacturing</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Healthcare</a
+                  >
+                </div>
+              </li>
+
+              <li class="py-3">
+                <a href="#pricing" class="block py-1">Pricing</a>
+              </li>
+              <li class="py-3">
+                <a href="#about" class="block py-1">About</a>
+              </li>
+              <li class="py-3">
+                <a href="#features" class="block py-1">Features</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="w-full mt-8 flex flex-col gap-3">
+            <a
+              href="#"
+              class="w-full bg-brand-espresso-500 text-brand-ivory font-medium text-center py-4 rounded-full text-lg"
+            >
+              Get a demo
+            </a>
+            <a
+              href="/login"
+              class="w-full bg-brand-lemon text-brand-espresso font-medium text-center py-4 rounded-full text-lg"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <section
+          class="px-8 pt-44 pb-8 bg-brand-ivory mb-[-100vh] hero-section"
+        >
+          <div class="max-w-90rem mx-auto w-full">
+            <div class="flex flex-col justify-start items-center relative z-2">
+              <h1
+                class="font-heading text-heading-h1 font-medium leading-[1.2] tracking-[-0.03em] max-w-[18ch] text-center lg:mb-8 md:mb-3"
+              >
+                The best platform to design and manage
+                <span class="italic">incentive plans</span>
+              </h1>
+              <p
+                class="text-[1.325rem] leading-[1.2] tracking-[-0.03em] text-center text-brand-espresso-300 max-w-[45ch]"
+              >
+                Give your team a stake in the company’s success. We’re here to
+                help design employee incentive plans that impact your business
+                goals and motivate employees to think and act like owners.
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="font-medium py-6 px-5 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group mt-12 max-h-[84px]"
+              >
+                <span
+                  class="leading-[1] tracking-[-.045rem] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] max-h-[85px]"
+                  >Try it for free</span
+                >
+                <div
+                  class="w-12 h-12 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
+                >
+                  <svg
+                    width="1.5rem"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-transform duration-300 ease-in-out group-hover:rotate-90"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.21397 5.44534L11.9072 8.13815H3.67067C3.42131 8.13815 3.18217 8.23721 3.00585 8.41353C2.82953 8.58985 2.73047 8.82899 2.73047 9.07835C2.73047 9.3277 2.82952 9.56685 3.00585 9.74317C3.18217 9.91949 3.42131 10.0185 3.67067 10.0185H11.9072L9.21394 12.7114C9.03757 12.8878 8.93849 13.127 8.93849 13.3764C8.93849 13.6258 9.03757 13.865 9.21394 14.0414C9.39031 14.2178 9.62952 14.3169 9.87895 14.3169C10.1284 14.3169 10.3676 14.2178 10.544 14.0414L14.842 9.74336C14.9293 9.65608 14.9986 9.55245 15.0459 9.43839C15.0932 9.32425 15.1176 9.2019 15.1176 9.07835C15.1176 8.9548 15.0932 8.83245 15.0459 8.71831C14.9986 8.60425 14.9291 8.50044 14.8418 8.41316L10.544 4.1153C10.3676 3.93893 10.1284 3.83984 9.87895 3.83984C9.62952 3.83984 9.39031 3.93893 9.21394 4.1153C9.03757 4.29167 8.93849 4.53088 8.93849 4.78031C8.93849 5.02973 9.0376 5.26897 9.21397 5.44534Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center pt-8 pb-8 min-h-dvh sticky top-0"
+            >
+              <div class="w-full mt-[-7rem] absolute top-0 right-0 z-2">
+                <div id="desktop-lottie"></div>
+                <div id="mobile-lottie"></div>
+              </div>
+              <div
+                class="relative flex mt-[-17rem] w-full justify-center items-center flex-col rounded-[2.5rem] bg-brand-ivory"
+              >
+                <div
+                  class="overflow-hidden relative w-full rounded-2xl z-2 max-w-[60rem]"
+                >
+                  <img
+                    src="/src/assets/header-img.svg"
+                    alt=""
+                    class="w-full h-full max-w-full"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="h-[100vh]"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- HEADER CONTAINER -->
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>

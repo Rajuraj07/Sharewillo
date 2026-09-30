@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Matter";
+  src: url(../../src/assets/fonts/Matter-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url(../../src/assets/fonts/Matter-Medium.woff2);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mackinac Pro";
+  src: url(../../src/assets/fonts/MackinacPro-Medium_26.woff2);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mackinac Pro";
+  src: url(../../src/assets/fonts/MackinacPro-MedItalic_18.woff2);
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  /*Font Family*/
+  --font-body: "Matter", sans-serif;
+  --font-heading: "Mackinac Pro", serif;
+  /*Text Sizes*/
+  --text-heading-h1: clamp(2.25rem, 1.8098rem + 1.8779vw, 3.5rem);
+
+  /* Brand Colors */
+  --color-brand-espresso-500: #180600;
+  --color-brand-espresso-300: #746a66;
+  --color-brand-dark-green: #003d08;
+  --color-brand-beige: #a39b99;
+  --color-brand-ivory: #faf7ec;
+  --color-brand-ivory-50: #e8e6e6;
+  --color-brand-lemon: #faf082;
+  --color-brand-light-lemon: #fcf6b4;
+  --color-brand-lime: #c1fb9b;
+  --color-brand-light-lime: #d9f0c9;
+  --color-brand-grey: #666;
+
+  /* Base Neutral Colors */
+  --color-neutral-white: #ffffff;
+  --color-neutral-black: #000000;
+  --color-neutral-lightest: #eee;
+  --color-neutral-lighter: #ccc;
+  --color-neutral-light: #aaa;
+  --color-neutral-base: #666;
+  --color-neutral-dark: #444;
+  --color-neutral-darker: #222;
+  --color-neutral-darkest: #111;
+
+  /* System Feedback Colors */
+  --color-system-success-green: #027a48;
+  --color-system-success-green-light: #ecfdf3;
+  --color-system-error-red: #b42318;
+  --color-system-error-red-light: #fef3f2;
+
+  /* Semantic Mappings */
+  --color-text-primary: var(--color-neutral-black);
+  --color-text-alternate: var(--color-neutral-white);
+  --color-text-secondary: var(--color-neutral-black);
+  --color-text-success: var(--color-system-success-green);
+  --color-text-error: var(--color-system-error-red);
+
+  --color-bg-primary: var(--color-neutral-white);
+  --color-bg-secondary: var(--color-neutral-lightest);
+  --color-bg-tertiary: var(--color-neutral-light);
+  --color-bg-alternate: var(--color-neutral-black);
+  --color-bg-success: var(--color-system-success-green-light);
+  --color-bg-error: var(--color-system-error-red-light);
+
+  --color-border-primary: var(--color-neutral-black);
+  --color-border-secondary: var(--color-neutral-light);
+  --color-border-alternate: var(--color-neutral-white);
+
+  --color-link-primary: var(--color-neutral-black);
+  --color-link-secondary: var(--color-neutral-light);
+  --color-link-alternate: var(--color-neutral-white);
+
+  /* Custom Max-Width utilities (generates max-w-90rem) */
+  --max-width-90rem: 90rem;
+  /* Custom Breakpoint matching Webflow 991px */
+  --breakpoint-nav-desktop: 992px;
+
+  /* Custom Transitions */
+  --ease-smooth-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Component Utility Classes */
+@layer components {
+  /* Fixed Header Slide Animation */
+  .nav-component {
+    will-change: transform;
+    transition: transform 350ms var(--ease-smooth-out);
+  }
+
+  .nav-hidden {
+    transform: translate3d(0, -160%, 0);
+  }
+
+  /* Custom Scrollbars for Dropdown content */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 9999px;
+  }
+}
