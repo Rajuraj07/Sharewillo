@@ -147,4 +147,16 @@ $(document).ready(function () {
     });
     return () => anim?.destroy();
   });
+  // 7.Hero section bg transition
+  gsap.to('.hero-section', {
+    backgroundColor: '#ffffff',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.hero-section',
+      start: 'top top',
+      end: '+=400',         
+      scrub: true,          
+      invalidateOnRefresh: true,
+    }
+  });
 });
