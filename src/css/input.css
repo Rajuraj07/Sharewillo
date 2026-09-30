@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Matter";
-  src: url(/src/assets/fonts/matter-regular.woff2);
+  src: url("../src/assets/fonts/matter-regular.woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Matter";
-  src: url(/src/assets/fonts/matter-medium.woff2);
+  src: url("../src/assets/fonts/matter-medium.woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Mackinac Pro";
-  src: url(/src/assets/fonts/mackinacpro-medium_26.woff2);
+  src: url("../src/assets/fonts/mackinacpro-medium_26.woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: "Mackinac Pro";
-  src: url(/src/assets/fonts/mackinacpro-medItalic_18.woff2);
+  src: url("../src/assets/fonts/mackinacpro-meditalic_18.woff2");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
