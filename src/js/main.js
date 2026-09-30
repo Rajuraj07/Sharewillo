@@ -129,7 +129,7 @@ $(document).ready(function () {
   mm.add('(min-width: 992px)', () => {
     let anim = createLottieScrollTrigger({
       target: '#desktop-lottie',
-      path: '../src/assets/first-scroll-people.json',
+      path: './src/assets/first-scroll-people.json',
       trigger: '.hero-section',
       start: 'top top',
       end: '+=750',    
@@ -140,7 +140,7 @@ $(document).ready(function () {
   mm.add('(max-width: 991px)', () => {
     let anim = createLottieScrollTrigger({
       target: '#mobile-lottie',
-      path: '../src/assets/mobile-first-scroll-people.json',
+      path: './src/assets/mobile-first-scroll-people.json',
       trigger: '.hero-section',
       start: 'top top',
       end: '+=750',
