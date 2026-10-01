@@ -561,6 +561,9 @@
   .max-w-\[24\.75rem\] {
     max-width: 24.75rem;
   }
+  .max-w-\[26\.375rem\] {
+    max-width: 26.375rem;
+  }
   .max-w-\[28ch\] {
     max-width: 28ch;
   }
@@ -581,6 +584,12 @@
   }
   .max-w-\[60rem\] {
     max-width: 60rem;
+  }
+  .max-w-\[81\.875rem\] {
+    max-width: 81.875rem;
+  }
+  .max-w-\[87\.5rem\] {
+    max-width: 87.5rem;
   }
   .max-w-\[156px\] {
     max-width: 156px;
