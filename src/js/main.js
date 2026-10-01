@@ -197,4 +197,56 @@ $(document).ready(function () {
       },
     });
   });
+  //9. Testimonial Section 
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  const indicator = document.getElementById('tab-bg-indicator');
+
+  // Move indicator pill to targeted tab
+  const moveIndicator = (tab) => {
+    gsap.to(indicator, { x: tab.offsetLeft, width: tab.offsetWidth, duration: 0.3, ease: 'power2.out' });
+  };
+
+  // Switch Active Tab & Toggle Panels
+  const switchTab = (activeTab) => {
+    tabs.forEach((tab) => {
+      const isActive = tab === activeTab;
+      tab.setAttribute('aria-selected', isActive);
+      tab.setAttribute('tabindex', isActive ? '0' : '-1');
+
+      // Toggle text color (white for active tab, espresso for inactive)
+      tab.classList.toggle('text-white', isActive);
+      tab.classList.toggle('text-brand-espresso-500', !isActive);
+      tab.classList.toggle('hover:opacity-80', !isActive);
+    });
+
+    moveIndicator(activeTab);
+
+    panels.forEach((panel) => {
+      const isMatch = panel.id === activeTab.dataset.target;
+      panel.classList.toggle('hidden', !isMatch);
+      panel.classList.toggle('grid', isMatch);
+
+      if (isMatch) {
+        gsap.fromTo(
+          panel.querySelectorAll('.testimonial-card'),
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.35, stagger: 0.08, ease: 'power2.out' }
+        );
+      }
+    });
+  };
+
+  // Set initial indicator state directly without animation
+  const initialTab = document.querySelector('.tab-btn[aria-selected="true"]') || tabs[0];
+  gsap.set(indicator, { x: initialTab.offsetLeft, width: initialTab.offsetWidth });
+
+  // Event Listeners
+  tabs.forEach((tab) => tab.addEventListener('click', () => switchTab(tab)));
+
+  // Recalculate indicator position on screen resize
+  window.addEventListener('resize', () => {
+    const activeTab = document.querySelector('.tab-btn[aria-selected="true"]');
+    if (activeTab) moveIndicator(activeTab);
+  });
 });

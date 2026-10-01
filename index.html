@@ -906,6 +906,257 @@
             </div>
           </div>
         </section>
+        <section class="px-8 pt-16 pb-32 overflow-hidden">
+          <div class="max-w-90rem mx-auto">
+            <!-- SECTION HEADING -->
+            <div class="text-center mb-[5.25rem]">
+              <h2
+                class="leading-[1.2] tracking-[-.03em] font-heading font-medium text-[clamp(1.875rem,1.6549rem+0.939vw,2.5rem)] max-w-[16ch] mx-auto text-brand-espresso-500"
+              >
+                Don't just take our <span class="italic">word for it</span>
+              </h2>
+            </div>
+
+            <!-- TAB NAVIGATION CONTAINER -->
+            <div class="flex justify-center md:mb-[5.625rem] mb-8">
+              <div
+                role="tablist"
+                aria-label="Testimonials category"
+                class="relative inline-flex bg-brand-ivory rounded-full py-2 px-[0.625rem]"
+              >
+                <!-- SLIDING BACKGROUND PILL INDICATOR -->
+                <div
+                  id="tab-bg-indicator"
+                  class="absolute top-2 bottom-1 left-0 bg-brand-espresso-500 rounded-full pointer-events-none z-0 max-h-[2.5rem]"
+                  aria-hidden="true"
+                ></div>
+
+                <!-- TAB BUTTON 1: EMPLOYEES (DEFAULT ACTIVE) -->
+                <button
+                  id="tab-employees"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="panel-employees"
+                  tabindex="0"
+                  data-target="panel-employees"
+                  class="tab-btn relative z-10 px-3 py-2 rounded-full transition-colors duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-espresso-500 text-white W-[6.5rem] text-[17px]"
+                >
+                  Employees
+                </button>
+
+                <!-- TAB BUTTON 2: COMPANIES -->
+                <button
+                  id="tab-companies"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-companies"
+                  tabindex="-1"
+                  data-target="panel-companies"
+                  class="tab-btn relative z-10 px-3 py-2 rounded-full transition-colors duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-espresso-500 text-brand-espresso-500 hover:opacity-80 W-[6.5rem] text-[17px]"
+                >
+                  Companies
+                </button>
+              </div>
+            </div>
+
+            <!-- TAB PANELS CONTENT AREA -->
+            <div class="relative">
+              <!-- PANEL 1: EMPLOYEES TESTIMONIALS -->
+              <div
+                id="panel-employees"
+                role="tabpanel"
+                aria-labelledby="tab-employees"
+                tabindex="0"
+                class="tab-panel grid grid-cols-1 md:grid-cols-3 gap-6"
+              >
+                <article
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                >
+                  <div>
+                    <img
+                      src="./src/assets/testimonial-one.png"
+                      alt="Tim Abell profile"
+                      class="w-20 h-20 rounded-full object-cover mb-8"
+                    />
+                    <blockquote
+                      class="text-[1.125rem] leading-[-.03em] leading-[1.2] font-normal"
+                    >
+                      “ShareWillow has changed how I work on every project.
+                      Knowing there’s a payout if we exceed the margin goal, I’m
+                      more mindful of costs and ways to save throughout the job.
+                      It’s rewarding to see exactly how my efforts help us stay
+                      profitable, and the awards I earn feel like a real
+                      acknowledgment of that hard work."
+                    </blockquote>
+                  </div>
+                  <div class="mt-8">
+                    <h3 class="text-base text-brand-espresso-500">
+                      Tim Abell,
+                    </h3>
+                    <p>Abell Construction</p>
+                  </div>
+                </article>
+
+                <article
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                >
+                  <div>
+                    <img
+                      src="./src/assets/testimonial-two.png"
+                      alt="Tim Abell profile"
+                      class="w-20 h-20 rounded-full object-cover mb-8"
+                    />
+                    <blockquote
+                      class="text-[1.125rem] leading-[-.03em] leading-[1.2] font-normal"
+                    >
+                      “The ShareWillow platform has made my goals and
+                      performance metrics clearer than ever. I can stay on top
+                      of my targets daily, and it keeps me motivated to reach
+                      those benchmarks. Thanks to this tool, I’ve stayed on
+                      track with my goals and earned an additional $5,000 in
+                      compensation this year alone. It’s become an essential
+                      part of how I approach my work.”
+                    </blockquote>
+                  </div>
+                  <div class="mt-8">
+                    <h3 class="text-base text-brand-espresso-500">
+                      Lenny Wichataw,
+                    </h3>
+                    <p>Chicago Remodeling</p>
+                  </div>
+                </article>
+
+                <article
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                >
+                  <div>
+                    <img
+                      src="./src/assets/testimonial-three.png"
+                      alt="Tim Abell profile"
+                      class="w-20 h-20 rounded-full object-cover mb-8"
+                    />
+                    <blockquote
+                      class="text-[1.125rem] leading-[-.03em] leading-[1.2] font-normal"
+                    >
+                      “This platform has made it so easy to stay on top of KPIs
+                      I am responsible for. Each KPI is tied to a bonus, and now
+                      I can monitor my progress in real-time, which has helped
+                      me stay focused and prioritize my work. I know exactly
+                      where I stand, which has me to meet and even exceed my
+                      targets. It’s been incredibly motivating to see my hard
+                      work translate directly into a bonus opportunity.”
+                    </blockquote>
+                  </div>
+                  <div class="mt-8">
+                    <h3 class="text-base text-brand-espresso-500">
+                      Tamara Paterson,
+                    </h3>
+                    <p>First Line Construction</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- PANEL 2: COMPANIES TESTIMONIALS -->
+              <div
+                id="panel-companies"
+                role="tabpanel"
+                aria-labelledby="tab-companies"
+                tabindex="0"
+                class="tab-panel hidden grid-cols-1 md:grid-cols-3 gap-6"
+              >
+                <article
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                >
+                  <div>
+                    <img
+                      src="./src/assets/testimonial-four.png"
+                      alt="Tim Abell profile"
+                      class="w-20 h-20 rounded-full object-cover mb-8"
+                    />
+                    <blockquote
+                      class="lg:text-[1.375rem] text-[1rem] leading-[-.03em] leading-[1.2] font-normal"
+                    >
+                      “The best part about ShareWillow is that it directly ties
+                      the employee’s rewards to their individual activities. We
+                      love the ability to create goals for each department based
+                      on KPIs and metrics and show the team progress in real
+                      time. Getting that information into the hands of those
+                      responsible for it is extremely powerful. Every worker
+                      wants to feel appreciated and know they are making an
+                      impact. ShareWillow’s software bridges that gap for the
+                      employee and the company. “
+                    </blockquote>
+                  </div>
+                  <div class="mt-8">
+                    <h3 class="text-base">Kevin Davis, CFO</h3>
+                    <p>Medical Technology Industries</p>
+                  </div>
+                </article>
+
+                <article
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                >
+                  <div>
+                    <img
+                      src="./src/assets/testimonial-five.png"
+                      alt="Tim Abell profile"
+                      class="w-20 h-20 rounded-full object-cover mb-8"
+                    />
+                    <blockquote
+                      class="lg:text-[1.375rem] text-[1rem] leading-[-.03em] leading-[1.2] font-normal"
+                    >
+                      “Prior to ShareWillow, we were sharing bonuses and profits
+                      for manually for 18 months. Since bringing them onboard we
+                      have implemented a fair and appropriate structure to
+                      calculate bonuses. ShareWillow has allowed us to introduce
+                      transparency and accuracy paired with clear expectations
+                      of how great performance is awarded to everyone on the
+                      team. Everyone that works at ShareWillow is awesome as
+                      well, but ultimately the tool has provided the opportunity
+                      for our employees to feel more a part of the bigger vision
+                      we have at First-Rate Movers.”
+                    </blockquote>
+                  </div>
+                  <div class="mt-8">
+                    <h3 class="text-base">Brian Tustin, Owner</h3>
+                    <p>First Rate Movers</p>
+                  </div>
+                </article>
+
+                <article
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                >
+                  <div>
+                    <img
+                      src="./src/assets/testimonial-six.png"
+                      alt="Tim Abell profile"
+                      class="w-20 h-20 rounded-full object-cover mb-8"
+                    />
+                    <blockquote
+                      class="lg:text-[1.375rem] text-[1rem] leading-[-.03em] leading-[1.2] font-normal"
+                    >
+                      “ShareWilow was the answer to our profit sharing goals and
+                      ambitions! We had tried several different methods to
+                      encourage accountability and have employees take more
+                      ownership in daily decisions of projects. In our minds,
+                      the key is to reward based on project specific results as
+                      opposed to across the board bonuses. ShareWillow managed
+                      to incorporate not only profit sharing per project, but
+                      they also incorporated performance reviews into the
+                      calculations as well. We’ve been using the software for
+                      three years and have had positive feedback from our
+                      employees. Highly recommend you give ShareWillow a try!”
+                    </blockquote>
+                  </div>
+                  <div class="mt-8">
+                    <h3 class="text-base">Anita Bruno,</h3>
+                    <p>VP Finance BODEC</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <!-- HEADER CONTAINER -->
