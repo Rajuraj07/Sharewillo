@@ -159,4 +159,42 @@ $(document).ready(function () {
       invalidateOnRefresh: true,
     }
   });
+  //8. motivate section animation
+  const initialPositions = [
+    { selector: '.home_motivate-img.cc-1', x: '41rem',  y: '-5rem' },
+    { selector: '.home_motivate-img.cc-2', x: '29rem',  y: '10rem' },
+    { selector: '.home_motivate-img.cc-3', x: '13rem',  y: '-14rem' },
+    { selector: '.home_motivate-img.cc-4', x: '0px',    y: '16rem' },
+    { selector: '.home_motivate-img.cc-5', x: '-13rem', y: '-14rem' },
+    { selector: '.home_motivate-img.cc-6', x: '-27rem', y: '10rem' }, 
+    { selector: '.home_motivate-img.cc-7', x: '-38rem', y: '-8rem' }  
+  ];
+  gsap.fromTo(
+    '.motivate-grid',
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.section-motivate',
+        start: 'top 60%',
+        toggleActions: 'play none none reverse',
+      },
+    }
+  );
+
+  initialPositions.forEach((item) => {
+    gsap.from(item.selector, {
+      x: item.x,
+      y: item.y,
+      duration: 1.2,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.section-motivate',
+        start: 'top 60%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+  });
 });

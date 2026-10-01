@@ -98,6 +98,18 @@
 
   /* Custom Transitions */
   --ease-smooth-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Define custom keyframes */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  --animate-marquee: marquee 25s linear infinite;
 }
 
 /* Custom Component Utility Classes */
