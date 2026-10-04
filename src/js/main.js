@@ -202,19 +202,15 @@ $(document).ready(function () {
   const panels = document.querySelectorAll('.tab-panel');
   const indicator = document.getElementById('tab-bg-indicator');
 
-  // Move indicator pill to targeted tab
   const moveIndicator = (tab) => {
     gsap.to(indicator, { x: tab.offsetLeft, width: tab.offsetWidth, duration: 0.3, ease: 'power2.out' });
   };
 
-  // Switch Active Tab & Toggle Panels
   const switchTab = (activeTab) => {
     tabs.forEach((tab) => {
       const isActive = tab === activeTab;
       tab.setAttribute('aria-selected', isActive);
       tab.setAttribute('tabindex', isActive ? '0' : '-1');
-
-      // Toggle text color (white for active tab, espresso for inactive)
       tab.classList.toggle('text-white', isActive);
       tab.classList.toggle('text-brand-espresso-500', !isActive);
       tab.classList.toggle('hover:opacity-80', !isActive);
@@ -237,16 +233,31 @@ $(document).ready(function () {
     });
   };
 
-  // Set initial indicator state directly without animation
   const initialTab = document.querySelector('.tab-btn[aria-selected="true"]') || tabs[0];
   gsap.set(indicator, { x: initialTab.offsetLeft, width: initialTab.offsetWidth });
 
-  // Event Listeners
   tabs.forEach((tab) => tab.addEventListener('click', () => switchTab(tab)));
 
-  // Recalculate indicator position on screen resize
   window.addEventListener('resize', () => {
     const activeTab = document.querySelector('.tab-btn[aria-selected="true"]');
     if (activeTab) moveIndicator(activeTab);
+  });
+  //10.Process section animation
+  const leftCards = document.querySelectorAll('.process-card');
+  const lottieCards = document.querySelectorAll('.lottie-card');
+
+  leftCards.forEach((card, index) => {
+    if (index === 0) return;
+
+    gsap.to(lottieCards[index - 1], {
+      yPercent: -100,
+      ease: "none",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 50%", 
+        end: "top 20%",   
+        scrub: 1.2 
+      }
+    });
   });
 });

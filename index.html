@@ -3,12 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShareWillow Navigation</title>
+    <title>ShareWillow - Incentive Plans Made Simple</title>
+    <!-- Meta Description Tag -->
+    <meta
+      name="description"
+      content="Build an employee incentive plan that motivates your team to act like owners. ShareWillow’s platform makes it easy to unite your team around a single goal."
+    />
+    <!-- Open Graph -->
+    <meta content="./src/assets/og-image.jpg" property="og:image" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
     />
+    <!-- Standard Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/favicon.png"
+    />
+    <!-- Webclip / Apple Touch Icon (Mobile Home Screens) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="256x256"
+      href="./src/assets/webclip.png"
+    />
+    <!-- Custom Css Tyle -->
     <link rel="stylesheet" href="./dist/output.css" />
+    <!-- Lottie Player-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body class="font-body">
     <div class="page-wrapper">
@@ -1157,9 +1180,639 @@
             </div>
           </div>
         </section>
+        <section class="px-8 pb-16">
+          <div class="max-w-90rem mx-auto w-full">
+            <div class="flex flex-col px-10">
+              <!-- Process Header -->
+              <h2
+                class="leading-[1.2] tracking-[-.03em] font-medium font-heading text-[clamp(1.875rem,1.6549rem+0.939vw,2.5rem)] max-w-[16ch]"
+              >
+                ShareWillow helps you in a
+                <span class="italic">few easy steps</span>
+              </h2>
+              <!-- Process Wrapper-->
+              <div class="flex justify-between gap-8">
+                <!-- Process content left -->
+                <div class="self-start">
+                  <!-- Process content left card 01 -->
+                  <div
+                    class="flex items-center justify-start h-[50vh] process-card"
+                  >
+                    <div>
+                      <div
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                      >
+                        <span>1.</span>
+                        <h3>Determine your cadence</h3>
+                      </div>
+                      <p
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                      >
+                        Choose how frequently you want to pay out cash bonuses.
+                        We recommend you do it every quarter to build a positive
+                        feedback loop, but have a 30-60 day delay in payout so
+                        you can close all your books.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 leading-[1] font-medium text-black"
+                      >
+                        <div
+                          class="w-6 h-6 flex items-center justify-center rounded-full text-brand-ivory bg-black"
+                        >
+                          <svg
+                            width="12px"
+                            viewBox="0 0 19 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="tracking-[-.03em] text-[1.375rem]">
+                          Learn more
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Process content left card 02 -->
+                  <div
+                    class="flex items-center justify-start h-[50vh] process-card"
+                  >
+                    <div>
+                      <div
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                      >
+                        <span>2.</span>
+                        <h3>Set up thresholds</h3>
+                      </div>
+                      <p
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                      >
+                        Set company-wide goals that have to be hit in order for
+                        your incentive plan to payout. You’ll give your team
+                        something to work towards, and make sure a payout only
+                        happens when you can afford it.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 leading-[1] font-medium text-black"
+                      >
+                        <div
+                          class="w-6 h-6 flex items-center justify-center rounded-full text-brand-ivory bg-black"
+                        >
+                          <svg
+                            width="12px"
+                            viewBox="0 0 19 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="tracking-[-.03em] text-[1.375rem]">
+                          Learn more
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Process content left card 03 -->
+                  <div
+                    class="flex items-center justify-start h-[50vh] process-card"
+                  >
+                    <div>
+                      <div
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                      >
+                        <span>3.</span>
+                        <h3>Establish formulas</h3>
+                      </div>
+                      <p
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                      >
+                        Set up formulas for different employees. You can
+                        determine a minimum amount of tenure to participate in
+                        the program, group employees together by role, and
+                        customize it any way you want.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 leading-[1] font-medium text-black"
+                      >
+                        <div
+                          class="w-6 h-6 flex items-center justify-center rounded-full text-brand-ivory bg-black"
+                        >
+                          <svg
+                            width="12px"
+                            viewBox="0 0 19 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="tracking-[-.03em] text-[1.375rem]">
+                          Learn more
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Process content left card 03 -->
+                  <div
+                    class="flex items-center justify-start h-[50vh] process-card"
+                  >
+                    <div>
+                      <div
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                      >
+                        <span>4.</span>
+                        <h3>Launch and share</h3>
+                      </div>
+                      <p
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                      >
+                        Invite your employees into ShareWillow where they can
+                        see their calculations, goals, and documents in one
+                        dashboard.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 leading-[1] font-medium text-black"
+                      >
+                        <div
+                          class="w-6 h-6 flex items-center justify-center rounded-full text-brand-ivory bg-black"
+                        >
+                          <svg
+                            width="12px"
+                            viewBox="0 0 19 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="tracking-[-.03em] text-[1.375rem]">
+                          Learn more
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Process content Right -->
+                <div
+                  class="flex items-center justify-start w-full max-w-[39rem] h-[50vh] sticky top-0 lottie-wrapper"
+                >
+                  <div
+                    class="w-full h-full mex-h-[33.125rem] relative rounded-[2.5rem] overflow-hidden"
+                  >
+                    <!-- Lottie Player with local JSON file 01-->
+                    <div
+                      class="absolute inset-0 w-full h-full z-4 will-change-transform [transform-style:preserve-3d] backface-hidden lottie-card"
+                    >
+                      <lottie-player
+                        src="./src/assets/cadence-freq-option.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                      >
+                      </lottie-player>
+                    </div>
+                    <!-- Lottie Player with local JSON file 02-->
+                    <div
+                      class="absolute inset-0 w-full h-full z-3 will-change-transform [transform-style:preserve-3d] backface-hidden lottie-card"
+                    >
+                      <lottie-player
+                        src="./src/assets/threshold-settings.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                      >
+                      </lottie-player>
+                    </div>
+                    <!-- Lottie Player with local JSON file 03-->
+                    <div
+                      class="absolute inset-0 w-full h-full z-2 will-change-transform [transform-style:preserve-3d] backface-hidden lottie-card"
+                    >
+                      <lottie-player
+                        src="./src/assets/cadence-freq-option.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                      >
+                      </lottie-player>
+                    </div>
+                    <!-- Lottie Player with local JSON file 04-->
+                    <div
+                      class="absolute inset-0 w-full h-full z-1 will-change-transform [transform-style:preserve-3d] backface-hidden lottie-card"
+                    >
+                      <lottie-player
+                        src="./src/assets/launch.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                      >
+                      </lottie-player>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-8 py-16">
+          <div class="max-w-90rem mx-auto w-full">
+            <div class="flex gap-[1.75rem] justify-between">
+              <!-- home extra card 01 -->
+              <div
+                class="flex flex-col p-8 w-full items-start justify-start rounded-[2.5rem] bg-brand-ivory"
+              >
+                <div
+                  class="bg-brand-espresso-500 text-brand-ivory text-center rounded-full mb-[5.4375rem] py-3 px-4"
+                >
+                  <span
+                    class="leading-[1.2] tracking-[-.03em] text-[clamp(1.125rem,0.993rem+0.5634vw,15rem)]"
+                    >Industries and case studies</span
+                  >
+                </div>
+                <h2
+                  class="leading-[1.2] tracking-[-.03em] text-[clamp(1.5rem,1.3239rem+0.7512vw,2rem)] max-w-[22ch] mb-8"
+                >
+                  Designed for industries that scale through employees
+                </h2>
+                <p
+                  class="leading-[1.2] tracking-[-.03em] text-[clamp(1.125rem,0.993rem+0.5634vw,15rem)] text-brand-espresso-300 max-w-[41ch] mb-8"
+                >
+                  If you’re a small business that relies on employees to serve
+                  customers, ShareWillow can help you build an incentive plan
+                  that motivates them. Check out our industry playbooks to see
+                  how others have done it.
+                </p>
+                <a
+                  href="#"
+                  class="flex items-center justify-center gap-4 leading-[1] font-medium text-black text-[clamp(0.875rem,0.6549rem+0.939vw,1.5rem)]"
+                  >See guides by industry -></a
+                >
+              </div>
+              <!-- home extra card 02 -->
+              <div
+                class="flex flex-col p-8 w-full items-start justify-start rounded-[2.5rem] bg-brand-lemon"
+              >
+                <div
+                  class="bg-brand-espresso-500 text-brand-ivory text-center rounded-full mb-[5.4375rem] py-3 px-4"
+                >
+                  <span
+                    class="leading-[1.2] tracking-[-.03em] text-[clamp(1.125rem,0.993rem+0.5634vw,15rem)]"
+                    >Pricing</span
+                  >
+                </div>
+                <h2
+                  class="leading-[1.2] tracking-[-.03em] text-[clamp(1.5rem,1.3239rem+0.7512vw,2rem)] max-w-[22ch] mb-8"
+                >
+                  Straightforward pricing that helps you grow your margins
+                </h2>
+                <p
+                  class="leading-[1.2] tracking-[-.03em] text-[clamp(1.125rem,0.993rem+0.5634vw,15rem)] text-brand-espresso-300 max-w-[41ch] mb-8"
+                >
+                  Start with a template, or get help from one of our incentive
+                  specialists with a one-time plan design. Our pricing is
+                  remarkably simple — you just pay for active participants — so
+                  you can focus on building a plan.
+                </p>
+                <a
+                  href="#"
+                  class="flex items-center justify-center gap-4 leading-[1] font-medium text-black text-[clamp(0.875rem,0.6549rem+0.939vw,1.5rem)]"
+                  >Pricing -></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-8 pt-16 pb-[7.25rem]">
+          <div class="max-w-90rem mx-auto w-full">
+            <div
+              class="flex flex-col items-center justify-center gap-8 text-center"
+            >
+              <h2
+                class="leading-[1.2] tracking-[-.03em] font-heading font-medium text-[clamp(1.875rem,1.6549rem+0.939vw,2.5rem)] max-w-[25ch]"
+              >
+                Motivate employees to act like owners, without complicated
+                equity
+              </h2>
+              <p
+                class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.7165rem+0.6761vw,1.325rem)] max-w-[50ch]"
+              >
+                Book a performance pay audit today, and let us show you how
+                ShareWillow can help your business increase efficiency, reduce
+                callbacks, and grow profits.
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="font-medium py-6 px-5 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group max-h-[84px]"
+              >
+                <span
+                  class="leading-[1] tracking-[-.045rem] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] max-h-[85px]"
+                  >Get started for free</span
+                >
+                <div
+                  class="w-12 h-12 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
+                >
+                  <svg
+                    width="1.5rem"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-transform duration-300 ease-in-out group-hover:rotate-90"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.21397 5.44534L11.9072 8.13815H3.67067C3.42131 8.13815 3.18217 8.23721 3.00585 8.41353C2.82953 8.58985 2.73047 8.82899 2.73047 9.07835C2.73047 9.3277 2.82952 9.56685 3.00585 9.74317C3.18217 9.91949 3.42131 10.0185 3.67067 10.0185H11.9072L9.21394 12.7114C9.03757 12.8878 8.93849 13.127 8.93849 13.3764C8.93849 13.6258 9.03757 13.865 9.21394 14.0414C9.39031 14.2178 9.62952 14.3169 9.87895 14.3169C10.1284 14.3169 10.3676 14.2178 10.544 14.0414L14.842 9.74336C14.9293 9.65608 14.9986 9.55245 15.0459 9.43839C15.0932 9.32425 15.1176 9.2019 15.1176 9.07835C15.1176 8.9548 15.0932 8.83245 15.0459 8.71831C14.9986 8.60425 14.9291 8.50044 14.8418 8.41316L10.544 4.1153C10.3676 3.93893 10.1284 3.83984 9.87895 3.83984C9.62952 3.83984 9.39031 3.93893 9.21394 4.1153C9.03757 4.29167 8.93849 4.53088 8.93849 4.78031C8.93849 5.02973 9.0376 5.26897 9.21397 5.44534Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer class="px-8 py-8 bg-brand-lemon">
+        <div class="max-w-90rem mx-auto w-full">
+          <div class="flex justify-between">
+            <div class="w-full max-w-[25rem]">
+              <h2
+                class="font-heading font-medium leading-[1.2] tracking-[-.03em] text-[clamp(1.75rem,1.5299rem+0.939vw,2.375rem)]"
+              >
+                ShareWillow Makes Profit Sharing
+                <span class="italic">Simple</span>
+              </h2>
+            </div>
+            <div class="w-[50%] flex justify-end items-stretch gap-[3.125rem]">
+              <!-- Footer Menu One -->
+              <nav class="max-w-[6.625rem]" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-1"
+                >
+                  Solutions
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-1"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>For Companies</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>For Employees</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Plan Design Consultation</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- Footer Menu Two -->
+              <nav class="max-w-[7.6875rem]" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-2"
+                >
+                  Industries
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-2"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Construction</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>All Industries</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- Footer Menu Three -->
+              <nav class="max-w-[8.5rem] flex flex-col" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-3"
+                >
+                  Resources
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-3"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Blog</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>What Is Profit Sharing?</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Employee Incentive Software</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Scripts & Templates</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Affiliate Program</span></a
+                    >
+                  </li>
+                </ul>
+                <div class="mt-auto">
+                  <img src="./src/assets/certified-badge.svg" alt="" />
+                </div>
+              </nav>
+              <!-- Footer Menu Four -->
+              <nav
+                class="max-w-[9.875rem] min-h-[17.375rem] flex flex-col"
+                aria-label="Footer"
+              >
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-4"
+                >
+                  Company
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-4"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>About</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Contact Us</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Pricing</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Release Notes</span></a
+                    >
+                  </li>
+                </ul>
+                <address class="font-normal mt-auto">
+                  <ul
+                    aria-label="Social media"
+                    class="flex items-center gap-[.625rem] mb-0"
+                  >
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]"
+                        ><img src="./src/assets/x-logo.svg" alt=""
+                      /></a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]"
+                        ><img src="./src/assets/icons-linkedin.svg" alt=""
+                      /></a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]">
+                        <svg
+                          width="1.125rem"
+                          height="100%"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z"
+                            fill="CurrentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]">
+                        <svg
+                          width="1.125rem"
+                          height="100%"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z"
+                            fill="CurrentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+              </nav>
+            </div>
+          </div>
+          <div class="mt-[16.875rem] flex flex-col gap-6">
+            <img src="./src/assets/footer-logo.svg" alt="" />
+            <div class="flex">
+              <div class="w-[50%] flex">
+                <a
+                  href="#"
+                  class="w-full max-w-[12.5rem] leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Terms & Conditions</span></a
+                >
+                <a
+                  href="#"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Privacy Policy</span></a
+                >
+              </div>
+              <div class="w-[50%] flex justify-between">
+                <a
+                  href="#"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Made by ++</span></a
+                >
+                <div class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]">
+                  © Copyright 2026 ShareWillow. All rights reserved.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    <!-- HEADER CONTAINER -->
+
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <!-- Gsap -->
