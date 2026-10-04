@@ -1,20 +1,20 @@
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  // 1. Lenis Smooth Scroll Setup
-  let lenis = new Lenis({
-    duration: 1.2,
-    easing: (e) => Math.min(1, 1.001 - Math.pow(2, -10 * e)),
-    orientation: 'vertical',
-    gestureOrientation: 'vertical',
-    smoothWheel: true,
-    syncTouch: false,
+  // 1. Initialize Lenis Smooth Scroll
+  const lenis = new Lenis({
+    lerp: 0.1,
+    wheelMultiplier: 0.7,
+    infinite: false,
+    gestureOrientation: "vertical",
+    normalizeWheel: false,
+    smoothTouch: false
   });
 
   lenis.on('scroll', ScrollTrigger.update);
 
-  gsap.ticker.add((t) => {
-    lenis.raf(1000 * t);
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
   });
 
   gsap.ticker.lagSmoothing(0);
@@ -221,7 +221,7 @@ $(document).ready(function () {
     panels.forEach((panel) => {
       const isMatch = panel.id === activeTab.dataset.target;
       panel.classList.toggle('hidden', !isMatch);
-      panel.classList.toggle('grid', isMatch);
+      panel.classList.toggle('flex', isMatch);
 
       if (isMatch) {
         gsap.fromTo(
@@ -259,5 +259,36 @@ $(document).ready(function () {
         scrub: 1.2 
       }
     });
+  });
+  //11.Mobile Footer Dropdown
+  $('.faq-toggle').on('click', function () {
+    const $button = $(this);
+    const $item = $button.closest('.faq-item');
+    const $content = $item.find('.faq-content');
+    const $icon = $button.find('.faq-icon');
+    const isOpen = $button.attr('aria-expanded') === 'true';
+
+    // Target class to toggle on parent
+    const activeClass = 'text-brand-espresso-300';
+
+    $('.faq-item').not($item).each(function () {
+      const $otherItem = $(this);
+      $otherItem.removeClass(activeClass);
+      $otherItem.find('.faq-toggle').attr('aria-expanded', 'false');
+      $otherItem.find('.faq-content').slideUp(200);
+      $otherItem.find('.faq-icon').removeClass('rotate-45');
+    });
+
+    if (isOpen) {
+      $content.slideUp(200);
+      $button.attr('aria-expanded', 'false');
+      $icon.removeClass('rotate-45');
+      $item.removeClass(activeClass);
+    } else {
+      $content.slideDown(200);
+      $button.attr('aria-expanded', 'true');
+      $icon.addClass('rotate-45');
+      $item.addClass(activeClass);
+    }
   });
 });

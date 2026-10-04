@@ -11,10 +11,6 @@
     />
     <!-- Open Graph -->
     <meta content="./src/assets/og-image.jpg" property="og:image" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
-    />
     <!-- Standard Favicon -->
     <link
       rel="icon"
@@ -28,16 +24,21 @@
       sizes="256x256"
       href="./src/assets/webclip.png"
     />
+    <!-- Lenis Css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
     <!-- Custom Css Tyle -->
     <link rel="stylesheet" href="./dist/output.css" />
     <!-- Lottie Player-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body class="font-body">
-    <div class="page-wrapper">
+    <div class="page-wrapper overflow-clip">
       <header
         id="main-header"
-        class="nav-component fixed top-4 nav-desktop:top-8 inset-x-0 z-50 w-full px-4 sm:px-7"
+        class="nav-component fixed lg:top-4 lg:pt-0 pt-6 inset-x-0 z-50 w-full px-4 sm:px-7"
         role="banner"
       >
         <div
@@ -382,7 +383,7 @@
         <!-- FULLSCREEN MOBILE NAV DRAWER (<= 991px) -->
         <div
           id="mobile-drawer"
-          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-18 pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
+          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
         >
           <nav
             aria-label="Mobile Navigation"
@@ -529,18 +530,18 @@
       </header>
       <main id="main">
         <section
-          class="px-8 pt-44 pb-8 bg-brand-ivory mb-[-100vh] hero-section transition-colors duration-300 will-change-[background-color]"
+          class="px-8 max-sm:px-4 pt-44 max-sm:pt-33 pb-8 bg-brand-ivory mb-[-100vh] hero-section transition-colors duration-300 will-change-[background-color]"
         >
           <div class="max-w-90rem mx-auto w-full">
             <div class="flex flex-col justify-start items-center relative z-2">
               <h1
-                class="font-heading text-heading-h1 font-medium leading-[1.2] tracking-[-0.03em] max-w-[18ch] text-center lg:mb-8 md:mb-3"
+                class="font-heading text-heading-h1 font-medium leading-[1.2] tracking-[-0.03em] max-w-[18ch] text-center lg:mb-8 mb-3"
               >
                 The best platform to design and manage
                 <span class="italic">incentive plans</span>
               </h1>
               <p
-                class="text-[1.325rem] leading-[1.2] tracking-[-0.03em] text-center text-brand-espresso-300 max-w-[45ch]"
+                class="text-[1.325rem] max-sm:text-[1rem] leading-[1.2] tracking-[-0.03em] text-center text-brand-espresso-300 max-w-[45ch]"
               >
                 Give your team a stake in the company’s success. We’re here to
                 help design employee incentive plans that impact your business
@@ -549,14 +550,14 @@
               <a
                 href="#"
                 target="_blank"
-                class="font-medium py-6 px-5 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group mt-12 max-h-[84px]"
+                class="font-medium py-6 px-5 max-sm:py-3 max-sm:px-4 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group mt-12 max-sm:mt-6 max-h-[84px] max-sm:max-h-[56px]"
               >
                 <span
                   class="leading-[1] tracking-[-.045rem] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] max-h-[85px]"
                   >Try it for free</span
                 >
                 <div
-                  class="w-12 h-12 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
+                  class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
                 >
                   <svg
                     width="1.5rem"
@@ -576,18 +577,18 @@
               </a>
             </div>
             <div
-              class="flex flex-col justify-center items-center pt-8 pb-8 min-h-dvh sticky top-0"
+              class="flex flex-col justify-center items-center pt-8 pb-8 tablet:min-h-dvh tablet:sticky top-0"
             >
-              <div class="w-full mt-[-7rem] absolute top-0 right-0 z-2">
+              <div
+                class="w-full mt-[-7rem] max-sm:mt-[-4rem] tablet:absolute relative top-0 right-0 z-2"
+              >
                 <div id="desktop-lottie"></div>
                 <div id="mobile-lottie"></div>
               </div>
               <div
-                class="relative flex mt-[-17rem] w-full justify-center items-center flex-col rounded-[2.5rem] bg-brand-ivory"
+                class="relative flex mt-[-17rem] max-sm:mt-[-10rem] w-full justify-center items-center flex-col rounded-[2.5rem] max-sm:rounded-[1rem] bg-brand-ivory"
               >
-                <div
-                  class="overflow-hidden relative w-full rounded-2xl z-2 max-w-[60rem]"
-                >
+                <div class="overflow-hidden relative w-full z-2 max-w-[60rem]">
                   <img
                     src="./src/assets/header-img.svg"
                     alt=""
@@ -599,16 +600,18 @@
             <div class="h-[100vh]"></div>
           </div>
         </section>
-        <section class="overflow-hidden relative z-2 px-8 pb-14">
+        <section class="overflow-hidden relative z-2 px-8 max-sm:px-4 pb-14">
           <div class="max-w-90rem mx-auto">
             <div
-              class="relative flex pb-8 flex-col min-h-[100vh] text-brand-lemon"
+              class="relative flex pb-8 flex-col min-h-[100vh] max-sm:min-h-auto text-brand-lemon"
             >
-              <div class="relative flex flex-col p-8 flex-1 rounded-[2.5rem]">
+              <div
+                class="relative flex flex-col p-8 max-sm:p-4 flex-1 rounded-[2.5rem]"
+              >
                 <img
                   src="./src/assets/three-man-with-smile-face.webp"
                   alt="Three Man with smile face"
-                  class="absolute inset-0 w-full h-full rounded-[2.5rem] -z-1 object-cover pointer-events-none"
+                  class="absolute inset-0 w-full h-full rounded-[2.5rem] max-sm:rounded-[1rem] -z-1 object-cover pointer-events-none"
                 />
                 <div>
                   <h2
@@ -618,20 +621,22 @@
                     <span class="italic">everybody wins</span>
                   </h2>
                   <p
-                    class="text-[1.594rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[20ch]"
+                    class="text-[1.594rem] max-sm:text-[1.25rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[20ch]"
                   >
                     Great employees treat your business like it’s their own.
                   </p>
                 </div>
-                <div class="flex mt-auto mt-6 gap-[4.75]">
+                <div
+                  class="flex mt-auto max-sm:mt-32 gap-[4.75rem] max-sm:flex-col max-sm:gap-[2rem]"
+                >
                   <p
-                    class="text-[1.594rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] py-2 pl-3 border-l border-l-brand-lemon"
+                    class="text-[1.594rem] max-sm:text-[1.25rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] py-2 pl-3 border-l border-l-brand-lemon"
                   >
                     They show up on time and deliver a world-class customer
                     experience that can fuel referrals for years to come.
                   </p>
                   <p
-                    class="text-[1.594rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] py-2 pl-3 border-l border-l-brand-lemon"
+                    class="text-[1.594rem] max-sm:text-[1.25rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] py-2 pl-3 border-l border-l-brand-lemon"
                   >
                     But finding and retaining those employees is easier said
                     than done, especially in tight talent markets.
@@ -641,7 +646,9 @@
             </div>
           </div>
           <!-- Outer Overflow Container -->
-          <div class="w-full overflow-hidden relative lg:mt-17 mt-8">
+          <div
+            class="w-full overflow-hidden relative lg:mt-17 mt-8 max-sm:mt-4"
+          >
             <!-- Optional: Gradient edge masks for smooth fade-in/fade-out -->
             <div
               class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"
@@ -656,10 +663,10 @@
             >
               <!-- logos_marquee-stripe (Primary Set) -->
               <div
-                class="logos_marquee-stripe flex flex-none gap-32 pl-32 items-center"
+                class="logos_marquee-stripe flex flex-none gap-32 max-sm:gap-20 pl-32 items-center"
               >
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/first-rate-move.png"
@@ -668,7 +675,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/thomas.png"
@@ -677,7 +684,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/baker-smith.png"
@@ -686,7 +693,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/jones-dimille.png"
@@ -695,7 +702,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/blost.png"
@@ -707,11 +714,11 @@
 
               <!-- logos_marquee-stripe (Duplicate Set for Seamless Infinite Loop) -->
               <div
-                class="logos_marquee-stripe flex flex-none gap-32 pl-32 items-center"
+                class="logos_marquee-stripe flex flex-none gap-32 max-sm:gap-20 pl-32 items-center"
                 aria-hidden="true"
               >
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/first-rate-move.png"
@@ -720,7 +727,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/thomas.png"
@@ -729,7 +736,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/baker-smith.png"
@@ -738,7 +745,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/jones-dimille.png"
@@ -747,7 +754,7 @@
                   />
                 </div>
                 <div
-                  class="logos_marquee-logo flex-none h-20 flex items-center justify-center"
+                  class="logos_marquee-logo flex-none h-20 max-sm:h-12 flex items-center justify-center"
                 >
                   <img
                     src="./src/assets/blost.png"
@@ -759,7 +766,7 @@
             </div>
           </div>
         </section>
-        <section class="px-8 pt-14 pb-[3.78125rem]">
+        <section class="px-8 pt-14 max-sm:pt-12 pb-[3.78125rem]">
           <div class="max-w-90rem mx-auto w-full">
             <div
               class="flex flex-col justify-center items-center text-center mb-8"
@@ -779,8 +786,13 @@
                 world-class software that makes it easy to build one.
               </p>
             </div>
-            <div class="flex gap-16 justify-between max-w-[87.5rem] mx-auto">
-              <div class="max-w-[26.375rem]">
+            <div
+              class="flex tablet:gap-16 gap-8 justify-between max-w-[87.5rem] mx-auto overflow-x-auto"
+            >
+              <!-- Employee card one -->
+              <div
+                class="tablet:max-w-[26.375rem] max-w-[21.875rem] tablet:w-auto tablet:flex-auto w-full flex-none"
+              >
                 <figure class="my-0">
                   <img
                     src="./src/assets/simple-to-set-up.png"
@@ -801,7 +813,10 @@
                   </p>
                 </div>
               </div>
-              <div class="max-w-[26.375rem]">
+              <!-- Employee card Two -->
+              <div
+                class="tablet:max-w-[26.375rem] max-w-[21.875rem] tablet:w-auto tablet:flex-auto w-full flex-none"
+              >
                 <figure class="my-0">
                   <img
                     src="./src/assets/home-crews-plan.png"
@@ -821,7 +836,10 @@
                   </p>
                 </div>
               </div>
-              <div class="max-w-[26.375rem]">
+              <!-- Employee card three -->
+              <div
+                class="tablet:max-w-[26.375rem] max-w-[21.875rem] tablet:w-auto tablet:flex-auto w-full flex-none"
+              >
                 <figure class="my-0">
                   <img
                     src="./src/assets/retain-employee.png"
@@ -842,7 +860,7 @@
                 </div>
               </div>
             </div>
-            <div class="flex justify-center mt-20">
+            <div class="flex justify-center mt-20 max-sm:mt-10">
               <a
                 href="#"
                 target="_blank"
@@ -857,12 +875,14 @@
           </div>
         </section>
         <section
-          class="relative flex flex-col min-h-[100vh] items-stretch justify-center px-8 py-16 section-motivate"
+          class="relative flex flex-col tablet:min-h-[100vh] min-h-auto items-stretch justify-center px-8 max-sm:px-4 py-16 max-sm:py-12 section-motivate"
         >
           <div
             class="flex flex-col justify-center items-center relative max-w-90rem mx-auto w-full"
           >
-            <div class="max-w-[42.3125rem] text-center absolute">
+            <div
+              class="tablet:max-w-[42.3125rem] max-w-[35rem] text-center absolute"
+            >
               <h2
                 class="leading-[1.2] tracking-[-.03em] font-heading font-medium text-[clamp(1.75rem,1.1338rem+2.6291vw,3.5rem)]"
               >
@@ -871,68 +891,75 @@
               </h2>
             </div>
             <div
-              class="relative grid gap-6 min-h-[40.75rem] grid-cols-12 w-full motivate-grid"
+              class="relative grid gap-6 tablet:min-h-[40.75rem] min-h-[30rem] max-sm:min-h-[20rem] grid-cols-12 w-full motivate-grid"
             >
-              <div class="row-span-1 col-span-3 flex flex-col">
+              <div class="row-span-1 col-span-3 flex flex-col max-sm:hidden">
                 <img
-                  class="w-40 ml-auto mr-4 mt-[5.9375rem] home_motivate-img cc-2"
+                  class="tablet:w-40 w-25 ml-auto mr-4 tablet:mt-[5.9375rem] mt-[2rem] home_motivate-img cc-2"
                   src="./src/assets/smile-one.png"
                   alt="Smile Logo"
                 />
                 <img
-                  class="w-40 mt-auto mb-[9.25rem] home_motivate-img cc-1"
+                  class="tablet:w-40 w-25 mt-auto tablet:mb-[9.25rem] mb-[7rem] max-sm:mb-0 home_motivate-img cc-1"
                   src="./src/assets/smile-people.png"
                   alt="A person headshoot with smile face"
                 />
               </div>
               <div
-                class="col-start-4 col-end-6 row-start-1 row-end-2 flex flex-col"
+                class="col-start-4 col-end-6 row-start-1 row-end-2 flex flex-col max-sm:hidden"
               >
                 <img
-                  class="w-40 mt-auto ml-[1.875rem] home_motivate-img cc-3"
+                  class="tablet:w-40 w-25 mt-auto ml-[1.875rem] home_motivate-img cc-3"
                   src="./src/assets/money.png"
                   alt=""
                 />
               </div>
               <div
-                class="flex flex-col items-center justify-items-start col-start-6 col-end-8 row-start-1 row-end-2"
+                class="flex flex-col items-center justify-items-start col-start-6 col-end-8 row-start-1 row-end-2 max-sm:hidden"
               >
                 <img
-                  class="w-40 home_motivate-img cc-4"
+                  class="tablet:w-40 w-25 home_motivate-img cc-4"
                   src="./src/assets/smile-women.png"
                   alt=""
                 />
               </div>
               <div
-                class="flex flex-col items-center justify-items-start col-start-8 col-end-10 row-start-1 row-end-2"
+                class="flex flex-col items-center justify-items-start col-start-8 col-end-10 row-start-1 row-end-2 max-sm:hidden"
               >
                 <img
-                  class="w-40 mt-auto home_motivate-img cc-5"
+                  class="tablet:w-40 w-25 mt-auto home_motivate-img cc-5"
                   src="./src/assets/smile-women-two.png"
                   alt=""
                 />
               </div>
               <div
-                class="flex flex-col col-start-10 col-end-13 row-start-1 row-end-2"
+                class="flex flex-col col-start-10 col-end-13 row-start-1 row-end-2 max-sm:hidden"
               >
                 <img
-                  class="w-40 mt-[5.9375] ml-[1.875] home_motivate-img cc-6"
+                  class="tablet:w-40 w-25 mt-[5.9375] ml-[1.875] home_motivate-img cc-6"
                   src="./src/assets/second-smile-logo.png"
                   alt=""
                 />
                 <img
-                  class="w-40 mt-auto ml-auto mr-6 mb-[6.4375rem] home_motivate-img cc-7"
+                  class="tablet:w-40 w-25 mt-auto ml-auto mr-6 mb-[6.4375rem] max-sm:mb-0 home_motivate-img cc-7"
                   src="./src/assets/smile-man.png"
                   alt=""
                 />
               </div>
+              <img
+                class="hidden max-sm:block absolute inset-0"
+                src="./src/assets/people-group-mobile.png"
+                alt=""
+              />
             </div>
           </div>
         </section>
-        <section class="px-8 pt-16 pb-32 overflow-hidden">
+        <section
+          class="px-8 max-sm:px-4 pt-16 max-sm:pt-12 pb-32 max-sm:pb-20 overflow-hidden"
+        >
           <div class="max-w-90rem mx-auto">
             <!-- SECTION HEADING -->
-            <div class="text-center mb-[5.25rem]">
+            <div class="text-center mb-[5.25rem] max-sm:mb-[3rem]">
               <h2
                 class="leading-[1.2] tracking-[-.03em] font-heading font-medium text-[clamp(1.875rem,1.6549rem+0.939vw,2.5rem)] max-w-[16ch] mx-auto text-brand-espresso-500"
               >
@@ -990,10 +1017,10 @@
                 role="tabpanel"
                 aria-labelledby="tab-employees"
                 tabindex="0"
-                class="tab-panel grid grid-cols-1 md:grid-cols-3 gap-6"
+                class="tab-panel flex gap-6 tablet:overflow-hidden overflow-x-auto"
               >
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1021,7 +1048,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1050,7 +1077,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1085,10 +1112,10 @@
                 role="tabpanel"
                 aria-labelledby="tab-companies"
                 tabindex="0"
-                class="tab-panel hidden grid-cols-1 md:grid-cols-3 gap-6"
+                class="tab-panel hidden gap-6 tablet:overflow-hidden overflow-x-auto"
               >
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory lg:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1117,7 +1144,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1147,7 +1174,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px]"
+                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1180,9 +1207,9 @@
             </div>
           </div>
         </section>
-        <section class="px-8 pb-16">
+        <section class="px-8 max-sm:px-4 pb-16 max-sm:pt-12">
           <div class="max-w-90rem mx-auto w-full">
-            <div class="flex flex-col px-10">
+            <div class="flex flex-col tablet:px-10 tablet:gap-0 gap-12">
               <!-- Process Header -->
               <h2
                 class="leading-[1.2] tracking-[-.03em] font-medium font-heading text-[clamp(1.875rem,1.6549rem+0.939vw,2.5rem)] max-w-[16ch]"
@@ -1191,12 +1218,12 @@
                 <span class="italic">few easy steps</span>
               </h2>
               <!-- Process Wrapper-->
-              <div class="flex justify-between gap-8">
+              <div class="tablet:flex justify-between gap-8">
                 <!-- Process content left -->
                 <div class="self-start">
                   <!-- Process content left card 01 -->
                   <div
-                    class="flex items-center justify-start h-[50vh] process-card"
+                    class="tablet:flex items-center justify-start tablet:h-[50vh] process-card tablet:mb-0 mb-12"
                   >
                     <div>
                       <div
@@ -1236,11 +1263,24 @@
                           Learn more
                         </p>
                       </a>
+                      <div
+                        class="tablet:hidden block w-[30rem] max-sm:w-full mt-8"
+                      >
+                        <lottie-player
+                          src="./src/assets/cadence-freq-option.json"
+                          background="transparent"
+                          speed="1"
+                          style="width: 100%; height: 100%"
+                          loop
+                          autoplay
+                        >
+                        </lottie-player>
+                      </div>
                     </div>
                   </div>
                   <!-- Process content left card 02 -->
                   <div
-                    class="flex items-center justify-start h-[50vh] process-card"
+                    class="tablet:flex items-center justify-start tablet:h-[50vh] process-card tablet:mb-0 mb-12"
                   >
                     <div>
                       <div
@@ -1280,11 +1320,24 @@
                           Learn more
                         </p>
                       </a>
+                      <div
+                        class="tablet:hidden block w-[30rem]max-sm:w-full mt-8"
+                      >
+                        <lottie-player
+                          src="./src/assets/threshold-settings.json"
+                          background="transparent"
+                          speed="1"
+                          style="width: 100%; height: 100%"
+                          loop
+                          autoplay
+                        >
+                        </lottie-player>
+                      </div>
                     </div>
                   </div>
                   <!-- Process content left card 03 -->
                   <div
-                    class="flex items-center justify-start h-[50vh] process-card"
+                    class="tablet:flex items-center justify-start tablet:h-[50vh] process-card tablet:mb-0 mb-12"
                   >
                     <div>
                       <div
@@ -1324,11 +1377,24 @@
                           Learn more
                         </p>
                       </a>
+                      <div
+                        class="tablet:hidden block w-[30rem] max-sm:w-full mt-8"
+                      >
+                        <lottie-player
+                          src="./src/assets/threshold-settings.json"
+                          background="transparent"
+                          speed="1"
+                          style="width: 100%; height: 100%"
+                          loop
+                          autoplay
+                        >
+                        </lottie-player>
+                      </div>
                     </div>
                   </div>
-                  <!-- Process content left card 03 -->
+                  <!-- Process content left card 04 -->
                   <div
-                    class="flex items-center justify-start h-[50vh] process-card"
+                    class="tablet:flex items-center justify-start tablet:h-[50vh] process-card tablet:mb-0 mb-12"
                   >
                     <div>
                       <div
@@ -1367,12 +1433,25 @@
                           Learn more
                         </p>
                       </a>
+                      <div
+                        class="tablet:hidden block w-[30rem] max-sm:w-full mt-8"
+                      >
+                        <lottie-player
+                          src="./src/assets/launch.json"
+                          background="transparent"
+                          speed="1"
+                          style="width: 100%; height: 100%"
+                          loop
+                          autoplay
+                        >
+                        </lottie-player>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <!-- Process content Right -->
                 <div
-                  class="flex items-center justify-start w-full max-w-[39rem] h-[50vh] sticky top-0 lottie-wrapper"
+                  class="tablet:flex items-center justify-start w-full max-w-[39rem] h-[50vh] sticky top-0 lottie-wrapper hidden"
                 >
                   <div
                     class="w-full h-full mex-h-[33.125rem] relative rounded-[2.5rem] overflow-hidden"
@@ -1439,12 +1518,14 @@
             </div>
           </div>
         </section>
-        <section class="px-8 py-16">
+        <section class="px-8 max-sm:px-4 py-16 max-sm:pt-12">
           <div class="max-w-90rem mx-auto w-full">
-            <div class="flex gap-[1.75rem] justify-between">
+            <div
+              class="flex tablet:flex-row flex-col gap-[1.75rem] justify-between"
+            >
               <!-- home extra card 01 -->
               <div
-                class="flex flex-col p-8 w-full items-start justify-start rounded-[2.5rem] bg-brand-ivory"
+                class="flex flex-col p-8 w-full items-start justify-start rounded-[2.5rem] max-sm:rounded-[1.25rem] bg-brand-ivory"
               >
                 <div
                   class="bg-brand-espresso-500 text-brand-ivory text-center rounded-full mb-[5.4375rem] py-3 px-4"
@@ -1475,7 +1556,7 @@
               </div>
               <!-- home extra card 02 -->
               <div
-                class="flex flex-col p-8 w-full items-start justify-start rounded-[2.5rem] bg-brand-lemon"
+                class="flex flex-col p-8 w-full items-start justify-start rounded-[2.5rem] max-sm:rounded-[1.25rem] bg-brand-lemon"
               >
                 <div
                   class="bg-brand-espresso-500 text-brand-ivory text-center rounded-full mb-[5.4375rem] py-3 px-4"
@@ -1507,7 +1588,9 @@
             </div>
           </div>
         </section>
-        <section class="px-8 pt-16 pb-[7.25rem]">
+        <section
+          class="px-8 max-sm:px-4 pt-16 max-sm:pt-12 pb-[7.25rem] max-sm:pb-[5rem]"
+        >
           <div class="max-w-90rem mx-auto w-full">
             <div
               class="flex flex-col items-center justify-center gap-8 text-center"
@@ -1528,14 +1611,14 @@
               <a
                 href="#"
                 target="_blank"
-                class="font-medium py-6 px-5 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group max-h-[84px]"
+                class="font-medium py-6 px-5 max-sm:py-3 max-sm:px-4 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group max-h-[84px] max-sm:max-h-[56px]"
               >
                 <span
                   class="leading-[1] tracking-[-.045rem] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] max-h-[85px]"
                   >Get started for free</span
                 >
                 <div
-                  class="w-12 h-12 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
+                  class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
                 >
                   <svg
                     width="1.5rem"
@@ -1557,8 +1640,9 @@
           </div>
         </section>
       </main>
-      <footer class="px-8 py-8 bg-brand-lemon">
+      <footer class="px-8 max-sm:px-4 py-8 bg-brand-lemon">
         <div class="max-w-90rem mx-auto w-full">
+          <!-- Footer Top -->
           <div class="flex justify-between">
             <div class="w-full max-w-[25rem]">
               <h2
@@ -1568,7 +1652,9 @@
                 <span class="italic">Simple</span>
               </h2>
             </div>
-            <div class="w-[50%] flex justify-end items-stretch gap-[3.125rem]">
+            <div
+              class="w-[50%] tablet:flex hidden justify-end items-stretch gap-[3.125rem]"
+            >
               <!-- Footer Menu One -->
               <nav class="max-w-[6.625rem]" aria-label="Footer">
                 <h3
@@ -1782,13 +1868,213 @@
               </nav>
             </div>
           </div>
-          <div class="mt-[16.875rem] flex flex-col gap-6">
+          <!-- Footer Bottom -->
+          <div class="footer_mobile tablet:hidden block mt-12">
+            <div class="footer_mobile-link">
+              <!-- Item 1 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-1"
+                >
+                  <span>Solutions</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-1"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >For Companies</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >For Employees</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 2 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-2"
+                >
+                  <span>Industries</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-2"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Construction</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >All Industries</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 3 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-3"
+                >
+                  <span>Resources</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-3"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Scripts & Templates</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 4 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-4"
+                >
+                  <span>Company</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-4"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">About</a>
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">Pricing</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mt-28 flex justify-between">
+              <img
+                class="w-[6.875rem]"
+                src="./src/assets/certified-badge.svg"
+                alt=""
+              />
+              <address class="font-normal">
+                <ul aria-label="Social media" class="flex items-center gap-2">
+                  <li>
+                    <a class="w-6" href=""
+                      ><img src="./src/assets/x-logo.svg" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a class="w-6" href=""
+                      ><img src="./src/assets/icons-linkedin.svg" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="tablet:mt-[18.125rem] mt-12 flex flex-col gap-6">
             <img src="./src/assets/footer-logo.svg" alt="" />
-            <div class="flex">
-              <div class="w-[50%] flex">
+            <div class="flex max-sm:flex-col gap-2">
+              <div
+                class="w-[50%] flex max-sm:w-full max-sm:justify-between gap-2"
+              >
                 <a
                   href="#"
-                  class="w-full max-w-[12.5rem] leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  class="w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
                   ><span>Terms & Conditions</span></a
                 >
                 <a
@@ -1797,7 +2083,7 @@
                   ><span>Privacy Policy</span></a
                 >
               </div>
-              <div class="w-[50%] flex justify-between">
+              <div class="w-[50%] flex justify-between max-sm:w-full gap-2">
                 <a
                   href="#"
                   class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
@@ -1812,7 +2098,6 @@
         </div>
       </footer>
     </div>
-
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <!-- Gsap -->

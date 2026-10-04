@@ -94,7 +94,8 @@
   /* Custom Max-Width utilities (generates max-w-90rem) */
   --max-width-90rem: 90rem;
   /* Custom Breakpoint matching Webflow 991px */
-  --breakpoint-nav-desktop: 992px;
+  --breakpoint-nav-desktop: 1024px;
+  --breakpoint-tablet: 992px;
 
   /* Custom Transitions */
   --ease-smooth-out: cubic-bezier(0.16, 1, 0.3, 1);
