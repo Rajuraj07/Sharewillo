@@ -1,0 +1,1564 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShareWillow Blog</title>
+    <!-- Meta Description Tag -->
+    <meta
+      name="description"
+      content="Learn more about incentive plans, and how to build a plan that makes sense for your business. Check out the free articles and templates on our blog."
+    />
+    <!-- Open Graph -->
+    <meta content="./src/assets/og-image.jpg" property="og:image" />
+    <!-- Standard Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/favicon.png"
+    />
+    <!-- Webclip / Apple Touch Icon (Mobile Home Screens) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="256x256"
+      href="./src/assets/webclip.png"
+    />
+    <!-- Lenis Css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
+    <!-- Custom Css Tyle -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <!-- Lottie Player-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body class="font-body">
+    <div class="page-wrapper overflow-clip">
+      <header
+        id="main-header"
+        class="nav-component fixed lg:top-4 lg:pt-0 pt-6 inset-x-0 z-50 w-full px-4 sm:px-7"
+        role="banner"
+      >
+        <div
+          class="max-w-90rem mx-auto bg-brand-ivory rounded-[1.25rem] lg:py-4 lg:px-[18px] py-2 px-3 flex items-center justify-between relative z-50"
+        >
+          <!-- LOGO -->
+          <div class="flex items-center">
+            <a
+              href="/"
+              aria-label="ShareWillow Home"
+              class="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm lg:max-w-[182px] max-w-[156px]"
+            >
+              <img
+                src="./src/assets/Logo.svg"
+                alt="ShareWillow Logo"
+                width="140"
+                height="28"
+                decoding="async"
+                class="h-6 md:h-7 w-auto object-contain"
+              />
+            </a>
+          </div>
+
+          <!-- DESKTOP NAVIGATION MENU (Visible > 991px) -->
+          <nav
+            aria-label="Main Navigation"
+            class="hidden nav-desktop:flex items-center gap-6 lg:gap-8 text-brand-espresso font-medium text-[1rem] tracking-[-0.54px]"
+          >
+            <ul class="flex items-center gap-6 lg:gap-8">
+              <!-- Solutions Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Solutions</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown Menu Wrapper -->
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 z-50 transition-all duration-200 pt-6"
+                >
+                  <div
+                    class="w-72 bg-brand-ivory rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium">For Companies</span>
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium text-brand-espresso"
+                            >For Employees</span
+                          >
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium text-brand-espresso"
+                            >Plan Design Consultation</span
+                          >
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Resources Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Resources</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown Menu Wrapper -->
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                >
+                  <div
+                    class="w-72 bg-brand-ivory rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Blog & Insights</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Case Studies</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Incentive Calculator</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Documentation</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Industries Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Industries</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown Menu Wrapper -->
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                >
+                  <div
+                    class="w-72 bg-brand-ivory rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Technology & SaaS</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Manufacturing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Healthcare</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Professional Services</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a
+                  href="#pricing"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >Features</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- DESKTOP CTA BUTTONS (Hidden <= 991px) -->
+          <div class="hidden nav-desktop:flex items-center gap-3">
+            <a
+              href="/login"
+              class="bg-brand-lemon leading-[1] tracking-[-.03375rem] text-black px-5 py-3 rounded-full hover:bg-brand-light-lemon transition-all h-[2.875rem] flex items-center"
+              >Sign in</a
+            >
+            <a
+              href="/signup"
+              class="bg-brand-espresso-500 leading-[1] tracking-[-.03375rem] px-5 py-3 rounded-full hover:bg-brand-espresso-300 transition-all text-white h-[2.875rem] flex items-center"
+              >Sign Up Now</a
+            >
+          </div>
+
+          <!-- HAMBURGER / CLOSE BUTTON (Visible <= 991px) -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="nav-desktop:hidden bg-black text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none cursor-pointer"
+            aria-label="Toggle Mobile Menu"
+            aria-expanded="false"
+          >
+            <svg
+              id="hamburger-icon"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-5 h-5 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- FULLSCREEN MOBILE NAV DRAWER (<= 991px) -->
+        <div
+          id="mobile-drawer"
+          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
+        >
+          <nav
+            aria-label="Mobile Navigation"
+            class="w-full mx-auto bg-white rounded-3xl p-6 shadow-sm"
+          >
+            <ul
+              class="flex flex-col divide-y divide-gray-100 text-brand-espresso font-medium text-lg"
+            >
+              <!-- Solutions Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Solutions</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >For Companies</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >For Employees</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Plan Design Consultation</a
+                  >
+                </div>
+              </li>
+
+              <!-- Resources Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Resources</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Blog & Insights</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Case Studies</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Incentive Calculator</a
+                  >
+                </div>
+              </li>
+
+              <!-- Industries Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Industries</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Technology & SaaS</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Manufacturing</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Healthcare</a
+                  >
+                </div>
+              </li>
+
+              <li class="py-3">
+                <a href="#pricing" class="block py-1">Pricing</a>
+              </li>
+              <li class="py-3">
+                <a href="#about" class="block py-1">About</a>
+              </li>
+              <li class="py-3">
+                <a href="#features" class="block py-1">Features</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="w-full mt-8 flex flex-col gap-3">
+            <a
+              href="#"
+              class="w-full bg-brand-espresso-500 text-brand-ivory font-medium text-center py-4 rounded-full text-lg"
+            >
+              Get a demo
+            </a>
+            <a
+              href="/login"
+              class="w-full bg-brand-lemon text-brand-espresso font-medium text-center py-4 rounded-full text-lg"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <section
+          class="px-8 max-sm:px-4 pt-[12.125rem] max-sm:pt-[6.5rem] pb-[3.59375rem] max-sm:pb-[2rem]"
+        >
+          <div class="max-w-90rem mx-auto w-full">
+            <div
+              class="flex flex-col text-center items-center justify-center gap-12 max-sm:gap-6"
+            >
+              <h1
+                class="font-heading font-medium leading-[1.2] tracking-[-.03em] text-[clamp(2rem,1.2958rem+3.0047vw,4rem)] max-w-[24ch]"
+              >
+                Learn more about profit sharing and
+                <span class="italic">incentive plans</span>
+              </h1>
+              <p
+                class="leading-[1.2] tracking-[-.03em] text-brand-espresso-300 text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] max-w-[65ch]"
+              >
+                Building an incentive plan can be a little overwhelming. Whether
+                you’ve opted for profit sharing, bonus plans, performance pay,
+                or any other design, we’ve created a collection of free
+                resources to help you think through what makes sense for you and
+                your team.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="px-8 max-sm:px-4 pt-20 max-sm:pt-8 pb-32 max-sm:pb-6">
+          <div class="max-w-90rem mx-auto w-full">
+            <div
+              class="flex justify-between mb-6 max-sm:mb-[1.125rem] pb-6 border-b border-brand-espresso-300 relative"
+            >
+              <!-- Search Box -->
+              <div class="relative">
+                <input
+                  class="pl-12 py-2 pr-3 min-h-[2.8rem] leading-[1.2] tracking-[-.03375rem] rounded-full bg-brand-ivory focus:outline-none focus:ring-0 focus:border-transparent"
+                  type="text"
+                  id="search"
+                  maxlength="256"
+                  name="search"
+                  placeholder="Search..."
+                />
+                <img
+                  class="absolute left-3 top-1/2 -translate-y-1/2"
+                  src="./src/assets/search-icon.svg"
+                  alt=""
+                />
+              </div>
+              <!-- Filter Button Group -->
+              <div class="tablet:flex gap-1 hidden">
+                <button
+                  type="button"
+                  class="py-2 px-4 leading-[1.2] tracking-[-.03375rem] flex items-center text-brand-espresso-300 bg-brand-ivory transition-all duration-[300ms] ease rounded-full hover:bg-brand-espresso-500 hover:text-brand-ivory cursor-pointer"
+                >
+                  <span>All Articles</span>
+                </button>
+                <button
+                  type="button"
+                  class="py-2 px-4 leading-[1.2] tracking-[-.03375rem] flex items-center text-brand-espresso-300 bg-brand-ivory transition-all duration-[300ms] ease rounded-full hover:bg-brand-espresso-500 hover:text-brand-ivory cursor-pointer"
+                >
+                  <span>Features</span>
+                </button>
+                <button
+                  type="button"
+                  class="py-2 px-4 leading-[1.2] tracking-[-.03375rem] flex items-center text-brand-espresso-300 bg-brand-ivory transition-all duration-[300ms] ease rounded-full hover:bg-brand-espresso-500 hover:text-brand-ivory cursor-pointer"
+                >
+                  <span>Incentives</span>
+                </button>
+                <button
+                  type="button"
+                  class="py-2 px-4 leading-[1.2] tracking-[-.03375rem] flex items-center text-brand-espresso-300 bg-brand-ivory transition-all duration-[300ms] ease rounded-full hover:bg-brand-espresso-500 hover:text-brand-ivory cursor-pointer"
+                >
+                  <span>Profit Sharing</span>
+                </button>
+                <button
+                  type="button"
+                  class="py-2 px-4 leading-[1.2] tracking-[-.03375rem] flex items-center text-brand-espresso-300 bg-brand-ivory transition-all duration-[300ms] ease rounded-full hover:bg-brand-espresso-500 hover:text-brand-ivory cursor-pointer"
+                >
+                  <span>Questions</span>
+                </button>
+                <button
+                  type="button"
+                  class="py-2 px-4 leading-[1.2] tracking-[-.03375rem] flex items-center text-brand-espresso-300 bg-brand-ivory transition-all duration-[300ms] ease rounded-full hover:bg-brand-espresso-500 hover:text-brand-ivory cursor-pointer"
+                >
+                  <span>Tips & Tricks</span>
+                </button>
+              </div>
+              <!-- filter buttons form tablet-->
+              <div class="hidden max-tablet:block">
+                <!-- Filter Toggle Button -->
+                <button
+                  id="filter-toggle-btn"
+                  type="button"
+                  class="px-6 py-2 rounded-full bg-black text-white font-medium hover:bg-neutral-800 transition-colors cursor-pointer"
+                >
+                  Filter
+                </button>
+                <!-- Absolute Filter Dropdown Menu -->
+                <div id="filter-drawer" class="filter-drawer mt-2">
+                  <div
+                    class="bg-brand-ivory rounded-2xl py-2 px-3 shadow-lg flex flex-col gap-2 border border-stone-200"
+                  >
+                    <!-- Selected State -->
+                    <button
+                      type="button"
+                      class="w-full flex items-center justify-between px-4 py-2 rounded-full text-neutral-900 font-medium hover:bg-black/5 transition-colors cursor-pointer"
+                    >
+                      All Articles
+                    </button>
+
+                    <!-- Category Options -->
+                    <button
+                      type="button"
+                      class="w-full flex items-center justify-between px-4 py-2 rounded-full text-neutral-900 font-medium hover:bg-black/5 transition-colors cursor-pointer"
+                    >
+                      <span>Features</span>
+                      <span class="text-lg leading-none">+</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="w-full flex items-center justify-between px-4 py-2 rounded-full text-neutral-900 font-medium hover:bg-black/5 transition-colors cursor-pointer"
+                    >
+                      <span>Incentives</span>
+                      <span class="text-lg leading-none">+</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="w-full flex items-center justify-between px-4 py-2 rounded-full text-neutral-900 font-medium hover:bg-black/5 transition-colors cursor-pointer"
+                    >
+                      <span>Profit Sharing</span>
+                      <span class="text-lg leading-none">+</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="w-full flex items-center justify-between px-4 py-2 rounded-full text-neutral-900 font-medium hover:bg-black/5 transition-colors cursor-pointer"
+                    >
+                      <span>Questions</span>
+                      <span class="text-lg leading-none">+</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="w-full flex items-center justify-between px-4 py-2 rounded-full text-neutral-900 font-medium hover:bg-black/5 transition-colors cursor-pointer"
+                    >
+                      <span>Tips & Tricks</span>
+                      <span class="text-lg leading-none">+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <h2
+                class="leading-[1.2] tracking-[-.03em] text-[clamp(1.125rem,0.9049rem+0.939vw,1.75rem)]"
+              >
+                Featured Articles
+              </h2>
+              <!-- Blog Article Card wrapper -->
+              <div class="flex flex-col gap-16 tablet:mt-5.25rem mt-12">
+                <!-- Blog Article Card -->
+                <article class="group flex max-tablet:flex-col relative">
+                  <div
+                    class="flex flex-col mr-[4.875rem] max-tablet:mr-0 max-tablet:mb-8 max-w-[38.875rem] justify-between items-start tablet:gap-4"
+                  >
+                    <div>
+                      <div
+                        class="bg-brand-lemon rounded-full py-2 px-4 leading-[1.2] tablet:mb-8 mb-6 inline-block"
+                      >
+                        <span>Incentives</span>
+                      </div>
+                      <h3
+                        class="font-heading font-medium leading-[1.2] tracking-[-.07875rem] text-[clamp(2rem,1.868rem+0.5634vw,2.375rem)]"
+                      >
+                        HVAC Installer Bonus: How One Company Set $300 to $1,000
+                        Awards by Job Type Before Its First Payout
+                      </h3>
+                    </div>
+                    <div>
+                      <p
+                        class="leading-[1.2] tracking-[-.045rem] hidden tablet:block text-[22px] text-brand-espresso-300"
+                      >
+                        HVAC installer bonus plan: one company pays $300 to
+                        $1,000 per install by job type, minus labor, split by
+                        hours, and cut its upsell rate from 6% to 3%.
+                      </p>
+                      <div
+                        class="flex items-center gap-2 font-medium text-2xl text-[#180600] mt-8 group-hover:text-[#746a66]"
+                      >
+                        <div
+                          class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
+                        >
+                          <svg
+                            width=".75rem"
+                            viewBox="0 0 19 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <span class="text-[0.937rem]">Continue reading</span>
+                      </div>
+                    </div>
+                  </div>
+                  <figure
+                    class="overflow-hidden relative rounded-[1.25rem] tablet:max-w-[42.25rem] max-tablet:w-full tablet:h-[30.375rem]"
+                  >
+                    <img
+                      class="w-full object-cover"
+                      src="./src/assets/technician-lead-generation-bonus-preview.png"
+                      alt=""
+                    />
+                  </figure>
+                  <a class="after:absolute after:inset-0" href="">
+                    <span class="sr-only"
+                      >HVAC installer bonus plan: one company pays $300 to
+                      $1,000 per install by job type, minus labor, split by
+                      hours, and cut its upsell rate from 6% to 3%.</span
+                    >
+                  </a>
+                </article>
+                <!-- Blog Article Card -->
+                <article class="group flex max-tablet:flex-col relative">
+                  <div
+                    class="flex flex-col mr-[4.875rem] max-tablet:mr-0 max-tablet:mb-8 max-w-[38.875rem] justify-between items-start tablet:gap-4"
+                  >
+                    <div>
+                      <div
+                        class="bg-brand-lemon rounded-full py-2 px-4 leading-[1.2] tablet:mb-8 mb-6 inline-block"
+                      >
+                        <span>Incentives</span>
+                      </div>
+                      <h3
+                        class="font-heading font-medium leading-[1.2] tracking-[-.07875rem] text-[clamp(2rem,1.868rem+0.5634vw,2.375rem)]"
+                      >
+                        Crew Bonus Plan: How an Outdoor Living Company Is Paying
+                        $50 for Every Hour Its Crews Save
+                      </h3>
+                    </div>
+                    <div>
+                      <p
+                        class="leading-[1.2] tracking-[-.045rem] hidden tablet:block text-[22px] text-brand-espresso-300"
+                      >
+                        A crew bonus plan that pays $50 per hour saved, gated by
+                        daily logs and zero callbacks. See how an outdoor living
+                        company is building it on JobTread.
+                      </p>
+                      <div
+                        class="flex items-center gap-2 font-medium text-2xl text-[#180600] group-hover:text-[#746a66] mt-8"
+                      >
+                        <div
+                          class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
+                        >
+                          <svg
+                            width=".75rem"
+                            viewBox="0 0 19 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <span class="text-[0.937rem]">Continue reading</span>
+                      </div>
+                    </div>
+                  </div>
+                  <figure
+                    class="overflow-hidden relative rounded-[1.25rem] tablet:max-w-[42.25rem] max-tablet:w-full tablet:h-[30.375rem]"
+                  >
+                    <img
+                      class="w-full object-cover"
+                      src="./src/assets/crew-bonus-plan-hours-saved-preview.png"
+                      alt=""
+                    />
+                  </figure>
+                  <a class="after:absolute after:inset-0" href="">
+                    <span class="sr-only"
+                      >Crew Bonus Plan: How an Outdoor Living Company Is Paying
+                      $50 for Every Hour Its Crews Save</span
+                    >
+                  </a>
+                </article>
+              </div>
+              <div class="tablet:mt-[5.375rem] mt-12 flex justify-center">
+                <a
+                  class="py-[1.25rem] px-[1.5rem] rounded-full flex items-center justify-center text-center bg-brand-espresso-500 text-brand-ivory font-medium leading-[1] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] transition-colors duration-[300ms] ease hover:bg-brand-espresso-300"
+                  href="#"
+                  ><span>Load more</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-8 max-sm:px-4 tablet:pb-32 pb-12">
+          <div class="max-w-90rem mx-auto w-full">
+            <!-- Letest Article Header -->
+            <div
+              class="tablet:pt-12 pt-8 mb-16 border-t border-brand-espresso-300"
+            >
+              <h2
+                class="leading-[1.2] tracking-[-.03em] text-[clamp(1.125rem,0.9049rem+0.939vw,1.75rem)]"
+              >
+                Lastest Articles
+              </h2>
+            </div>
+            <!-- Letest Article Card Wrapper -->
+            <div
+              class="grid tablet:grid-cols-3 grid-cols-2 max-sm:grid-cols-1 gap-y-[3rem] gap-x-12"
+            >
+              <!-- Letest Article Card -->
+              <article class="group relative overflow-hidden">
+                <figure
+                  class="tablet:mb-10 mb-8 overflow-hidden rounded-[1.25rem]"
+                >
+                  <img
+                    src="./src/assets/hvac-installer-bonus-hero.png"
+                    alt=""
+                  />
+                </figure>
+                <div>
+                  <h3
+                    class="tablet:mb-[2.375rem] mb-8 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
+                  >
+                    HVAC Installer Bonus: How One Company Set $300 to $1,000
+                    Awards by Job Type Before Its First Payout
+                  </h3>
+                  <p
+                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8"
+                  >
+                    HVAC installer bonus plan: one company pays $300 to $1,000
+                    per install by job type, minus labor, split by hours, and
+                    cut its upsell rate from 6% to 3%.
+                  </p>
+                  <div class="flex flex-col gap-3">
+                    <div
+                      class="flex items-center gap-2 font-medium text-2xl text-[#180600] group-hover:text-[#746a66]"
+                    >
+                      <div
+                        class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
+                      >
+                        <svg
+                          width=".75rem"
+                          viewBox="0 0 19 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="text-[0.937rem]">Continue reading</span>
+                    </div>
+                    <p
+                      class="text-[.875rem] leading-[1.2] tracking-[-.0525rem] uppercase text-brand-espresso-300"
+                    >
+                      10/5/26
+                    </p>
+                  </div>
+                </div>
+                <a class="after:absolute after:inset-0" href="">
+                  <span class="sr-only"
+                    >HVAC installer bonus plan: one company pays $300 to $1,000
+                    per install by job type, minus labor, split by hours, and
+                    cut its upsell rate from 6% to 3%.</span
+                  >
+                </a>
+              </article>
+              <!-- Letest Article Card -->
+              <article class="group relative overflow-hidden">
+                <figure
+                  class="tablet:mb-10 mb-8 overflow-hidden rounded-[1.25rem]"
+                >
+                  <img
+                    src="./src/assets/install-commission-split-fix-hero.png"
+                    alt=""
+                  />
+                </figure>
+                <div>
+                  <h3
+                    class="tablet:mb-[2.375rem] mb-8 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
+                  >
+                    The Install Split That Almost Paid Zero
+                  </h3>
+                  <p
+                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8"
+                  >
+                    A two-location HVAC and plumbing company built its
+                    install-crew bonus pool around ServiceTitan job data, until
+                    a routine check showed one of its busiest pools calculating
+                    out to a flat zero. The technicians hadn't stopped earning
+                    it. The software just had no idea how to split a job between
+                    two installers.
+                  </p>
+                  <div class="flex flex-col gap-3">
+                    <div
+                      class="flex items-center gap-2 font-medium text-2xl text-[#180600] group-hover:text-[#746a66]"
+                    >
+                      <div
+                        class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
+                      >
+                        <svg
+                          width=".75rem"
+                          viewBox="0 0 19 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="text-[0.937rem]">Continue reading</span>
+                    </div>
+                    <p
+                      class="text-[.875rem] leading-[1.2] tracking-[-.0525rem] uppercase text-brand-espresso-300"
+                    >
+                      9/7/26
+                    </p>
+                  </div>
+                </div>
+                <a class="after:absolute after:inset-0" href="">
+                  <span class="sr-only"
+                    >HVAC installer bonus plan: one company pays $300 to $1,000
+                    per install by job type, minus labor, split by hours, and
+                    cut its upsell rate from 6% to 3%.</span
+                  >
+                </a>
+              </article>
+              <!-- Letest Article Card -->
+              <article class="group relative overflow-hidden">
+                <figure
+                  class="tablet:mb-10 mb-8 overflow-hidden rounded-[1.25rem]"
+                >
+                  <img
+                    src="./src/assets/lead-generation-bonus-hero.png"
+                    alt=""
+                  />
+                </figure>
+                <div>
+                  <h3
+                    class="tablet:mb-[2.375rem] mb-8 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
+                  >
+                    Technician Lead Generation Bonus: How an HVAC and Plumbing
+                    Company Found $52K in Tech-Sourced Sales Its Report Showed
+                    as Zero
+                  </h3>
+                  <p
+                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8"
+                  >
+                    A technician lead generation bonus paid 3% on tech-sourced
+                    leads, but the report showed zero. See how one HVAC and
+                    plumbing company found about $52K.
+                  </p>
+                  <div class="flex flex-col gap-3">
+                    <div
+                      class="flex items-center gap-2 font-medium text-2xl text-[#180600] group-hover:text-[#746a66]"
+                    >
+                      <div
+                        class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
+                      >
+                        <svg
+                          width=".75rem"
+                          viewBox="0 0 19 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <span class="text-[0.937rem]">Continue reading</span>
+                    </div>
+                    <p
+                      class="text-[.875rem] leading-[1.2] tracking-[-.0525rem] uppercase text-brand-espresso-300"
+                    >
+                      10/4/26
+                    </p>
+                  </div>
+                </div>
+                <a class="after:absolute after:inset-0" href="">
+                  <span class="sr-only"
+                    >HVAC installer bonus plan: one company pays $300 to $1,000
+                    per install by job type, minus labor, split by hours, and
+                    cut its upsell rate from 6% to 3%.</span
+                  >
+                </a>
+              </article>
+            </div>
+            <div class="tablet:mt-[5.375rem] mt-12 flex justify-center">
+              <a
+                class="py-[1.25rem] px-[1.5rem] rounded-full flex items-center justify-center text-center bg-brand-espresso-500 text-brand-ivory font-medium leading-[1] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] transition-colors duration-[300ms] ease hover:bg-brand-espresso-300"
+                href="#"
+                ><span>Load more</span></a
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          class="px-8 max-sm:px-4 pt-16 max-sm:pt-12 pb-[7.25rem] max-sm:pb-[5rem]"
+        >
+          <div class="max-w-90rem mx-auto w-full">
+            <div
+              class="flex flex-col items-center justify-center gap-8 text-center"
+            >
+              <h2
+                class="leading-[1.2] tracking-[-.03em] font-heading font-medium text-[clamp(1.875rem,1.6549rem+0.939vw,2.5rem)] max-w-[25ch]"
+              >
+                Motivate employees to act like owners, without complicated
+                equity
+              </h2>
+              <p
+                class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.7165rem+0.6761vw,1.325rem)] max-w-[50ch]"
+              >
+                Book a performance pay audit today, and let us show you how
+                ShareWillow can help your business increase efficiency, reduce
+                callbacks, and grow profits.
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="font-medium py-6 px-5 max-sm:py-3 max-sm:px-4 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group max-h-[84px] max-sm:max-h-[56px]"
+              >
+                <span
+                  class="leading-[1] tracking-[-.045rem] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] max-h-[85px]"
+                  >Get started for free</span
+                >
+                <div
+                  class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
+                >
+                  <svg
+                    width="1.5rem"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-transform duration-300 ease-in-out group-hover:rotate-90"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.21397 5.44534L11.9072 8.13815H3.67067C3.42131 8.13815 3.18217 8.23721 3.00585 8.41353C2.82953 8.58985 2.73047 8.82899 2.73047 9.07835C2.73047 9.3277 2.82952 9.56685 3.00585 9.74317C3.18217 9.91949 3.42131 10.0185 3.67067 10.0185H11.9072L9.21394 12.7114C9.03757 12.8878 8.93849 13.127 8.93849 13.3764C8.93849 13.6258 9.03757 13.865 9.21394 14.0414C9.39031 14.2178 9.62952 14.3169 9.87895 14.3169C10.1284 14.3169 10.3676 14.2178 10.544 14.0414L14.842 9.74336C14.9293 9.65608 14.9986 9.55245 15.0459 9.43839C15.0932 9.32425 15.1176 9.2019 15.1176 9.07835C15.1176 8.9548 15.0932 8.83245 15.0459 8.71831C14.9986 8.60425 14.9291 8.50044 14.8418 8.41316L10.544 4.1153C10.3676 3.93893 10.1284 3.83984 9.87895 3.83984C9.62952 3.83984 9.39031 3.93893 9.21394 4.1153C9.03757 4.29167 8.93849 4.53088 8.93849 4.78031C8.93849 5.02973 9.0376 5.26897 9.21397 5.44534Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="px-8 max-sm:px-4 py-8 bg-brand-lemon">
+        <div class="max-w-90rem mx-auto w-full">
+          <!-- Footer Top -->
+          <div class="flex justify-between">
+            <div class="w-full max-w-[25rem]">
+              <h2
+                class="font-heading font-medium leading-[1.2] tracking-[-.03em] text-[clamp(1.75rem,1.5299rem+0.939vw,2.375rem)]"
+              >
+                ShareWillow Makes Profit Sharing
+                <span class="italic">Simple</span>
+              </h2>
+            </div>
+            <div
+              class="w-[50%] tablet:flex hidden justify-end items-stretch gap-[3.125rem]"
+            >
+              <!-- Footer Menu One -->
+              <nav class="max-w-[6.625rem]" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-1"
+                >
+                  Solutions
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-1"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>For Companies</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>For Employees</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Plan Design Consultation</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- Footer Menu Two -->
+              <nav class="max-w-[7.6875rem]" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-2"
+                >
+                  Industries
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-2"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Construction</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>All Industries</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- Footer Menu Three -->
+              <nav class="max-w-[8.5rem] flex flex-col" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-3"
+                >
+                  Resources
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-3"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Blog</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>What Is Profit Sharing?</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Employee Incentive Software</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Scripts & Templates</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Affiliate Program</span></a
+                    >
+                  </li>
+                </ul>
+                <div class="mt-auto">
+                  <img src="./src/assets/certified-badge.svg" alt="" />
+                </div>
+              </nav>
+              <!-- Footer Menu Four -->
+              <nav
+                class="max-w-[9.875rem] min-h-[17.375rem] flex flex-col"
+                aria-label="Footer"
+              >
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-4"
+                >
+                  Company
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-4"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>About</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Contact Us</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Pricing</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Release Notes</span></a
+                    >
+                  </li>
+                </ul>
+                <address class="font-normal mt-auto">
+                  <ul
+                    aria-label="Social media"
+                    class="flex items-center gap-[.625rem] mb-0"
+                  >
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]"
+                        ><img src="./src/assets/x-logo.svg" alt=""
+                      /></a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]"
+                        ><img src="./src/assets/icons-linkedin.svg" alt=""
+                      /></a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]">
+                        <svg
+                          width="1.125rem"
+                          height="100%"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z"
+                            fill="CurrentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]">
+                        <svg
+                          width="1.125rem"
+                          height="100%"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z"
+                            fill="CurrentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+              </nav>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="footer_mobile tablet:hidden block mt-12">
+            <div class="footer_mobile-link">
+              <!-- Item 1 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-1"
+                >
+                  <span>Solutions</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-1"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >For Companies</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >For Employees</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 2 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-2"
+                >
+                  <span>Industries</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-2"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Construction</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >All Industries</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 3 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-3"
+                >
+                  <span>Resources</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-3"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Scripts & Templates</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 4 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-4"
+                >
+                  <span>Company</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-4"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">About</a>
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">Pricing</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mt-28 flex justify-between">
+              <img
+                class="w-[6.875rem]"
+                src="./src/assets/certified-badge.svg"
+                alt=""
+              />
+              <address class="font-normal">
+                <ul aria-label="Social media" class="flex items-center gap-2">
+                  <li>
+                    <a class="w-6" href=""
+                      ><img src="./src/assets/x-logo.svg" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a class="w-6" href=""
+                      ><img src="./src/assets/icons-linkedin.svg" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="tablet:mt-[18.125rem] mt-12 flex flex-col gap-6">
+            <img src="./src/assets/footer-logo.svg" alt="" />
+            <div class="flex max-sm:flex-col gap-2">
+              <div
+                class="w-[50%] flex max-sm:w-full max-sm:justify-between gap-2"
+              >
+                <a
+                  href="#"
+                  class="w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Terms & Conditions</span></a
+                >
+                <a
+                  href="#"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Privacy Policy</span></a
+                >
+              </div>
+              <div class="w-[50%] flex justify-between max-sm:w-full gap-2">
+                <a
+                  href="#"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Made by ++</span></a
+                >
+                <div class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]">
+                  © Copyright 2026 ShareWillow. All rights reserved.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Global Js -->
+    <script src="./src/js/main.js" defer></script>
+    <!-- Blog Js -->
+    <script src="./src/js/blog.js" defer></script>
+  </body>
+</html>

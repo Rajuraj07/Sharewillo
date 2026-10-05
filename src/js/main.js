@@ -1,67 +1,65 @@
+// global.js
 $(document).ready(function () {
-  gsap.registerPlugin(ScrollTrigger);
-
   // 1. Initialize Lenis Smooth Scroll
+  gsap.registerPlugin(ScrollTrigger);
   const lenis = new Lenis({
     lerp: 0.1,
     wheelMultiplier: 0.7,
     infinite: false,
     gestureOrientation: "vertical",
     normalizeWheel: false,
-    smoothTouch: false
+    smoothTouch: false,
   });
 
   lenis.on('scroll', ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
+  gsap.ticker.add((time) => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
-  ScrollTrigger.refresh();
 
-  // 2. Header Hide / Show Logic
+  // 2. Hide/Show Header on Scroll
   let lastScrollTop = 0;
-  let $header = $('#main-header');
-  let $mobileDrawer = $('#mobile-drawer');
+  const $header = $('#main-header');
+  const $mobileDrawer = $('#mobile-drawer');
 
-  lenis.on('scroll', (e) => {
-    if ($mobileDrawer.hasClass('flex')) return;
-    let scrollTop = e.scroll;
+  if ($header.length) {
+    lenis.on('scroll', (e) => {
+      if ($mobileDrawer.hasClass('flex')) return;
+      let scrollTop = e.scroll;
+      if (Math.abs(lastScrollTop - scrollTop) <= 10) return;
 
-    if (Math.abs(lastScrollTop - scrollTop) <= 10) return;
+      if (scrollTop > lastScrollTop && scrollTop > 120) {
+        $header.addClass('nav-hidden');
+      } else {
+        $header.removeClass('nav-hidden');
+      }
+      lastScrollTop = scrollTop;
+    });
+  }
 
-    if (scrollTop > lastScrollTop && scrollTop > 120) {
-      $header.addClass('nav-hidden');
-    } else {
-      $header.removeClass('nav-hidden');
-    }
-    lastScrollTop = scrollTop;
-  });
+  // 3. Mobile Navigation Drawer
+  const $mobileBtn = $('#mobile-menu-btn');
+  const $hamburgerIcon = $('#hamburger-icon');
+  const $closeIcon = $('#close-icon');
 
-  // 3. Mobile Drawer Controls
-  let $mobileBtn = $('#mobile-menu-btn');
-  let $hamburgerIcon = $('#hamburger-icon');
-  let $closeIcon = $('#close-icon');
+  if ($mobileBtn.length) {
+    $mobileBtn.on('click', function () {
+      let isExpanded = $(this).attr('aria-expanded') === 'true';
+      $(this).attr('aria-expanded', !isExpanded);
+      $hamburgerIcon.toggleClass('hidden');
+      $closeIcon.toggleClass('hidden');
 
-  $mobileBtn.on('click', function () {
-    let isExpanded = $(this).attr('aria-expanded') === 'true';
-    $(this).attr('aria-expanded', !isExpanded);
-    $hamburgerIcon.toggleClass('hidden');
-    $closeIcon.toggleClass('hidden');
+      if (isExpanded) {
+        $mobileDrawer.addClass('hidden').removeClass('flex');
+        $('body').removeClass('overflow-hidden');
+        lenis.start();
+      } else {
+        $mobileDrawer.removeClass('hidden').addClass('flex');
+        $('body').addClass('overflow-hidden');
+        lenis.stop();
+      }
+    });
+  }
 
-    if (isExpanded) {
-      $mobileDrawer.addClass('hidden').removeClass('flex');
-      $('body').removeClass('overflow-hidden');
-      lenis.start();
-    } else {
-      $mobileDrawer.removeClass('hidden').addClass('flex');
-      $('body').addClass('overflow-hidden');
-      lenis.stop();
-    }
-  });
-
-  // 4. Accordion Logic
+  // 4. Accordions & FAQ Toggles
   $('.mobile-accordion-btn').on('click', function () {
     let $btn = $(this);
     let $content = $btn.next('.mobile-accordion-content');
@@ -81,194 +79,12 @@ $(document).ready(function () {
     }
   });
 
-  // 5. Lottie ScrollTrigger Function (Hero Scroll Style)
-  function createLottieScrollTrigger(config) {
-    let target = typeof config.target === 'string'
-      ? document.querySelector(config.target)
-      : config.target;
-
-    if (!target) return null;
-
-    let playhead = { frame: 0 };
-    let anim = lottie.loadAnimation({
-      container: target,
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: config.path,
-    });
-
-    // Check if Lottie JSON file loaded properly
-    anim.addEventListener('data_failed', () => {
-      console.error('Lottie file failed to load. Check path:', config.path);
-    });
-
-    anim.addEventListener('DOMLoaded', () => {
-      gsap.to(playhead, {
-        frame: anim.totalFrames - 1,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: config.trigger || '.hero-section',
-          start: config.start || 'top top',
-          end: config.end || '+=1100',       
-          scrub: 0.8,                       
-          invalidateOnRefresh: true,               
-        },
-        onUpdate: () => anim.goToAndStop(playhead.frame, true),
-      });
-
-      ScrollTrigger.refresh();
-    });
-
-    return anim;
-  }
-
-  // 6. MatchMedia Responsive Triggers
-  let mm = gsap.matchMedia();
-
-  mm.add('(min-width: 992px)', () => {
-    let anim = createLottieScrollTrigger({
-      target: '#desktop-lottie',
-      path: './src/assets/first-scroll-people.json',
-      trigger: '.hero-section',
-      start: 'top top',
-      end: '+=750',    
-    });
-    return () => anim?.destroy();
-  });
-
-  mm.add('(max-width: 991px)', () => {
-    let anim = createLottieScrollTrigger({
-      target: '#mobile-lottie',
-      path: './src/assets/mobile-first-scroll-people.json',
-      trigger: '.hero-section',
-      start: 'top top',
-      end: '+=750',
-    });
-    return () => anim?.destroy();
-  });
-  // 7.Hero section bg transition
-  gsap.to('.hero-section', {
-    backgroundColor: '#ffffff',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.hero-section',
-      start: 'top top',
-      end: '+=400',         
-      scrub: true,          
-      invalidateOnRefresh: true,
-    }
-  });
-  //8. motivate section animation
-  const initialPositions = [
-    { selector: '.home_motivate-img.cc-1', x: '41rem',  y: '-5rem' },
-    { selector: '.home_motivate-img.cc-2', x: '29rem',  y: '10rem' },
-    { selector: '.home_motivate-img.cc-3', x: '13rem',  y: '-14rem' },
-    { selector: '.home_motivate-img.cc-4', x: '0px',    y: '16rem' },
-    { selector: '.home_motivate-img.cc-5', x: '-13rem', y: '-14rem' },
-    { selector: '.home_motivate-img.cc-6', x: '-27rem', y: '10rem' }, 
-    { selector: '.home_motivate-img.cc-7', x: '-38rem', y: '-8rem' }  
-  ];
-  gsap.fromTo(
-    '.motivate-grid',
-    { opacity: 0 },
-    {
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.section-motivate',
-        start: 'top 60%',
-        toggleActions: 'play none none reverse',
-      },
-    }
-  );
-
-  initialPositions.forEach((item) => {
-    gsap.from(item.selector, {
-      x: item.x,
-      y: item.y,
-      duration: 1.2,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.section-motivate',
-        start: 'top 60%',
-        toggleActions: 'play none none reverse',
-      },
-    });
-  });
-  //9. Testimonial Section 
-  const tabs = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.tab-panel');
-  const indicator = document.getElementById('tab-bg-indicator');
-
-  const moveIndicator = (tab) => {
-    gsap.to(indicator, { x: tab.offsetLeft, width: tab.offsetWidth, duration: 0.3, ease: 'power2.out' });
-  };
-
-  const switchTab = (activeTab) => {
-    tabs.forEach((tab) => {
-      const isActive = tab === activeTab;
-      tab.setAttribute('aria-selected', isActive);
-      tab.setAttribute('tabindex', isActive ? '0' : '-1');
-      tab.classList.toggle('text-white', isActive);
-      tab.classList.toggle('text-brand-espresso-500', !isActive);
-      tab.classList.toggle('hover:opacity-80', !isActive);
-    });
-
-    moveIndicator(activeTab);
-
-    panels.forEach((panel) => {
-      const isMatch = panel.id === activeTab.dataset.target;
-      panel.classList.toggle('hidden', !isMatch);
-      panel.classList.toggle('flex', isMatch);
-
-      if (isMatch) {
-        gsap.fromTo(
-          panel.querySelectorAll('.testimonial-card'),
-          { opacity: 0, y: 15 },
-          { opacity: 1, y: 0, duration: 0.35, stagger: 0.08, ease: 'power2.out' }
-        );
-      }
-    });
-  };
-
-  const initialTab = document.querySelector('.tab-btn[aria-selected="true"]') || tabs[0];
-  gsap.set(indicator, { x: initialTab.offsetLeft, width: initialTab.offsetWidth });
-
-  tabs.forEach((tab) => tab.addEventListener('click', () => switchTab(tab)));
-
-  window.addEventListener('resize', () => {
-    const activeTab = document.querySelector('.tab-btn[aria-selected="true"]');
-    if (activeTab) moveIndicator(activeTab);
-  });
-  //10.Process section animation
-  const leftCards = document.querySelectorAll('.process-card');
-  const lottieCards = document.querySelectorAll('.lottie-card');
-
-  leftCards.forEach((card, index) => {
-    if (index === 0) return;
-
-    gsap.to(lottieCards[index - 1], {
-      yPercent: -100,
-      ease: "none",
-      scrollTrigger: {
-        trigger: card,
-        start: "top 50%", 
-        end: "top 20%",   
-        scrub: 1.2 
-      }
-    });
-  });
-  //11.Mobile Footer Dropdown
   $('.faq-toggle').on('click', function () {
     const $button = $(this);
     const $item = $button.closest('.faq-item');
     const $content = $item.find('.faq-content');
     const $icon = $button.find('.faq-icon');
     const isOpen = $button.attr('aria-expanded') === 'true';
-
-    // Target class to toggle on parent
     const activeClass = 'text-brand-espresso-300';
 
     $('.faq-item').not($item).each(function () {
