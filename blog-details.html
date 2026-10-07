@@ -1,0 +1,1715 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShareWillow Blog</title>
+    <!-- Meta Description Tag -->
+    <meta
+      name="description"
+      content="Learn more about incentive plans, and how to build a plan that makes sense for your business. Check out the free articles and templates on our blog."
+    />
+    <!-- Open Graph -->
+    <meta content="./src/assets/og-image.jpg" property="og:image" />
+    <!-- Standard Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/favicon.png"
+    />
+    <!-- Webclip / Apple Touch Icon (Mobile Home Screens) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="256x256"
+      href="./src/assets/webclip.png"
+    />
+    <!-- Lenis Css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
+    <!-- Custom Css Tyle -->
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="font-body">
+    <div class="page-wrapper overflow-clip">
+      <header
+        id="main-header"
+        class="nav-component fixed lg:top-4 lg:pt-0 pt-6 inset-x-0 z-50 w-full px-4 sm:px-7"
+        role="banner"
+      >
+        <div
+          class="max-w-90rem mx-auto bg-brand-ivory rounded-[1.25rem] lg:py-4 lg:px-[18px] py-2 px-3 flex items-center justify-between relative z-50"
+        >
+          <!-- LOGO -->
+          <div class="flex items-center">
+            <a
+              href="/"
+              aria-label="ShareWillow Home"
+              class="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm lg:max-w-[182px] max-w-[156px]"
+            >
+              <img
+                src="./src/assets/Logo.svg"
+                alt="ShareWillow Logo"
+                width="140"
+                height="28"
+                decoding="async"
+                class="h-6 md:h-7 w-auto object-contain"
+              />
+            </a>
+          </div>
+
+          <!-- DESKTOP NAVIGATION MENU (Visible > 991px) -->
+          <nav
+            aria-label="Main Navigation"
+            class="hidden nav-desktop:flex items-center gap-6 lg:gap-8 text-brand-espresso font-medium text-[1rem] tracking-[-0.54px]"
+          >
+            <ul class="flex items-center gap-6 lg:gap-8">
+              <!-- Solutions Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Solutions</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown Menu Wrapper -->
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 z-50 transition-all duration-200 pt-6"
+                >
+                  <div
+                    class="w-72 bg-brand-ivory rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium">For Companies</span>
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium text-brand-espresso"
+                            >For Employees</span
+                          >
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                        >
+                          <span class="font-medium text-brand-espresso"
+                            >Plan Design Consultation</span
+                          >
+                          <svg
+                            class="w-4 h-4 text-gray-400 group-hover/item:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Resources Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Resources</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown Menu Wrapper -->
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                >
+                  <div
+                    class="w-72 bg-brand-ivory rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Blog & Insights</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Case Studies</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Incentive Calculator</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Documentation</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Industries Dropdown -->
+              <li class="relative group py-2">
+                <button
+                  type="button"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span>Industries</span>
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown Menu Wrapper -->
+                <div
+                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                >
+                  <div
+                    class="w-72 bg-brand-ivory rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
+                  >
+                    <ul class="space-y-1">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Technology & SaaS</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Manufacturing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Healthcare</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center justify-between p-3 rounded-xl text-brand-espresso-300 hover:bg-brand-ivory hover:text-brand-espresso-500 transition-colors group/item"
+                          >Professional Services</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a
+                  href="#pricing"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  >Features</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- DESKTOP CTA BUTTONS (Hidden <= 991px) -->
+          <div class="hidden nav-desktop:flex items-center gap-3">
+            <a
+              href="/login"
+              class="bg-brand-lemon leading-[1] tracking-[-.03375rem] text-black px-5 py-3 rounded-full hover:bg-brand-light-lemon transition-all h-[2.875rem] flex items-center"
+              >Sign in</a
+            >
+            <a
+              href="/signup"
+              class="bg-brand-espresso-500 leading-[1] tracking-[-.03375rem] px-5 py-3 rounded-full hover:bg-brand-espresso-300 transition-all text-white h-[2.875rem] flex items-center"
+              >Sign Up Now</a
+            >
+          </div>
+
+          <!-- HAMBURGER / CLOSE BUTTON (Visible <= 991px) -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="nav-desktop:hidden bg-black text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none cursor-pointer"
+            aria-label="Toggle Mobile Menu"
+            aria-expanded="false"
+          >
+            <svg
+              id="hamburger-icon"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-5 h-5 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- FULLSCREEN MOBILE NAV DRAWER (<= 991px) -->
+        <div
+          id="mobile-drawer"
+          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
+        >
+          <nav
+            aria-label="Mobile Navigation"
+            class="w-full mx-auto bg-white rounded-3xl p-6 shadow-sm"
+          >
+            <ul
+              class="flex flex-col divide-y divide-gray-100 text-brand-espresso font-medium text-lg"
+            >
+              <!-- Solutions Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Solutions</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >For Companies</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >For Employees</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Plan Design Consultation</a
+                  >
+                </div>
+              </li>
+
+              <!-- Resources Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Resources</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Blog & Insights</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Case Studies</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Incentive Calculator</a
+                  >
+                </div>
+              </li>
+
+              <!-- Industries Mobile Accordion -->
+              <li class="py-3">
+                <button
+                  type="button"
+                  class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
+                >
+                  <span>Industries</span>
+                  <svg
+                    class="w-5 h-5 text-gray-400 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Technology & SaaS</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Manufacturing</a
+                  >
+                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                    >Healthcare</a
+                  >
+                </div>
+              </li>
+
+              <li class="py-3">
+                <a href="#pricing" class="block py-1">Pricing</a>
+              </li>
+              <li class="py-3">
+                <a href="#about" class="block py-1">About</a>
+              </li>
+              <li class="py-3">
+                <a href="#features" class="block py-1">Features</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="w-full mt-8 flex flex-col gap-3">
+            <a
+              href="#"
+              class="w-full bg-brand-espresso-500 text-brand-ivory font-medium text-center py-4 rounded-full text-lg"
+            >
+              Get a demo
+            </a>
+            <a
+              href="/login"
+              class="w-full bg-brand-lemon text-brand-espresso font-medium text-center py-4 rounded-full text-lg"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <section
+          class="px-8 max-sm:px-4 tablet:pt-[12.125rem] pt-[8rem] tablet:pb-[3.59375rem] pb-8"
+        >
+          <div class="max-w-90rem mx-auto w-full">
+            <div
+              class="flex flex-col items-center justify-center text-center relative"
+            >
+              <a
+                class="w-16 h-16 bg-brand-ivory rounded-full flex items-center justify-center overflow-hidden tablet:absolute top-0 left-0 max-tablet:w-[2.5rem] max-tablet:h-[2.5rem] max-tablet:mr-auto max-tablet:mb-[1rem]"
+                href=""
+              >
+                <svg
+                  class="tablet:w-[1.375rem] w-[0.875rem]"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.46003 9.86534L21.866 9.86533L21.866 12.1367L4.46003 12.1367L12.5994 20.2757L11 21.875L0.126029 11.001L11 0.135003L12.5994 1.72634L4.46003 9.86534Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </a>
+              <h1
+                class="font-heading font-medium leading-[1.2] tracking-[-.1425rem] text-[clamp(2rem,1.2958rem+3.0047vw,4rem)] max-w-[25ch] mb-6"
+              >
+                Crew Bonus Plan: How an Outdoor Living Company Is Paying $50 for
+                Every Hour Its Crews Save
+              </h1>
+              <div class="text-brand-espresso-300 flex gap-0.5 mb-4">
+                <p
+                  class="leading-[1.2] tracking-[-.03em] tablet:text-[1.325rem] text-[1rem]"
+                >
+                  By
+                </p>
+                <p
+                  class="leading-[1.2] tracking-[-.03em] tablet:text-[1.325rem] text-[1rem]"
+                >
+                  Ryan Shank
+                </p>
+              </div>
+              <div class="flex text-brand-espresso-300">
+                <div
+                  class="flex gap-2 mr-3 pr-3 border-r border-brand-espresso-300"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 6V12H16.5M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                      stroke="#746A66"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>6</p>
+                  <p>min read</p>
+                </div>
+                <div class="flex gap-2">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.75 3V5.25M17.25 3V5.25M3 18.75V7.5C3 6.90326 3.23705 6.33097 3.65901 5.90901C4.08097 5.48705 4.65326 5.25 5.25 5.25H18.75C19.3467 5.25 19.919 5.48705 20.341 5.90901C20.7629 6.33097 21 6.90326 21 7.5V18.75M3 18.75C3 19.3467 3.23705 19.919 3.65901 20.341C4.08097 20.7629 4.65326 21 5.25 21H18.75C19.3467 21 19.919 20.7629 20.341 20.341C20.7629 19.919 21 19.3467 21 18.75M3 18.75V11.25C3 10.6533 3.23705 10.081 3.65901 9.65901C4.08097 9.23705 4.65326 9 5.25 9H18.75C19.3467 9 19.919 9.23705 20.341 9.65901C20.7629 10.081 21 10.6533 21 11.25V18.75"
+                      stroke="#746A66"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>4.10.26</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-8 max-sm:px-4 tablet:pb-32 pb-12 tablet:pt-16 pt-4">
+          <div class="max-w-90rem mx-auto w-full">
+            <div class="max-w-[71.375rem] mx-auto">
+              <div class="flex items-start justify-start">
+                <div class="max-w-[56.25rem] w-full">
+                  <div class="mb-8 text-brand-espresso-300">
+                    <h2
+                      class="leading-[1.2] tracking-[-.06rem] tablet:pb-16 pb-[1.75rem] border-b border-brand-espresso-300 text-[2rem] max-sm:text-[1rem]"
+                    >
+                      A crew bonus plan that pays $50 per hour saved, gated by
+                      daily logs and zero callbacks. See how an outdoor living
+                      company is building it on JobTread.
+                    </h2>
+                  </div>
+                  <h2
+                    class="font-heading font-medium leading-[1.19524] tracking-[-.03em] tablet:mb-12 mb-6 text-[2.625rem] max-sm:text-[1.5rem]"
+                  >
+                    A crew bonus plan starts with one question: how long should
+                    this job take?
+                  </h2>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    A good crew bonus plan answers a simple question before
+                    anyone swings a hammer: how many hours should this job take?
+                    Once you have that number, you can pay the crew for beating
+                    it. The catch is that most small contractors never write the
+                    number down in a form the payroll system can read, and that
+                    is where a lot of well-meant bonus ideas stall.
+                  </p>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    An outdoor living company with three field crews is working
+                    through exactly this right now. The owners want crews that
+                    finish jobs efficiently and document their work, and they
+                    want to understand true labor cost and overhead on every
+                    project. Their field teams are small, two or three people
+                    each, and they run their jobs on JobTread. This post walks
+                    through the plan they settled on, the gates they added so it
+                    cannot be gamed, and the data gaps they hit on the first
+                    review. The plan is still being validated, so this is a look
+                    at the design work, not a victory lap.
+                  </p>
+                  <h2
+                    class="font-heading font-medium leading-[1.19524] tracking-[-.03em] tablet:mb-12 mb-6 text-[2.625rem] max-sm:text-[1.5rem]"
+                  >
+                    The plan: $50 for every hour the crew saves
+                  </h2>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    The structure they chose for field workers is a fixed award
+                    based on hours saved. Each completed job has a budgeted
+                    number of labor hours from the bid. If the crew finishes in
+                    fewer hours than budgeted, the company pays
+                    <span class="font-bold">$50 for each hour saved</span>
+                    ,split among the crew that worked the job.
+                  </p>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    Here is the math on an example job. Say a patio build is
+                    budgeted at 40 labor hours and the crew finishes it in 32.
+                    That leaves 8 hours saved, so the award is $400. A
+                    three-person crew splits that into roughly $133 each. A
+                    two-person crew would take $200 apiece. The crew can see the
+                    reward in plain dollars, and the company only pays when it
+                    has already banked the labor it would have spent.
+                  </p>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    The flat dollar figure is deliberate. A percentage of job
+                    revenue rewards the crew for selling bigger projects, which
+                    they do not control. A fixed rate per hour saved rewards the
+                    one thing they do control: how efficiently they work. We
+                    compared this kind of approach with other designs in our
+                    guide to
+                    <a class="text-brand-espresso-500" href=""
+                      >bonus structure examples</a
+                    >, and the labor-saved model fits field crews well because
+                    the target is concrete and visible on the job.
+                  </p>
+                  <img
+                    class="rounded-[12px] mt-2 mb-6 w-full"
+                    src="./src/assets/blog-crew-bonus-plan-hours-saved-inline-1.png"
+                    alt=""
+                  />
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    The office side gets a different structure. For
+                    superintendents and office staff, the company discussed a
+                    profit-share style award of about 1% of job revenue. On a
+                    $30,000 job, that would be $300. It is not final, and it
+                    makes sense: the people who schedule, order, and coordinate
+                    do not log hours on site, so a revenue-linked share rewards
+                    the outcome they influence.
+                  </p>
+                  <!-- Blog cta one -->
+                  <div
+                    class="flex items-center justify-start gap-5 rounded-[1.25rem] bg-brand-lemon md:py-8 md:px-6 p-4 md:mb-8 mb-4"
+                  >
+                    <svg
+                      class="md:w-8 w-[1.375rem] flex-none"
+                      width="100%"
+                      viewBox="0 0 33 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M32.5968 22.0238L11.5968 44.5238C11.3742 44.7613 11.0805 44.92 10.7598 44.9759C10.4392 45.0318 10.1091 44.9819 9.81931 44.8337C9.52953 44.6855 9.2958 44.4471 9.1534 44.1544C9.01099 43.8618 8.96764 43.5308 9.02989 43.2113L11.7786 29.4619L0.973011 25.4044C0.740945 25.3176 0.533997 25.1747 0.370654 24.9884C0.207311 24.8021 0.0926616 24.5782 0.0369483 24.3368C-0.018765 24.0954 -0.0138066 23.8439 0.05138 23.6048C0.116567 23.3658 0.239951 23.1466 0.410511 22.9669L21.4105 0.466915C21.6331 0.229419 21.9268 0.0707486 22.2474 0.0148468C22.5681 -0.041055 22.8982 0.00884533 23.188 0.157018C23.4777 0.30519 23.7115 0.543594 23.8539 0.836256C23.9963 1.12892 24.0396 1.45995 23.9774 1.77941L21.2211 15.5438L32.0268 19.5957C32.2571 19.6831 32.4624 19.8258 32.6245 20.0114C32.7865 20.197 32.9004 20.4196 32.956 20.6596C33.0116 20.8996 33.0072 21.1496 32.9433 21.3876C32.8793 21.6255 32.7577 21.844 32.5893 22.0238H32.5968Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    <p
+                      class="leading-[1.19524] tracking-[-.045rem] md:text-[22px] text-[1rem]"
+                    >
+                      <span class="font-medium"
+                        >Essential KPI Guide [Free Download]:</span
+                      >
+                      <a href=""
+                        >We put together a guide + template of the top 20
+                        essential KPIs used by thousands of successful
+                        businesses to boost efficiency and increase profits.
+                        <span class="font-bold">Get the guide now →</span></a
+                      >
+                    </p>
+                  </div>
+                  <h2
+                    class="font-heading font-medium leading-[1.19524] tracking-[-.03em] tablet:mb-12 mb-6 text-[2.625rem] max-sm:text-[1.5rem]"
+                  >
+                    Three gates before any award is paid
+                  </h2>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    A bonus that only checks hours will quietly reward rushed
+                    work. To protect quality, the company set three conditions
+                    that every job must meet before the award pays out:
+                  </p>
+                  <ul
+                    class="leading-[1.2] tracking-[-.045rem] md:mb-16 mb-12 pl-8 md:text-2xl text-[1rem] text-brand-espresso-300 list-disc flex flex-col gap-1"
+                  >
+                    <li>
+                      <span class="font-bold">A submitted daily log.</span> The
+                      log captures the date, the crew or subcontractors on site,
+                      who submitted it, a score, and file uploads. It also tells
+                      the system which crew worked the job, which is how the
+                      award gets split correctly.
+                    </li>
+                    <li>
+                      <span class="font-bold"
+                        >Completion within the budgeted time.</span
+                      >
+                      This is the hours-saved test itself.
+                    </li>
+                    <li>
+                      <span class="font-bold">No callback or rework.</span>
+                      A job that comes back as a warranty visit does not
+                      qualify.
+                    </li>
+                  </ul>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    Together these turn a simple hours bonus into a
+                    quality-and-documentation bonus. The crew that finishes
+                    early but skips the daily log earns nothing, and so does the
+                    crew that finishes early and leaves a punch-list item the
+                    homeowner has to call about. If you want to see how a
+                    similar trio of rules keeps incentives honest, our story on
+                    <a class="text-brand-espresso-500" href=""
+                      >two install crews with a 20% productivity gap</a
+                    >
+                    shows what happens when the clock, not opinion, decides who
+                    is ahead.
+                  </p>
+                  <h2
+                    class="font-heading font-medium leading-[1.19524] tracking-[-.03em] tablet:mb-12 mb-6 text-[2.625rem] max-sm:text-[1.5rem]"
+                  >
+                    Three gates before any award is paid
+                  </h2>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    The design was the easy part. The first review of the real
+                    data surfaced three gaps, and each one is common enough that
+                    you should check for it before you launch your own crew
+                    bonus plan.
+                  </p>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    <span class="font-bold">Budgeted hours were blank.</span>
+                    Labor estimates live in the bids as crew-rate line items,
+                    but those hours were not flowing into the field that the
+                    report compares against actual hours. A bonus based on hours
+                    saved cannot run without the budget side of the equation.
+                    The company is now checking how its labor catalog items,
+                    manual labor entries, and scheduling map into budgeted
+                    hours, and it will not set a go-live date until an example
+                    week reconciles.
+                  </p>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    <span class="font-bold"
+                      >Actual hours are entered by hand.</span
+                    >
+                    The crews punch in and out through a time clock with GPS
+                    boundaries, but it tracks the employee, not the job. Actual
+                    job hours are keyed in from timesheets, which means a crew
+                    that forgets to clock in understates its hours and
+                    overstates its savings. The company plans manual review in
+                    the meantime. Any plan that pays for time saved is only as
+                    strong as the time record underneath it. For a different way
+                    to tie crew pay to labor, see our
+                  </p>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    <span class="font-bold"
+                      >Callbacks have no native home.</span
+                    >
+                    JobTread does not have a warranty or callback workflow, and
+                    a closed job cannot be reopened cleanly. So the company
+                    creates a new job with the word warranty in the name.
+                    ShareWillow can then find those jobs, link each one to the
+                    customer's most recent completed job, and mark the original
+                    as a callback. It is a workaround, but a consistent naming
+                    rule is all the plan needs.
+                  </p>
+                  <img
+                    class="rounded-[12px] mt-2 mb-6 w-full"
+                    src="./src/assets/twocrew-bonus-plan-hours-saved-inline-2.png"
+                    alt=""
+                  />
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    One more limit is worth naming. Photo uploads sit behind a
+                    general upload function at the bottom of the daily log, and
+                    they cannot be reported reliably yet. Rather than let photo
+                    compliance block the plan, the company is considering a
+                    separate yes or no field or a manual check. Perfect data can
+                    wait. A rule that is simple and consistent should not.
+                  </p>
+                  <!-- Blog cta Two -->
+                  <div
+                    class="relative bg-brand-lemon rounded-[2.5rem] md:mb-16 mb-8 p-6"
+                  >
+                    <div class="max-w-[27.8125rem] w-full">
+                      <h3
+                        class="font-heading font-medium leading-[1.2] tracking-[-.07875rem] text-[clamp(1.875rem,1.6109rem+1.1268vw,2.625rem)]"
+                      >
+                        Profit sharing <span class="italic">made simple</span>
+                      </h3>
+                      <p
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.7165rem+0.6761vw,1.325rem)] tablet:mb-[8rem] mb-[1.5rem] mt-6"
+                      >
+                        Give your team a stake in the company’s success.
+                        ShareWillow helps you create and manage profit-sharing
+                        programs that motivate employees and drive business
+                        results.
+                      </p>
+                      <a
+                        class="py-[1.25rem] px-[1.5rem] rounded-full inline-flex items-center justify-center text-center bg-brand-espresso-500 text-brand-ivory font-medium leading-[1] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] transition-colors duration-[300ms] ease hover:bg-brand-espresso-300"
+                        href="#"
+                        ><span>Get a demo</span></a
+                      >
+                    </div>
+                    <img
+                      class="tablet:absolute bottom-0 right-0 max-w-[18.75rem] select-none max-tablet:max-w-[22rem] max-tablet:mx-auto max-tablet:mt-10 max-tablet:mb-[-24px]"
+                      src="./src/assets/blog-cta-1.png"
+                      alt=""
+                    />
+                  </div>
+                  <h2
+                    class="font-heading font-medium leading-[1.19524] tracking-[-.03em] tablet:mb-12 mb-6 text-[2.625rem] max-sm:text-[1.5rem]"
+                  >
+                    How to set up a crew bonus plan without paying for bad data
+                  </h2>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    The lesson from this rollout is not the dollar amount. It is
+                    the order of operations. If you want a crew bonus plan that
+                    holds up, build it in this sequence:
+                  </p>
+                  <ol class="list-decimal mt-4 mb-4 pl-6">
+                    <li class="mb-1">
+                      <span class="font-bold">Fix the budget first.</span> Make
+                      sure every job carries a budgeted hours number in a place
+                      your reports can read. No budget, no bonus.
+                    </li>
+                    <li class="mb-1">
+                      <span class="font-bold"
+                        >Decide how you will measure actual hours.</span
+                      >
+                      Job-level time beats a general punch clock. If you cannot
+                      get it yet, plan for a manual review.
+                    </li>
+                    <li class="mb-1">
+                      <span class="font-bold"
+                        >Write the eligibility rules in plain words.</span
+                      >
+                      Daily log, within budget, no callback. Anyone on the crew
+                      should be able to recite them.
+                    </li>
+                    <li class="mb-1">
+                      <span class="font-bold"
+                        >Run an example week before launch.</span
+                      >
+                      Compare what the plan would pay against what you would
+                      have paid by hand, and fix the gaps while the numbers are
+                      still theoretical.
+                    </li>
+                    <li class="mb-1">
+                      <span class="font-bold"
+                        >Pick a rate you can afford at your thinnest
+                        margin.</span
+                      >
+                      <a href="">how to calculate bonus pay</a> shows how to
+                      test a rate before you commit.
+                    </li>
+                  </ol>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    Crews that see their own number tend to protect it. A
+                    painting company that moved to weekly payouts found its crew
+                    grew without breaking the plan, which we covered in how a
+                    painting company tripled its crew. The point is the same
+                    here: a crew bonus plan works when the reward is close to
+                    the work and the rules are boring. Software like ShareWillow
+                    can pull jobs, daily logs, and time entries into a single
+                    report so the award is calculated from the same record
+                    everyone can see.
+                  </p>
+                  <h2
+                    class="font-heading font-medium leading-[1.19524] tracking-[-.03em] tablet:mb-12 mb-6 text-[2.625rem] max-sm:text-[1.5rem]"
+                  >
+                    Frequently asked questions
+                  </h2>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    Start with a budgeted number of labor hours for each job,
+                    then pay a fixed amount for each hour the crew saves. This
+                    company uses $50 per hour saved, split among the crew that
+                    worked the job, with eligibility gates for a daily log,
+                    on-time completion, and no callbacks.
+                  </p>
+                  <h3
+                    class="font-heading font-medium leading-[1.2] tracking-[-.07875rem] tablet:mb-12 mb-6 tablet:text-[38px] text-[34px]"
+                  >
+                    Should office staff be included in a crew bonus plan?
+                  </h3>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    They can be, but with a different measure. People who
+                    coordinate jobs do not log hours on site, so a small share
+                    of job revenue, such as the 1% under discussion here, ties
+                    their reward to the outcome they influence instead of the
+                    crew's hours.
+                  </p>
+                  <h3
+                    class="font-heading font-medium leading-[1.2] tracking-[-.07875rem] tablet:mb-12 mb-6 tablet:text-[38px] text-[34px]"
+                  >
+                    How do you stop a crew from rushing to earn the bonus?
+                  </h3>
+                  <p
+                    class="text-brand-espresso-300 leading-[1.19524] tracking-[-.045rem] md:text-2xl text-[1rem] md:mb-12 mb-6"
+                  >
+                    Add quality gates. Requiring a submitted daily log and no
+                    callback or rework means a crew only earns the award when
+                    the work is documented and holds up after it is done.
+                  </p>
+                  <h2
+                    class="font-heading font-medium leading-[1.19524] tracking-[-.03em] tablet:mb-12 mb-6 text-[2.625rem] max-sm:text-[1.5rem]"
+                  >
+                    Related reading
+                  </h2>
+                  <ul
+                    class="leading-[1.2] tracking-[-.045rem] md:mb-16 mb-12 pl-8 md:text-2xl text-[1rem] text-brand-espresso-300 list-disc flex flex-col gap-1"
+                  >
+                    <li>
+                      <a href=""
+                        >The 20% Productivity Gap Between Two Install Crews
+                        Nobody Could See, Until the Clock Told the Truth</a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        >Why One Roofing Company Ditched Team Bonuses for a
+                        Labor-Rate Target</a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        >How a Painting Company Tripled Its Crew Without
+                        Breaking Its Bonus Plan</a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        >9 Bonus Structure Examples Employees and Employers
+                        Love</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Blog cta Three -->
+                  <div
+                    class="md:p-12 p-6 md:rounded-[2.5rem] rounded-[1.5rem] bg-brand-lemon"
+                  >
+                    <h2
+                      class="font-heading font-medium leading-[1.2] tracking-[-.03em] md:text-[2.625rem] text-2xl md:mb-32 mb-12"
+                    >
+                      Conclusion
+                    </h2>
+                    <p
+                      class="leading-[1.19524] tracking-[-.045rem] md:text-[22px] text-[1rem]"
+                    >
+                      Pay crews for hours saved only when the budget is real,
+                      the clock is trustworthy, and the work comes with a daily
+                      log and no callback.
+                    </p>
+                  </div>
+                  <!-- Blog cta Four -->
+                  <div
+                    class="flex flex-col items-center bg-brand-ivory md:p-[2.25rem] p-[1.5rem] md:rounded-[2.5rem] rounded-[1.25rem] md:mt-16 mt-4 text-center"
+                  >
+                    <h3
+                      class="font-heading font-medium leading-[1.2] tracking-[-.07875rem] md:text-[2.625rem] text-[1.875rem]"
+                    >
+                      Create incentives that
+                      <span class="italic">drive results</span>
+                    </h3>
+                    <p
+                      class="leading-[1.2] tracking-[-.03em] text=[clamp(0.875rem,0.7165rem+0.6761vw,1.325rem)] md:py-8 py-5"
+                    >
+                      You shouldn't need complex equity plans to align your
+                      team. ShareWillow makes it simple to create transparent
+                      profit-sharing programs that motivate employees and grow
+                      your business.
+                    </p>
+                    <a
+                      class="py-[1.25rem] px-[1.5rem] rounded-full flex items-center justify-center text-center bg-brand-espresso-500 text-brand-ivory font-medium leading-[1] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] transition-colors duration-[300ms] ease hover:bg-brand-espresso-300"
+                      href="#"
+                      ><span>See the product</span></a
+                    >
+                    <div class="flex gap-2 items-center md:mt-8 mt-6">
+                      <img
+                        class="max-w-[7.4375rem]"
+                        src="./src/assets/people-badge.png"
+                        alt=""
+                      />
+                      <p class="max-w-[20ch] leading-[1.2]">
+                        Incentive plans to help
+                        <a class="underline" href=""
+                          >small businesses thrive.</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="max-w-[20.4375rem] w-full ml-6 sticky top-12 hidden tablet:block"
+                >
+                  <div class="overflow-hidden rounded-[1.25rem]">
+                    <div class="px-6 pt-6 bg-brand-lemon">
+                      <img
+                        class="rounded-t-lg"
+                        src="./src/assets/bonus-template.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="bg-brand-ivory py-6 px-4">
+                      <p
+                        class="leading-[1.2] tracking-[-.04125rem] mb-5 md:text-[1.1rem] text-[1rem]"
+                      >
+                        "I was able to leverage the knowledge of the ShareWillow
+                        team to learn how other companies were designing their
+                        bonus plans. The template was extremely helpful."
+                      </p>
+                      <div class="my-6 flex gap-2">
+                        <figure class="max-w-[3rem]">
+                          <img src="./src/assets/brian tustin.png" alt="" />
+                        </figure>
+                        <div class="text-[#180600b3]">
+                          <p class="text-[1.125rem] tracking-[-.03375rem]">
+                            Brian Tustin
+                          </p>
+                          <p class="text-[1.125rem] tracking-[-.03375rem]">
+                            Owner, First Rate Movers
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-8 max-sm:px-4 pb-16">
+          <div class="max-w-[71.375rem] mx-auto w-full">
+            <div
+              class="tablet:mb-18 mb-10 pt-6 border-t border-brand-espresso-500"
+            >
+              <h2
+                class="leading-[1.2] tracking-[-.03em] tablet:text-[28px] text-[1.125rem]"
+              >
+                Related Articles
+              </h2>
+            </div>
+            <!-- Blog Related Article Card -->
+            <article class="group flex max-tablet:flex-col relative">
+              <figure
+                class="overflow-hidden relative rounded-[1.25rem] tablet:max-w-[34.9375rem] max-tablet:w-full"
+              >
+                <img
+                  class="size-full object-cover"
+                  src="./src/assets/related-hvac-installer-bonus-hero.png"
+                  alt=""
+                />
+              </figure>
+              <div
+                class="flex flex-col pl-[4.875rem] max-tablet:pl-0 max-tablet:mb-8 max-w-[38.875rem] justify-between items-start tablet:gap-4 max-tablet:pt-10"
+              >
+                <div>
+                  <h3
+                    class="font-heading font-medium leading-[1.2] tracking-[-.07875rem] text-[clamp(2rem,1.868rem+0.5634vw,2.375rem)]"
+                  >
+                    HVAC Installer Bonus: How One Company Set $300 to $1,000
+                    Awards by Job Type Before Its First Payout
+                  </h3>
+                </div>
+                <div>
+                  <p
+                    class="leading-[1.2] tracking-[-.045rem] hidden tablet:block text-[22px] text-brand-espresso-300"
+                  >
+                    HVAC installer bonus plan: one company pays $300 to $1,000
+                    per install by job type, minus labor, split by hours, and
+                    cut its upsell rate from 6% to 3%.
+                  </p>
+                  <div
+                    class="flex items-center gap-2 font-medium text-2xl text-[#180600] mt-8 group-hover:text-[#746a66]"
+                  >
+                    <div
+                      class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
+                    >
+                      <svg
+                        width=".75rem"
+                        viewBox="0 0 19 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.3294 10.4129L11.0794 15.6629C10.9699 15.7723 10.8215 15.8338 10.6667 15.8338C10.5119 15.8338 10.3634 15.7723 10.254 15.6629C10.1445 15.5534 10.083 15.405 10.083 15.2502C10.083 15.0954 10.1445 14.9469 10.254 14.8375L14.5086 10.5835H3.08333C2.92862 10.5835 2.78025 10.522 2.67085 10.4126C2.56146 10.3032 2.5 10.1549 2.5 10.0002C2.5 9.84545 2.56146 9.69708 2.67085 9.58768C2.78025 9.47829 2.92862 9.41683 3.08333 9.41683H14.5086L10.254 5.16287C10.1445 5.05341 10.083 4.90496 10.083 4.75016C10.083 4.59537 10.1445 4.44691 10.254 4.33745C10.3634 4.228 10.5119 4.1665 10.6667 4.1665C10.8215 4.1665 10.9699 4.228 11.0794 4.33745L16.3294 9.58745C16.3836 9.64163 16.4266 9.70596 16.456 9.77678C16.4854 9.8476 16.5005 9.9235 16.5005 10.0002C16.5005 10.0768 16.4854 10.1527 16.456 10.2235C16.4266 10.2944 16.3836 10.3587 16.3294 10.4129Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                    <span class="text-[0.937rem]">Continue reading</span>
+                  </div>
+                </div>
+              </div>
+              <a class="after:absolute after:inset-0" href="">
+                <span class="sr-only"
+                  >HVAC installer bonus plan: one company pays $300 to $1,000
+                  per install by job type, minus labor, split by hours, and cut
+                  its upsell rate from 6% to 3%.</span
+                >
+              </a>
+            </article>
+          </div>
+        </section>
+        <section
+          class="px-8 max-sm:px-4 pt-16 max-sm:pt-12 pb-[7.25rem] max-sm:pb-[5rem]"
+        >
+          <div class="max-w-90rem mx-auto w-full">
+            <div
+              class="flex flex-col items-center justify-center gap-8 text-center"
+            >
+              <h2
+                class="leading-[1.2] tracking-[-.03em] font-heading font-medium text-[clamp(1.875rem,1.6549rem+0.939vw,2.5rem)] max-w-[25ch]"
+              >
+                Motivate employees to act like owners, without complicated
+                equity
+              </h2>
+              <p
+                class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.7165rem+0.6761vw,1.325rem)] max-w-[50ch]"
+              >
+                Book a performance pay audit today, and let us show you how
+                ShareWillow can help your business increase efficiency, reduce
+                callbacks, and grow profits.
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="font-medium py-6 px-5 max-sm:py-3 max-sm:px-4 flex justify-center items-center rounded-full text-center text-brand-ivory bg-brand-espresso-500 gap-4 group max-h-[84px] max-sm:max-h-[56px]"
+              >
+                <span
+                  class="leading-[1] tracking-[-.045rem] text-[clamp(1rem,0.868rem+0.5634vw,1.375rem)] max-h-[85px]"
+                  >Get started for free</span
+                >
+                <div
+                  class="w-12 h-12 max-sm:w-8 max-sm:h-8 flex justify-center items-center rounded-full bg-brand-lemon text-brand-espresso-500"
+                >
+                  <svg
+                    width="1.5rem"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-transform duration-300 ease-in-out group-hover:rotate-90"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.21397 5.44534L11.9072 8.13815H3.67067C3.42131 8.13815 3.18217 8.23721 3.00585 8.41353C2.82953 8.58985 2.73047 8.82899 2.73047 9.07835C2.73047 9.3277 2.82952 9.56685 3.00585 9.74317C3.18217 9.91949 3.42131 10.0185 3.67067 10.0185H11.9072L9.21394 12.7114C9.03757 12.8878 8.93849 13.127 8.93849 13.3764C8.93849 13.6258 9.03757 13.865 9.21394 14.0414C9.39031 14.2178 9.62952 14.3169 9.87895 14.3169C10.1284 14.3169 10.3676 14.2178 10.544 14.0414L14.842 9.74336C14.9293 9.65608 14.9986 9.55245 15.0459 9.43839C15.0932 9.32425 15.1176 9.2019 15.1176 9.07835C15.1176 8.9548 15.0932 8.83245 15.0459 8.71831C14.9986 8.60425 14.9291 8.50044 14.8418 8.41316L10.544 4.1153C10.3676 3.93893 10.1284 3.83984 9.87895 3.83984C9.62952 3.83984 9.39031 3.93893 9.21394 4.1153C9.03757 4.29167 8.93849 4.53088 8.93849 4.78031C8.93849 5.02973 9.0376 5.26897 9.21397 5.44534Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="px-8 max-sm:px-4 py-8 bg-brand-lemon">
+        <div class="max-w-90rem mx-auto w-full">
+          <!-- Footer Top -->
+          <div class="flex justify-between">
+            <div class="w-full max-w-[25rem]">
+              <h2
+                class="font-heading font-medium leading-[1.2] tracking-[-.03em] text-[clamp(1.75rem,1.5299rem+0.939vw,2.375rem)]"
+              >
+                ShareWillow Makes Profit Sharing
+                <span class="italic">Simple</span>
+              </h2>
+            </div>
+            <div
+              class="w-[50%] tablet:flex hidden justify-end items-stretch gap-[3.125rem]"
+            >
+              <!-- Footer Menu One -->
+              <nav class="max-w-[6.625rem]" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-1"
+                >
+                  Solutions
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-1"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>For Companies</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>For Employees</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Plan Design Consultation</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- Footer Menu Two -->
+              <nav class="max-w-[7.6875rem]" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-2"
+                >
+                  Industries
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-2"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Construction</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>All Industries</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- Footer Menu Three -->
+              <nav class="max-w-[8.5rem] flex flex-col" aria-label="Footer">
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-3"
+                >
+                  Resources
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-3"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Blog</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>What Is Profit Sharing?</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Employee Incentive Software</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Scripts & Templates</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Affiliate Program</span></a
+                    >
+                  </li>
+                </ul>
+                <div class="mt-auto">
+                  <img src="./src/assets/certified-badge.svg" alt="" />
+                </div>
+              </nav>
+              <!-- Footer Menu Four -->
+              <nav
+                class="max-w-[9.875rem] min-h-[17.375rem] flex flex-col"
+                aria-label="Footer"
+              >
+                <h3
+                  class="leading-[1.2] tracking-[-.02625rem] font-medium text-[0.875rem] mb-4"
+                  id="footer-menu-title-4"
+                >
+                  Company
+                </h3>
+                <ul
+                  aria-labelledby="footer-menu-title-4"
+                  class="list-none flex flex-col gap-[.375rem] leading-[1.2] tracking-[-.02625rem] text-[0.875rem]"
+                >
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>About</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Contact Us</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Pricing</span></a
+                    >
+                  </li>
+                  <li class="my-0 pl-0">
+                    <a
+                      href=""
+                      class="flex leading-[1.2] tracking-[-.02625rem] text-[0.875rem] transition-colors hover:text-brand-espresso-300"
+                      ><span>Release Notes</span></a
+                    >
+                  </li>
+                </ul>
+                <address class="font-normal mt-auto">
+                  <ul
+                    aria-label="Social media"
+                    class="flex items-center gap-[.625rem] mb-0"
+                  >
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]"
+                        ><img src="./src/assets/x-logo.svg" alt=""
+                      /></a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]"
+                        ><img src="./src/assets/icons-linkedin.svg" alt=""
+                      /></a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]">
+                        <svg
+                          width="1.125rem"
+                          height="100%"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z"
+                            fill="CurrentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="my-0 pl-0">
+                      <a href="#" class="max-w-[1.125rem]">
+                        <svg
+                          width="1.125rem"
+                          height="100%"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z"
+                            fill="CurrentColor"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+              </nav>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="footer_mobile tablet:hidden block mt-12">
+            <div class="footer_mobile-link">
+              <!-- Item 1 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-1"
+                >
+                  <span>Solutions</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-1"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >For Companies</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >For Employees</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 2 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-2"
+                >
+                  <span>Industries</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-2"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Construction</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >All Industries</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 3 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-3"
+                >
+                  <span>Resources</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-3"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Scripts & Templates</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Item 4 -->
+              <div class="footer_mobile-dropdown faq-item text-black">
+                <button
+                  type="button"
+                  class="faq-toggle flex w-full items-center justify-between py-3 text-left font-medium text-[0.875rem] focus:outline-none"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav-4"
+                >
+                  <span>Company</span>
+                  <!-- Icon -->
+                  <svg
+                    class="faq-icon size-4 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+
+                <nav
+                  id="mobile-nav-4"
+                  class="faq-content hidden overflow-hidden pb-3"
+                >
+                  <ul class="space-y-2">
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">About</a>
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-[.875rem] text-black" href="#">Pricing</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mt-28 flex justify-between">
+              <img
+                class="w-[6.875rem]"
+                src="./src/assets/certified-badge.svg"
+                alt=""
+              />
+              <address class="font-normal">
+                <ul aria-label="Social media" class="flex items-center gap-2">
+                  <li>
+                    <a class="w-6" href=""
+                      ><img src="./src/assets/x-logo.svg" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a class="w-6" href=""
+                      ><img src="./src/assets/icons-linkedin.svg" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="tablet:mt-[18.125rem] mt-12 flex flex-col gap-6">
+            <img src="./src/assets/footer-logo.svg" alt="" />
+            <div class="flex max-sm:flex-col gap-2">
+              <div
+                class="w-[50%] flex max-sm:w-full max-sm:justify-between gap-2"
+              >
+                <a
+                  href="#"
+                  class="w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Terms & Conditions</span></a
+                >
+                <a
+                  href="#"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Privacy Policy</span></a
+                >
+              </div>
+              <div class="w-[50%] flex justify-between max-sm:w-full gap-2">
+                <a
+                  href="#"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  ><span>Made by ++</span></a
+                >
+                <div class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]">
+                  © Copyright 2026 ShareWillow. All rights reserved.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Global Js -->
+    <script src="./src/js/main.js" defer></script>
+  </body>
+</html>
