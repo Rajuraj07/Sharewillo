@@ -1,110 +1,283 @@
 // global.js
-$(document).ready(function () {
-  // 1. Initialize Lenis Smooth Scroll
+document.addEventListener('DOMContentLoaded', () => {
+  /* ==========================================================================
+     1. Initialize Lenis Smooth Scroll & GSAP Integration
+     ========================================================================== */
   gsap.registerPlugin(ScrollTrigger);
+
   const lenis = new Lenis({
     lerp: 0.1,
     wheelMultiplier: 0.7,
     infinite: false,
-    gestureOrientation: "vertical",
+    gestureOrientation: 'vertical',
     normalizeWheel: false,
     smoothTouch: false,
   });
 
   lenis.on('scroll', ScrollTrigger.update);
+
   gsap.ticker.add((time) => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
 
-  // 2. Hide/Show Header on Scroll
-  let lastScrollTop = 0;
-  const $header = $('#main-header');
-  const $mobileDrawer = $('#mobile-drawer');
+  /* ==========================================================================
+     2. Hide/Show Header on Scroll
+     ========================================================================== */
+  const header = document.getElementById('main-header');
+  const mobileDrawer = document.getElementById('mobile-drawer');
 
-  if ($header.length) {
-    lenis.on('scroll', (e) => {
-      if ($mobileDrawer.hasClass('flex')) return;
-      let scrollTop = e.scroll;
-      if (Math.abs(lastScrollTop - scrollTop) <= 10) return;
+  if (header) {
+    let lastScrollTop = 0;
 
-      if (scrollTop > lastScrollTop && scrollTop > 120) {
-        $header.addClass('nav-hidden');
+    lenis.on('scroll', ({ scroll }) => {
+      // Don't auto-hide header if mobile menu is actively open
+      if (mobileDrawer?.classList.contains('flex')) return;
+
+      if (Math.abs(lastScrollTop - scroll) <= 10) return;
+
+      if (scroll > lastScrollTop && scroll > 120) {
+        header.classList.add('nav-hidden');
       } else {
-        $header.removeClass('nav-hidden');
+        header.classList.remove('nav-hidden');
       }
-      lastScrollTop = scrollTop;
+
+      lastScrollTop = scroll;
     });
   }
 
-  // 3. Mobile Navigation Drawer
-  const $mobileBtn = $('#mobile-menu-btn');
-  const $hamburgerIcon = $('#hamburger-icon');
-  const $closeIcon = $('#close-icon');
+  /* ==========================================================================
+     3. Mobile Navigation Drawer
+     ========================================================================== */
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
 
-  if ($mobileBtn.length) {
-    $mobileBtn.on('click', function () {
-      let isExpanded = $(this).attr('aria-expanded') === 'true';
-      $(this).attr('aria-expanded', !isExpanded);
-      $hamburgerIcon.toggleClass('hidden');
-      $closeIcon.toggleClass('hidden');
+  if (mobileBtn && mobileDrawer) {
+    mobileBtn.addEventListener('click', () => {
+      const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+
+      mobileBtn.setAttribute('aria-expanded', String(!isExpanded));
+      hamburgerIcon?.classList.toggle('hidden');
+      closeIcon?.classList.toggle('hidden');
 
       if (isExpanded) {
-        $mobileDrawer.addClass('hidden').removeClass('flex');
-        $('body').removeClass('overflow-hidden');
+        mobileDrawer.classList.add('hidden');
+        mobileDrawer.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
         lenis.start();
       } else {
-        $mobileDrawer.removeClass('hidden').addClass('flex');
-        $('body').addClass('overflow-hidden');
+        mobileDrawer.classList.remove('hidden');
+        mobileDrawer.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
         lenis.stop();
       }
     });
   }
 
-  // 4. Accordions & FAQ Toggles
-  $('.mobile-accordion-btn').on('click', function () {
-    let $btn = $(this);
-    let $content = $btn.next('.mobile-accordion-content');
-    let $svg = $btn.find('svg');
-    let isOpen = $content.is(':visible');
-
-    $('.mobile-accordion-content').slideUp(250);
-    $('.mobile-accordion-btn svg').removeClass('rotate-90');
-
-    if (isOpen) {
-      setTimeout(() => ScrollTrigger.refresh(), 260);
-    } else {
-      $content.slideDown(250, function () {
-        ScrollTrigger.refresh();
+  /* ==========================================================================
+     4. Smooth Collapsible Engine (replaces jQuery .slideUp() / .slideDown())
+     ========================================================================== */
+  /**
+   * Smoothly expands an element using CSS Grid/max-height or native web animations.
+   * Leverages GSAP for precise height animation and scroll-trigger reflows.
+   */
+  const animateCollapse = {
+    slideUp(element, duration = 250) {
+      return gsap.to(element, {
+        height: 0,
+        opacity: 0,
+        duration: duration / 1000,
+        ease: 'power2.out',
+        onComplete: () => {
+          element.style.display = 'none';
+        },
       });
-      $svg.addClass('rotate-90');
-    }
-  });
+    },
+    slideDown(element, duration = 250) {
+      element.style.display = 'block';
+      const targetHeight = element.scrollHeight;
 
-  $('.faq-toggle').on('click', function () {
-    const $button = $(this);
-    const $item = $button.closest('.faq-item');
-    const $content = $item.find('.faq-content');
-    const $icon = $button.find('.faq-icon');
-    const isOpen = $button.attr('aria-expanded') === 'true';
-    const activeClass = 'text-brand-espresso-300';
+      return gsap.fromTo(
+        element,
+        { height: 0, opacity: 0 },
+        {
+          height: targetHeight,
+          opacity: 1,
+          duration: duration / 1000,
+          ease: 'power2.out',
+          onComplete: () => {
+            element.style.height = 'auto'; // allow responsive resizing after expand
+          },
+        }
+      );
+    },
+  };
 
-    $('.faq-item').not($item).each(function () {
-      const $otherItem = $(this);
-      $otherItem.removeClass(activeClass);
-      $otherItem.find('.faq-toggle').attr('aria-expanded', 'false');
-      $otherItem.find('.faq-content').slideUp(200);
-      $otherItem.find('.faq-icon').removeClass('rotate-45');
+  /* --- Mobile Accordion Handler --- */
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.mobile-accordion-btn');
+    if (!btn) return;
+
+    const content = btn.nextElementSibling;
+    if (!content || !content.classList.contains('mobile-accordion-content')) return;
+
+    const svg = btn.querySelector('svg');
+    const isOpen = content.offsetHeight > 0 && window.getComputedStyle(content).display !== 'none';
+
+    // Close all open accordions first (Single active accordion pattern)
+    document.querySelectorAll('.mobile-accordion-content').forEach((item) => {
+      if (item !== content && window.getComputedStyle(item).display !== 'none') {
+        animateCollapse.slideUp(item, 250);
+      }
+    });
+    document.querySelectorAll('.mobile-accordion-btn svg').forEach((icon) => {
+      if (icon !== svg) icon.classList.remove('rotate-90');
     });
 
     if (isOpen) {
-      $content.slideUp(200);
-      $button.attr('aria-expanded', 'false');
-      $icon.removeClass('rotate-45');
-      $item.removeClass(activeClass);
+      animateCollapse.slideUp(content, 250).eventCallback('onComplete', () => {
+        ScrollTrigger.refresh();
+      });
+      svg?.classList.remove('rotate-90');
     } else {
-      $content.slideDown(200);
-      $button.attr('aria-expanded', 'true');
-      $icon.addClass('rotate-45');
-      $item.addClass(activeClass);
+      svg?.classList.add('rotate-90');
+      animateCollapse.slideDown(content, 250).eventCallback('onComplete', () => {
+        ScrollTrigger.refresh();
+      });
     }
+  });
+
+  /* --- FAQ Toggle Handler --- */
+  document.addEventListener('click', (e) => {
+    const button = e.target.closest('.faq-toggle');
+    if (!button) return;
+
+    const item = button.closest('.faq-item');
+    if (!item) return;
+
+    const content = item.querySelector('.faq-content');
+    const icon = button.querySelector('.faq-icon');
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    const activeClass = 'text-brand-espresso-300';
+
+    // Reset all sibling FAQs
+    document.querySelectorAll('.faq-item').forEach((otherItem) => {
+      if (otherItem !== item) {
+        otherItem.classList.remove(activeClass);
+        otherItem.querySelector('.faq-toggle')?.setAttribute('aria-expanded', 'false');
+        otherItem.querySelector('.faq-icon')?.classList.remove('rotate-45');
+
+        const otherContent = otherItem.querySelector('.faq-content');
+        if (otherContent && window.getComputedStyle(otherContent).display !== 'none') {
+          animateCollapse.slideUp(otherContent, 200);
+        }
+      }
+    });
+
+    if (isOpen) {
+      button.setAttribute('aria-expanded', 'false');
+      icon?.classList.remove('rotate-45');
+      item.classList.remove(activeClass);
+      animateCollapse.slideUp(content, 200).eventCallback('onComplete', () => {
+        ScrollTrigger.refresh();
+      });
+    } else {
+      button.setAttribute('aria-expanded', 'true');
+      icon?.classList.add('rotate-45');
+      item.classList.add(activeClass);
+      animateCollapse.slideDown(content, 200).eventCallback('onComplete', () => {
+        ScrollTrigger.refresh();
+      });
+    }
+  });
+
+  /* ==========================================================================
+     5. Accessible Dropdown Navigation
+     ========================================================================== */
+  const dropdownItems = document.querySelectorAll('.nav-dropdown-item');
+
+  const toggleDropdown = (item, forceOpen) => {
+    const btn = item.querySelector('.dropdown-toggle');
+    const menu = item.querySelector('.dropdown-menu');
+    if (!btn || !menu) return;
+
+    const isOpen = forceOpen !== undefined ? forceOpen : btn.getAttribute('aria-expanded') !== 'true';
+
+    btn.setAttribute('aria-expanded', String(isOpen));
+
+    if (isOpen) {
+      menu.classList.remove('hidden');
+      menu.classList.add('block');
+      gsap.fromTo(menu, { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.2, ease: 'power2.out' });
+    } else {
+      gsap.to(menu, {
+        opacity: 0,
+        y: -8,
+        duration: 0.15,
+        ease: 'power2.in',
+        onComplete: () => {
+          menu.classList.add('hidden');
+          menu.classList.remove('block');
+        },
+      });
+    }
+  };
+
+  dropdownItems.forEach((item) => {
+    const btn = item.querySelector('.dropdown-toggle');
+    const menu = item.querySelector('.dropdown-menu');
+
+    // Keydown navigation on main toggle
+    btn?.addEventListener('keydown', (e) => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!isOpen) toggleDropdown(item, true);
+
+        // Focus first link in menu
+        requestAnimationFrame(() => {
+          menu?.querySelector('a')?.focus();
+        });
+      }
+
+      if (e.key === 'Escape' && isOpen) {
+        e.preventDefault();
+        toggleDropdown(item, false);
+        btn.focus();
+      }
+    });
+
+    // Keydown navigation inside dropdown menu items
+    menu?.addEventListener('keydown', (e) => {
+      const targetLink = e.target.closest('a');
+      if (!targetLink) return;
+
+      const links = Array.from(menu.querySelectorAll('a'));
+      const currentIndex = links.indexOf(targetLink);
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextIndex = (currentIndex + 1) % links.length;
+        links[nextIndex]?.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prevIndex = (currentIndex - 1 + links.length) % links.length;
+        links[prevIndex]?.focus();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        toggleDropdown(item, false);
+        btn?.focus();
+      }
+    });
+
+    // Focusout handling to auto-close when tabbing away
+    item.addEventListener('focusout', () => {
+      // Small timeout allows document.activeElement to update correctly
+      setTimeout(() => {
+        if (!item.contains(document.activeElement)) {
+          toggleDropdown(item, false);
+        }
+      }, 10);
+    });
   });
 });

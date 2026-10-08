@@ -69,7 +69,7 @@
           >
             <ul class="flex items-center gap-6 lg:gap-8">
               <!-- Solutions Dropdown -->
-              <li class="relative group py-2">
+              <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
                   class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
@@ -173,7 +173,7 @@
               </li>
 
               <!-- Resources Dropdown -->
-              <li class="relative group py-2">
+              <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
                   class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
@@ -238,7 +238,7 @@
               </li>
 
               <!-- Industries Dropdown -->
-              <li class="relative group py-2">
+              <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
                   class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
@@ -1286,17 +1286,21 @@
                     class="flex items-center gap-[.625rem] mb-0"
                   >
                     <li class="my-0 pl-0">
-                      <a href="#" class="max-w-[1.125rem]"
-                        ><img src="./src/assets/x-logo.svg" alt=""
-                      /></a>
+                      <a href="#" class="max-w-[1.125rem] relative"
+                        ><img src="./src/assets/x-logo.svg" alt="" />
+                        <span class="sr-only">Icon X/twitter</span></a
+                      >
                     </li>
                     <li class="my-0 pl-0">
-                      <a href="#" class="max-w-[1.125rem]"
-                        ><img src="./src/assets/icons-linkedin.svg" alt=""
-                      /></a>
+                      <a href="#" class="max-w-[1.125rem] relative"
+                        ><img
+                          src="./src/assets/icons-linkedin.svg"
+                          alt=""
+                        /><span class="sr-only">Icon linkedin</span></a
+                      >
                     </li>
                     <li class="my-0 pl-0">
-                      <a href="#" class="max-w-[1.125rem]">
+                      <a href="#" class="max-w-[1.125rem] relative">
                         <svg
                           width="1.125rem"
                           height="100%"
@@ -1309,10 +1313,11 @@
                             fill="CurrentColor"
                           ></path>
                         </svg>
+                        <span class="sr-only">Icon Facebook</span>
                       </a>
                     </li>
                     <li class="my-0 pl-0">
-                      <a href="#" class="max-w-[1.125rem]">
+                      <a href="#" class="max-w-[1.125rem] relative">
                         <svg
                           width="1.125rem"
                           height="100%"
@@ -1327,6 +1332,7 @@
                             fill="CurrentColor"
                           ></path>
                         </svg>
+                        <span class="sr-only">Icon Instagram</span>
                       </a>
                     </li>
                   </ul>
@@ -1571,8 +1577,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Lottie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Global Js -->
     <script src="./src/js/main.js" defer></script>
     <!-- Blog Js -->

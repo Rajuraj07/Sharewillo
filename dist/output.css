@@ -811,9 +811,6 @@
   .resize {
     resize: both;
   }
-  .list-inside {
-    list-style-position: inside;
-  }
   .list-decimal {
     list-style-type: decimal;
   }
@@ -1155,9 +1152,6 @@
   }
   .pt-44 {
     padding-top: calc(var(--spacing) * 44);
-  }
-  .pt-\[5rem\] {
-    padding-top: 5rem;
   }
   .pt-\[8rem\] {
     padding-top: 8rem;
@@ -1574,8 +1568,14 @@
     .group-hover\:bg-\[\#746a66\]:is(:where(.group):hover *) {
       background-color: #746a66;
     }
+    .group-hover\:bg-brand-espresso-300:is(:where(.group):hover *) {
+      background-color: var(--color-brand-espresso-300);
+    }
     .group-hover\:text-\[\#746a66\]:is(:where(.group):hover *) {
       color: #746a66;
+    }
+    .group-hover\:text-brand-espresso-300:is(:where(.group):hover *) {
+      color: var(--color-brand-espresso-300);
     }
     .group-hover\/item\:translate-x-1:is(:where(.group\/item):hover *) {
       --tw-translate-x: var(--spacing);
@@ -1687,14 +1687,8 @@
     .max-tablet\:block {
       display: block;
     }
-    .max-tablet\:h-\[1\.5rem\] {
-      height: 1.5rem;
-    }
     .max-tablet\:h-\[2\.5rem\] {
       height: 2.5rem;
-    }
-    .max-tablet\:w-\[1\.5rem\] {
-      width: 1.5rem;
     }
     .max-tablet\:w-\[2\.5rem\] {
       width: 2.5rem;
@@ -1710,9 +1704,6 @@
     }
     .max-tablet\:pt-10 {
       padding-top: calc(var(--spacing) * 10);
-    }
-    .max-tablet\:pt-16 {
-      padding-top: calc(var(--spacing) * 16);
     }
     .max-tablet\:pl-0 {
       padding-left: 0px;
@@ -1925,9 +1916,6 @@
     .tablet\:max-w-\[34\.9375rem\] {
       max-width: 34.9375rem;
     }
-    .tablet\:max-w-\[37\.375\] {
-      max-width: 37.375;
-    }
     .tablet\:max-w-\[42\.25rem\] {
       max-width: 42.25rem;
     }
@@ -1978,9 +1966,6 @@
     }
     .tablet\:pb-\[3\.59375rem\] {
       padding-bottom: 3.59375rem;
-    }
-    .tablet\:text-center {
-      text-align: center;
     }
     .tablet\:text-\[1\.325rem\] {
       font-size: 1.325rem;
@@ -2113,14 +2098,14 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Mackinac Pro";
+  font-family: "Mackinac pro";
   src: url("../src/assets/fonts/mackinacpro-medium.woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Mackinac Pro";
+  font-family: "Mackinac pro";
   src: url("../src/assets/fonts/mackinacpro-meditalic.woff2");
   font-weight: 500;
   font-style: italic;
