@@ -72,7 +72,7 @@
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -176,7 +176,7 @@
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -241,7 +241,7 @@
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -305,21 +305,21 @@
               <li>
                 <a
                   href="#pricing"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >Pricing</a
                 >
               </li>
               <li>
                 <a
                   href="#about"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >About</a
                 >
               </li>
               <li>
                 <a
                   href="#features"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >Features</a
                 >
               </li>
@@ -382,22 +382,22 @@
         <!-- FULLSCREEN MOBILE NAV DRAWER (<= 991px) -->
         <div
           id="mobile-drawer"
-          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
+          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 max-sm:px-4 flex-col justify-between overflow-y-auto custom-scrollbar"
         >
           <nav
             aria-label="Mobile Navigation"
-            class="w-full mx-auto bg-white rounded-3xl p-6 shadow-sm"
+            class="w-full mx-auto bg-white rounded-3xl p-4 shadow-sm"
           >
             <ul
               class="flex flex-col divide-y divide-gray-100 text-brand-espresso font-medium text-lg"
             >
               <!-- Solutions Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Solutions</span>
+                  <span class="max-sm:text-[1rem]">Solutions</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -413,27 +413,33 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >For Companies</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >For Employees</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Plan Design Consultation</a
                   >
                 </div>
               </li>
 
               <!-- Resources Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Resources</span>
+                  <span class="max-sm:text-[1rem]">Resources</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -449,29 +455,33 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
                   <a
                     href="https://rajuraj07.github.io/Sharewillo/blog.html"
-                    class="block py-1.5 hover:text-brand-espresso"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Blog & Insights</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Case Studies</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Incentive Calculator</a
                   >
                 </div>
               </li>
 
               <!-- Industries Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Industries</span>
+                  <span class="max-sm:text-[1rem]">Industries</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -487,28 +497,38 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Technology & SaaS</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Manufacturing</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Healthcare</a
                   >
                 </div>
               </li>
 
-              <li class="py-3">
-                <a href="#pricing" class="block py-1">Pricing</a>
+              <li class="py-2">
+                <a href="#pricing" class="block py-1 max-sm:text-[1rem]"
+                  >Pricing</a
+                >
               </li>
-              <li class="py-3">
-                <a href="#about" class="block py-1">About</a>
+              <li class="py-2">
+                <a href="#about" class="block py-1 max-sm:text-[1rem]">About</a>
               </li>
-              <li class="py-3">
-                <a href="#features" class="block py-1">Features</a>
+              <li class="py-2">
+                <a href="#features" class="block py-1 max-sm:text-[1rem]"
+                  >Features</a
+                >
               </li>
             </ul>
           </nav>
@@ -717,7 +737,7 @@
                         hours, and cut its upsell rate from 6% to 3%.
                       </p>
                       <div
-                        class="flex items-center gap-2 font-medium text-2xl text-[#180600] mt-8 group-hover:text-[#746a66]"
+                        class="flex items-center gap-2 font-medium text-2xl text-[#180600] mt-8 max-sm:mt-5 group-hover:text-[#746a66]"
                       >
                         <div
                           class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
@@ -785,7 +805,7 @@
                         company is building it on JobTread.
                       </p>
                       <div
-                        class="flex items-center gap-2 font-medium text-2xl text-[#180600] group-hover:text-[#746a66] mt-8"
+                        class="flex items-center gap-2 font-medium text-2xl text-[#180600] group-hover:text-[#746a66] mt-8 max-sm:mt-5"
                       >
                         <div
                           class="w-6 h-6 flex items-center justify-center rounded-full bg-black text-brand-ivory group-hover:bg-[#746a66]"
@@ -840,7 +860,7 @@
           <div class="max-w-90rem mx-auto w-full">
             <!-- Letest Article Header -->
             <div
-              class="tablet:pt-12 pt-8 mb-16 border-t border-brand-espresso-300"
+              class="tablet:pt-12 pt-8 mb-16 max-sm:mb-12 border-t border-brand-espresso-300"
             >
               <h2
                 class="leading-[1.2] tracking-[-.03em] text-[clamp(1.125rem,0.9049rem+0.939vw,1.75rem)]"
@@ -864,13 +884,13 @@
                 </figure>
                 <div>
                   <h3
-                    class="tablet:mb-[2.375rem] mb-8 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
+                    class="tablet:mb-[2.375rem] mb-4 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
                   >
                     HVAC Installer Bonus: How One Company Set $300 to $1,000
                     Awards by Job Type Before Its First Payout
                   </h3>
                   <p
-                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8"
+                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8 max-sm:mb-4"
                   >
                     HVAC installer bonus plan: one company pays $300 to $1,000
                     per install by job type, minus labor, split by hours, and
@@ -927,12 +947,12 @@
                 </figure>
                 <div>
                   <h3
-                    class="tablet:mb-[2.375rem] mb-8 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
+                    class="tablet:mb-[2.375rem] mb-4 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
                   >
                     The Install Split That Almost Paid Zero
                   </h3>
                   <p
-                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8"
+                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8 max-sm:mb-4"
                   >
                     A two-location HVAC and plumbing company built its
                     install-crew bonus pool around ServiceTitan job data, until
@@ -992,14 +1012,14 @@
                 </figure>
                 <div>
                   <h3
-                    class="tablet:mb-[2.375rem] mb-8 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
+                    class="tablet:mb-[2.375rem] mb-4 leading-[1.2] tracking-[-.0525rem] font-heading font-medium tablet:text-[26px] text-2xl line-clamp-2 overflow-hidden"
                   >
                     Technician Lead Generation Bonus: How an HVAC and Plumbing
                     Company Found $52K in Tech-Sourced Sales Its Report Showed
                     as Zero
                   </h3>
                   <p
-                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8"
+                    class="line-clamp-2 overflow-hidden leading-[1.2] tracking-[-.0525rem] tablet:text-[1.325rem] text-[0.875rem] text-brand-espresso-300 mb-8 max-sm:mb-4"
                   >
                     A technician lead generation bonus paid 3% on tech-sourced
                     leads, but the report showed zero. See how one HVAC and
@@ -1540,14 +1560,19 @@
           <!-- Footer Bottom -->
           <div class="tablet:mt-[18.125rem] mt-12 flex flex-col gap-6">
             <img src="./src/assets/footer-logo.svg" alt="" />
-            <div class="flex max-sm:flex-col gap-2">
+            <div class="flex max-sm:flex-col gap-4">
               <div
                 class="w-[50%] flex max-sm:w-full max-sm:justify-between gap-2"
               >
                 <a
                   href="#"
-                  class="w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  class="tablet:w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
                   ><span>Terms & Conditions</span></a
+                >
+                <a
+                  href="https://www.tinyflow.agency/"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem] hidden max-sm:block"
+                  ><span>Rebuild by Tinyflow -</span></a
                 >
                 <a
                   href="#"
@@ -1555,11 +1580,13 @@
                   ><span>Privacy Policy</span></a
                 >
               </div>
-              <div class="w-[50%] flex justify-between max-sm:w-full gap-2">
+              <div
+                class="w-[50%] flex justify-between max-sm:justify-center max-sm:w-full gap-2"
+              >
                 <a
-                  href="#"
-                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
-                  ><span>Made by ++</span></a
+                  href="https://www.tinyflow.agency/"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem] hidden sm:block"
+                  ><span>Rebuild by Tinyflow -</span></a
                 >
                 <div class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]">
                   © Copyright 2026 ShareWillow. All rights reserved.

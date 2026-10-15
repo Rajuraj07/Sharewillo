@@ -38,7 +38,7 @@
     <div class="page-wrapper overflow-clip">
       <header
         id="main-header"
-        class="nav-component fixed lg:top-4 lg:pt-0 pt-6 inset-x-0 z-50 w-full px-4 sm:px-7"
+        class="nav-component fixed lg:top-4 lg:pt-0 pt-6 inset-x-0 z-50 w-full px-4 sm:px-6"
         role="banner"
       >
         <div
@@ -67,12 +67,12 @@
             aria-label="Main Navigation"
             class="hidden nav-desktop:flex items-center gap-6 lg:gap-8 text-brand-espresso font-medium text-[1rem] tracking-[-0.54px]"
           >
-            <ul class="flex items-center gap-6 lg:gap-8">
+            <ul class="flex items-center gap-6">
               <!-- Solutions Dropdown -->
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -95,7 +95,7 @@
 
                 <!-- Dropdown Menu Wrapper with pt-5 invisible bridge -->
                 <div
-                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 z-50 transition-all duration-200 pt-6"
+                  class="dropdown-menu hidden group-hover:block group-hover:opacity-100 absolute top-full -left-4 z-50 transition-all duration-200 pt-6"
                 >
                   <div
                     class="w-72 bg-white rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
@@ -177,7 +177,7 @@
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -199,7 +199,7 @@
                 </button>
 
                 <div
-                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                  class="dropdown-menu hidden group-hover:block group-hover:opacity-100 absolute top-full -left-4 pt-6 z-50"
                 >
                   <div
                     class="w-72 bg-white rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
@@ -239,10 +239,10 @@
               </li>
 
               <!-- Industries Dropdown -->
-              <li class="relative group py-2 nav-dropdown-item">
+              <li class="relative group py-2 px-1 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -264,7 +264,7 @@
                 </button>
 
                 <div
-                  class="dropdown-menu hidden group-hover:block absolute top-full -left-4 pt-6 z-50"
+                  class="dropdown-menu hidden group-hover:block group-hover:opacity-100 absolute top-full -left-4 pt-6 z-50"
                 >
                   <div
                     class="w-72 bg-white rounded-2xl shadow-xl p-3 border border-gray-100 max-h-[80vh] overflow-y-auto custom-scrollbar"
@@ -306,21 +306,21 @@
               <li class="">
                 <a
                   href="#pricing"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >Pricing</a
                 >
               </li>
               <li class="">
                 <a
                   href="#about"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >About</a
                 >
               </li>
               <li class="">
                 <a
                   href="#features"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >Features</a
                 >
               </li>
@@ -383,22 +383,22 @@
         <!-- FULLSCREEN MOBILE NAV DRAWER (<= 991px) -->
         <div
           id="mobile-drawer"
-          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
+          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 max-sm:px-4 flex-col justify-between overflow-y-auto custom-scrollbar"
         >
           <nav
             aria-label="Mobile Navigation"
-            class="w-full mx-auto bg-white rounded-3xl p-6 shadow-sm"
+            class="w-full mx-auto bg-white rounded-3xl p-4 shadow-sm"
           >
             <ul
               class="flex flex-col divide-y divide-gray-100 text-brand-espresso font-medium text-lg"
             >
               <!-- Solutions Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Solutions</span>
+                  <span class="max-sm:text-[1rem]">Solutions</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -414,27 +414,33 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >For Companies</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >For Employees</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Plan Design Consultation</a
                   >
                 </div>
               </li>
 
               <!-- Resources Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Resources</span>
+                  <span class="max-sm:text-[1rem]">Resources</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -450,29 +456,33 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
                   <a
                     href="https://rajuraj07.github.io/Sharewillo/blog.html"
-                    class="block py-1.5 hover:text-brand-espresso"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Blog & Insights</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Case Studies</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Incentive Calculator</a
                   >
                 </div>
               </li>
 
               <!-- Industries Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Industries</span>
+                  <span class="max-sm:text-[1rem]">Industries</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -488,28 +498,38 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Technology & SaaS</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Manufacturing</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Healthcare</a
                   >
                 </div>
               </li>
 
-              <li class="py-3">
-                <a href="#pricing" class="block py-1">Pricing</a>
+              <li class="py-2">
+                <a href="#pricing" class="block py-1 max-sm:text-[1rem]"
+                  >Pricing</a
+                >
               </li>
-              <li class="py-3">
-                <a href="#about" class="block py-1">About</a>
+              <li class="py-2">
+                <a href="#about" class="block py-1 max-sm:text-[1rem]">About</a>
               </li>
-              <li class="py-3">
-                <a href="#features" class="block py-1">Features</a>
+              <li class="py-2">
+                <a href="#features" class="block py-1 max-sm:text-[1rem]"
+                  >Features</a
+                >
               </li>
             </ul>
           </nav>
@@ -629,16 +649,16 @@
                   </p>
                 </div>
                 <div
-                  class="flex mt-auto max-sm:mt-32 gap-[4.75rem] max-sm:flex-col max-sm:gap-[2rem]"
+                  class="flex mt-auto max-sm:mt-32 gap-[4.75rem] max-sm:flex-col max-sm:gap-[2.5rem]"
                 >
                   <p
-                    class="text-[1.594rem] max-sm:text-[1.25rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] py-2 pl-3 border-l border-l-brand-lemon"
+                    class="text-[1.594rem] max-sm:text-[1.125rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] sm:py-2 pl-3 border-l border-l-brand-lemon"
                   >
                     They show up on time and deliver a world-class customer
                     experience that can fuel referrals for years to come.
                   </p>
                   <p
-                    class="text-[1.594rem] max-sm:text-[1.25rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] py-2 pl-3 border-l border-l-brand-lemon"
+                    class="text-[1.594rem] max-sm:text-[1.125rem] leading-[1.2] tracking-[-0.03em] text-brand-lemon max-w-[28ch] sm:py-2 pl-3 border-l border-l-brand-lemon"
                   >
                     But finding and retaining those employees is easier said
                     than done, especially in tight talent markets.
@@ -768,7 +788,9 @@
             </div>
           </div>
         </section>
-        <section class="px-8 pt-14 max-sm:pt-12 pb-[3.78125rem]">
+        <section
+          class="px-8 pt-14 max-sm:pt-4 pb-[3.78125rem] max-sm:pb-[2rem]"
+        >
           <div class="max-w-90rem mx-auto w-full">
             <div
               class="flex flex-col justify-center items-center text-center mb-8"
@@ -789,11 +811,11 @@
               </p>
             </div>
             <div
-              class="flex tablet:gap-16 gap-8 justify-between max-w-[87.5rem] mx-auto overflow-x-auto"
+              class="flex tablet:gap-16 gap-8 justify-between mx-auto max-tablet:flex-col"
             >
               <!-- Employee card one -->
               <div
-                class="tablet:max-w-[26.375rem] max-w-[21.875rem] tablet:w-auto tablet:flex-auto w-full flex-none"
+                class="tablet:max-w-[26.375rem] tablet:flex-auto w-full flex-none"
               >
                 <figure class="my-0">
                   <img
@@ -801,8 +823,10 @@
                     alt="Simple to set up"
                   />
                 </figure>
-                <div class="mt-6">
-                  <h3 class="leading-[1.2] tracking-[-.03em] text-2xl mb-6">
+                <div class="mt-6 max-sm:mt-4">
+                  <h3
+                    class="leading-[1.2] tracking-[-.03em] text-2xl mb-6 max-sm:mb-4"
+                  >
                     Simple to set up
                   </h3>
                   <p
@@ -817,7 +841,7 @@
               </div>
               <!-- Employee card Two -->
               <div
-                class="tablet:max-w-[26.375rem] max-w-[21.875rem] tablet:w-auto tablet:flex-auto w-full flex-none"
+                class="tablet:max-w-[26.375rem] tablet:flex-auto w-full flex-none"
               >
                 <figure class="my-0">
                   <img
@@ -825,8 +849,10 @@
                     alt="Trackable and transparent"
                   />
                 </figure>
-                <div class="mt-6">
-                  <h3 class="leading-[1.2] tracking-[-.03em] text-2xl mb-6">
+                <div class="mt-6 max-sm:mt-4">
+                  <h3
+                    class="leading-[1.2] tracking-[-.03em] text-2xl mb-6 max-sm:mb-4"
+                  >
                     Trackable and transparent
                   </h3>
                   <p
@@ -840,7 +866,7 @@
               </div>
               <!-- Employee card three -->
               <div
-                class="tablet:max-w-[26.375rem] max-w-[21.875rem] tablet:w-auto tablet:flex-auto w-full flex-none"
+                class="tablet:max-w-[26.375rem] tablet:flex-auto w-full flex-none"
               >
                 <figure class="my-0">
                   <img
@@ -848,8 +874,10 @@
                     alt="Motivating and inspiring"
                   />
                 </figure>
-                <div class="mt-6">
-                  <h3 class="leading-[1.2] tracking-[-.03em] text-2xl mb-6">
+                <div class="mt-6 max-sm:mt-4">
+                  <h3
+                    class="leading-[1.2] tracking-[-.03em] text-2xl mb-6 max-sm:mb-4"
+                  >
                     Motivating and inspiring
                   </h3>
                   <p
@@ -957,7 +985,7 @@
           </div>
         </section>
         <section
-          class="px-8 max-sm:px-4 pt-16 max-sm:pt-12 pb-32 max-sm:pb-20 overflow-hidden"
+          class="px-8 max-sm:px-4 pt-16 max-sm:pt-4 pb-32 max-sm:pb-12 overflow-hidden"
         >
           <div class="max-w-90rem mx-auto">
             <!-- SECTION HEADING -->
@@ -1018,11 +1046,11 @@
                 id="panel-employees"
                 role="tabpanel"
                 aria-labelledby="tab-employees"
-                tabindex="0"
-                class="tab-panel flex gap-6 tablet:overflow-hidden overflow-x-auto"
+                tabindex="-1"
+                class="tab-panel flex gap-6 max-sm:gap-4 tablet:overflow-hidden overflow-x-auto"
               >
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
+                  class="testimonial-card flex flex-col justify-between p-8 max-sm:p-6 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[18.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1031,7 +1059,7 @@
                       class="w-20 h-20 rounded-full object-cover mb-8"
                     />
                     <blockquote
-                      class="text-[1.125rem] leading-[-.03em] leading-[1.2] font-normal"
+                      class="text-[1.125rem] max-sm:text-[1.063rem] leading-[-.03em] leading-[1.2] font-normal"
                     >
                       “ShareWillow has changed how I work on every project.
                       Knowing there’s a payout if we exceed the margin goal, I’m
@@ -1050,7 +1078,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
+                  class="testimonial-card flex flex-col justify-between p-8 max-sm:p-6 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[18.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1059,7 +1087,7 @@
                       class="w-20 h-20 rounded-full object-cover mb-8"
                     />
                     <blockquote
-                      class="text-[1.125rem] leading-[-.03em] leading-[1.2] font-normal"
+                      class="text-[1.125rem] max-sm:text-[1.063rem] leading-[-.03em] leading-[1.2] font-normal"
                     >
                       “The ShareWillow platform has made my goals and
                       performance metrics clearer than ever. I can stay on top
@@ -1079,7 +1107,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
+                  class="testimonial-card flex flex-col justify-between p-8 max-sm:p-6 bg-brand-ivory text-brand-espresso-500 md:rounded-[2.5rem] tablet:rounded-[1.25rem] rounded-[1rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[18.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1088,7 +1116,7 @@
                       class="w-20 h-20 rounded-full object-cover mb-8"
                     />
                     <blockquote
-                      class="text-[1.125rem] leading-[-.03em] leading-[1.2] font-normal"
+                      class="text-[1.125rem] max-sm:text-[1.063rem] leading-[-.03em] leading-[1.2] font-normal"
                     >
                       “This platform has made it so easy to stay on top of KPIs
                       I am responsible for. Each KPI is tied to a bonus, and now
@@ -1113,11 +1141,11 @@
                 id="panel-companies"
                 role="tabpanel"
                 aria-labelledby="tab-companies"
-                tabindex="0"
-                class="tab-panel hidden gap-6 tablet:overflow-hidden overflow-x-auto"
+                tabindex="-1"
+                class="tab-panel hidden gap-6 max-sm:gap-4 tablet:overflow-hidden overflow-x-auto"
               >
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory lg:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
+                  class="testimonial-card flex flex-col justify-between p-8 max-sm:p-6 bg-brand-espresso-500 text-brand-ivory lg:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[18.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1146,7 +1174,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
+                  class="testimonial-card flex flex-col justify-between p-8 max-sm:p-6 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[18.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1176,7 +1204,7 @@
                 </article>
 
                 <article
-                  class="testimonial-card flex flex-col justify-between p-8 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[21.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
+                  class="testimonial-card flex flex-col justify-between p-8 max-sm:p-6 bg-brand-espresso-500 text-brand-ivory md:rounded-[2.5rem] rounded-[1.25rem] min-h-[420px] tablet:max-w-[33.33%] max-w-[18.875rem] tablet:w-auto w-full tablet:flex-auto flex-none"
                 >
                   <div>
                     <img
@@ -1229,13 +1257,13 @@
                   >
                     <div>
                       <div
-                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 max-sm:mb-4 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
                       >
                         <span>1.</span>
                         <h3>Determine your cadence</h3>
                       </div>
                       <p
-                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8 max-sm:mb-4"
                       >
                         Choose how frequently you want to pay out cash bonuses.
                         We recommend you do it every quarter to build a positive
@@ -1288,13 +1316,13 @@
                   >
                     <div>
                       <div
-                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 max-sm:mb-4 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
                       >
                         <span>2.</span>
                         <h3>Set up thresholds</h3>
                       </div>
                       <p
-                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8 max-sm:mb-4"
                       >
                         Set company-wide goals that have to be hit in order for
                         your incentive plan to payout. You’ll give your team
@@ -1347,13 +1375,13 @@
                   >
                     <div>
                       <div
-                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 max-sm:mb-4 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
                       >
                         <span>3.</span>
                         <h3>Establish formulas</h3>
                       </div>
                       <p
-                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8 max-sm:mb-4"
                       >
                         Set up formulas for different employees. You can
                         determinea minimum amount of tenure to participate in
@@ -1402,17 +1430,17 @@
                   </div>
                   <!-- Process content left card 04 -->
                   <div
-                    class="tablet:flex items-center justify-start tablet:h-[50vh] process-card tablet:mb-0 mb-12"
+                    class="tablet:flex items-center justify-start tablet:h-[50vh] process-card tablet:mb-0 mb-12 max-tablet:mb-0"
                   >
                     <div>
                       <div
-                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
+                        class="flex gap-3 leading-[1.2] tracking-[-.0675rem] mb-8 max-sm:mb-4 text-[clamp(1.5rem,1.2359rem+1.1268vw,2.25rem)]"
                       >
                         <span>4.</span>
                         <h3>Launch and share</h3>
                       </div>
                       <p
-                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8"
+                        class="leading-[1.2] tracking-[-.03em] text-[clamp(0.875rem,0.6989rem+0.7512vw,1.375rem)] text-brand-espresso-300 max-w-[48ch] mb-8 max-sm:mb-4"
                       >
                         Invite your employees into ShareWillow where they can
                         see their calculations, goals, and documents in one
@@ -1528,7 +1556,7 @@
             </div>
           </div>
         </section>
-        <section class="px-8 max-sm:px-4 py-16 max-sm:pt-12">
+        <section class="px-8 max-sm:px-4 py-16 max-sm:py-4">
           <div class="max-w-90rem mx-auto w-full">
             <div
               class="flex tablet:flex-row flex-col gap-[1.75rem] justify-between"
@@ -2084,14 +2112,19 @@
           <!-- Footer Bottom -->
           <div class="tablet:mt-[18.125rem] mt-12 flex flex-col gap-6">
             <img src="./src/assets/footer-logo.svg" alt="" />
-            <div class="flex max-sm:flex-col gap-2">
+            <div class="flex max-sm:flex-col gap-4">
               <div
                 class="w-[50%] flex max-sm:w-full max-sm:justify-between gap-2"
               >
                 <a
                   href="#"
-                  class="w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  class="tablet:w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
                   ><span>Terms & Conditions</span></a
+                >
+                <a
+                  href="https://www.tinyflow.agency/"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem] hidden max-sm:block"
+                  ><span>Rebuild by Tinyflow -</span></a
                 >
                 <a
                   href="#"
@@ -2099,11 +2132,13 @@
                   ><span>Privacy Policy</span></a
                 >
               </div>
-              <div class="w-[50%] flex justify-between max-sm:w-full gap-2">
+              <div
+                class="w-[50%] flex justify-between max-sm:justify-center max-sm:w-full gap-2"
+              >
                 <a
-                  href="#"
-                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
-                  ><span>Made by ++</span></a
+                  href="https://www.tinyflow.agency/"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem] hidden sm:block"
+                  ><span>Rebuild by Tinyflow -</span></a
                 >
                 <div class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]">
                   © Copyright 2026 ShareWillow. All rights reserved.

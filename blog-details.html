@@ -65,12 +65,12 @@
             aria-label="Main Navigation"
             class="hidden nav-desktop:flex items-center gap-6 lg:gap-8 text-brand-espresso font-medium text-[1rem] tracking-[-0.54px]"
           >
-            <ul class="flex items-center gap-6 lg:gap-8">
+            <ul class="flex items-center gap-6">
               <!-- Solutions Dropdown -->
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -174,7 +174,7 @@
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -239,7 +239,7 @@
               <li class="relative group py-2 nav-dropdown-item">
                 <button
                   type="button"
-                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer"
+                  class="dropdown-toggle flex items-center gap-1.5 hover:text-brand-espresso-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-espresso rounded-sm cursor-pointer px-1"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -303,21 +303,21 @@
               <li>
                 <a
                   href="#pricing"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >Pricing</a
                 >
               </li>
               <li>
                 <a
                   href="#about"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >About</a
                 >
               </li>
               <li>
                 <a
                   href="#features"
-                  class="py-2 hover:text-brand-espresso-300 transition-colors"
+                  class="py-2 px-1 hover:text-brand-espresso-300 transition-colors"
                   >Features</a
                 >
               </li>
@@ -380,22 +380,22 @@
         <!-- FULLSCREEN MOBILE NAV DRAWER (<= 991px) -->
         <div
           id="mobile-drawer"
-          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 flex-col justify-between overflow-y-auto custom-scrollbar"
+          class="hidden nav-desktop:hidden fixed inset-0 top-0 left-0 w-full h-[100vh] bg-brand-ivory z-40 pt-[90px] pb-10 px-6 max-sm:px-4 flex-col justify-between overflow-y-auto custom-scrollbar"
         >
           <nav
             aria-label="Mobile Navigation"
-            class="w-full mx-auto bg-white rounded-3xl p-6 shadow-sm"
+            class="w-full mx-auto bg-white rounded-3xl p-4 shadow-sm"
           >
             <ul
               class="flex flex-col divide-y divide-gray-100 text-brand-espresso font-medium text-lg"
             >
               <!-- Solutions Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Solutions</span>
+                  <span class="max-sm:text-[1rem]">Solutions</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -411,27 +411,33 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >For Companies</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >For Employees</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Plan Design Consultation</a
                   >
                 </div>
               </li>
 
               <!-- Resources Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Resources</span>
+                  <span class="max-sm:text-[1rem]">Resources</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -447,29 +453,33 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
                   <a
                     href="https://rajuraj07.github.io/Sharewillo/blog.html"
-                    class="block py-1.5 hover:text-brand-espresso"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Blog & Insights</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Case Studies</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Incentive Calculator</a
                   >
                 </div>
               </li>
 
               <!-- Industries Mobile Accordion -->
-              <li class="py-3">
+              <li class="py-2">
                 <button
                   type="button"
                   class="mobile-accordion-btn flex items-center justify-between w-full text-left py-1 cursor-pointer"
                 >
-                  <span>Industries</span>
+                  <span class="max-sm:text-[1rem]">Industries</span>
                   <svg
                     class="w-5 h-5 text-gray-400 transition-transform duration-200"
                     fill="none"
@@ -485,28 +495,38 @@
                   </svg>
                 </button>
                 <div
-                  class="mobile-accordion-content hidden relative pt-3 pl-4 space-y-2 text-base text-gray-600"
+                  class="mobile-accordion-content hidden relative pl-2 text-base text-gray-600"
                 >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Technology & SaaS</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Manufacturing</a
                   >
-                  <a href="#" class="block py-1.5 hover:text-brand-espresso"
+                  <a
+                    href="#"
+                    class="block py-1.5 hover:text-brand-espresso text-[0.875rem]"
                     >Healthcare</a
                   >
                 </div>
               </li>
 
-              <li class="py-3">
-                <a href="#pricing" class="block py-1">Pricing</a>
+              <li class="py-2">
+                <a href="#pricing" class="block py-1 max-sm:text-[1rem]"
+                  >Pricing</a
+                >
               </li>
-              <li class="py-3">
-                <a href="#about" class="block py-1">About</a>
+              <li class="py-2">
+                <a href="#about" class="block py-1 max-sm:text-[1rem]">About</a>
               </li>
-              <li class="py-3">
-                <a href="#features" class="block py-1">Features</a>
+              <li class="py-2">
+                <a href="#features" class="block py-1 max-sm:text-[1rem]"
+                  >Features</a
+                >
               </li>
             </ul>
           </nav>
@@ -1121,7 +1141,7 @@
             </div>
           </div>
         </section>
-        <section class="px-8 max-sm:px-4 pb-16">
+        <section class="px-8 max-sm:px-4 pb-16 max-sm:pb-4">
           <div class="max-w-[71.375rem] mx-auto w-full">
             <div
               class="tablet:mb-18 mb-10 pt-6 border-t border-brand-espresso-500"
@@ -1683,14 +1703,19 @@
           <!-- Footer Bottom -->
           <div class="tablet:mt-[18.125rem] mt-12 flex flex-col gap-6">
             <img src="./src/assets/footer-logo.svg" alt="" />
-            <div class="flex max-sm:flex-col gap-2">
+            <div class="flex max-sm:flex-col gap-4">
               <div
                 class="w-[50%] flex max-sm:w-full max-sm:justify-between gap-2"
               >
                 <a
                   href="#"
-                  class="w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
+                  class="tablet:w-full max-w-[12.5rem] max-sm:max-w-auto leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
                   ><span>Terms & Conditions</span></a
+                >
+                <a
+                  href="https://www.tinyflow.agency/"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem] hidden max-sm:block"
+                  ><span>Rebuild by Tinyflow -</span></a
                 >
                 <a
                   href="#"
@@ -1698,11 +1723,13 @@
                   ><span>Privacy Policy</span></a
                 >
               </div>
-              <div class="w-[50%] flex justify-between max-sm:w-full gap-2">
+              <div
+                class="w-[50%] flex justify-between max-sm:justify-center max-sm:w-full gap-2"
+              >
                 <a
-                  href="#"
-                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]"
-                  ><span>Made by ++</span></a
+                  href="https://www.tinyflow.agency/"
+                  class="leading-[1.2] tracking-[-.0225rem] text-[.75rem] hidden sm:block"
+                  ><span>Rebuild by Tinyflow -</span></a
                 >
                 <div class="leading-[1.2] tracking-[-.0225rem] text-[.75rem]">
                   © Copyright 2026 ShareWillow. All rights reserved.

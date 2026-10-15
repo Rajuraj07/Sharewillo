@@ -522,6 +522,9 @@
   .hidden {
     display: none;
   }
+  .inline {
+    display: inline;
+  }
   .inline-block {
     display: inline-block;
   }
@@ -692,8 +695,14 @@
   .max-w-\[18\.75rem\] {
     max-width: 18.75rem;
   }
+  .max-w-\[18\.875rem\] {
+    max-width: 18.875rem;
+  }
   .max-w-\[18ch\] {
     max-width: 18ch;
+  }
+  .max-w-\[20\.875rem\] {
+    max-width: 20.875rem;
   }
   .max-w-\[20\.4375rem\] {
     max-width: 20.4375rem;
@@ -736,9 +745,6 @@
   }
   .max-w-\[41ch\] {
     max-width: 41ch;
-  }
-  .max-w-\[45ch\] {
-    max-width: 45ch;
   }
   .max-w-\[48ch\] {
     max-width: 48ch;
@@ -1075,6 +1081,9 @@
   .p-\[1\.5rem\] {
     padding: 1.5rem;
   }
+  .px-1 {
+    padding-inline: var(--spacing);
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -1203,6 +1212,9 @@
   }
   .pl-0 {
     padding-left: 0px;
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
   }
   .pl-3 {
     padding-left: calc(var(--spacing) * 3);
@@ -1577,6 +1589,9 @@
     .group-hover\:text-brand-espresso-300:is(:where(.group):hover *) {
       color: var(--color-brand-espresso-300);
     }
+    .group-hover\:opacity-100:is(:where(.group):hover *) {
+      opacity: 100%;
+    }
     .group-hover\/item\:translate-x-1:is(:where(.group\/item):hover *) {
       --tw-translate-x: var(--spacing);
       translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -1675,6 +1690,9 @@
     .max-tablet\:mr-auto {
       margin-right: auto;
     }
+    .max-tablet\:mb-0 {
+      margin-bottom: 0px;
+    }
     .max-tablet\:mb-8 {
       margin-bottom: calc(var(--spacing) * 8);
     }
@@ -1713,6 +1731,9 @@
     .max-sm\:mt-4 {
       margin-top: calc(var(--spacing) * 4);
     }
+    .max-sm\:mt-5 {
+      margin-top: calc(var(--spacing) * 5);
+    }
     .max-sm\:mt-6 {
       margin-top: calc(var(--spacing) * 6);
     }
@@ -1730,6 +1751,12 @@
     }
     .max-sm\:mb-0 {
       margin-bottom: 0px;
+    }
+    .max-sm\:mb-4 {
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+    .max-sm\:mb-12 {
+      margin-bottom: calc(var(--spacing) * 12);
     }
     .max-sm\:mb-\[1\.125rem\] {
       margin-bottom: 1.125rem;
@@ -1773,11 +1800,20 @@
     .max-sm\:justify-between {
       justify-content: space-between;
     }
+    .max-sm\:justify-center {
+      justify-content: center;
+    }
+    .max-sm\:gap-4 {
+      gap: calc(var(--spacing) * 4);
+    }
     .max-sm\:gap-6 {
       gap: calc(var(--spacing) * 6);
     }
     .max-sm\:gap-20 {
       gap: calc(var(--spacing) * 20);
+    }
+    .max-sm\:gap-\[2\.5rem\] {
+      gap: 2.5rem;
     }
     .max-sm\:gap-\[2rem\] {
       gap: 2rem;
@@ -1791,14 +1827,23 @@
     .max-sm\:p-4 {
       padding: calc(var(--spacing) * 4);
     }
+    .max-sm\:p-6 {
+      padding: calc(var(--spacing) * 6);
+    }
     .max-sm\:px-4 {
       padding-inline: calc(var(--spacing) * 4);
     }
     .max-sm\:py-3 {
       padding-block: calc(var(--spacing) * 3);
     }
+    .max-sm\:py-4 {
+      padding-block: calc(var(--spacing) * 4);
+    }
     .max-sm\:py-12 {
       padding-block: calc(var(--spacing) * 12);
+    }
+    .max-sm\:pt-4 {
+      padding-top: calc(var(--spacing) * 4);
     }
     .max-sm\:pt-8 {
       padding-top: calc(var(--spacing) * 8);
@@ -1812,8 +1857,14 @@
     .max-sm\:pt-\[6\.5rem\] {
       padding-top: 6.5rem;
     }
+    .max-sm\:pb-4 {
+      padding-bottom: calc(var(--spacing) * 4);
+    }
     .max-sm\:pb-6 {
       padding-bottom: calc(var(--spacing) * 6);
+    }
+    .max-sm\:pb-12 {
+      padding-bottom: calc(var(--spacing) * 12);
     }
     .max-sm\:pb-20 {
       padding-bottom: calc(var(--spacing) * 20);
@@ -1829,6 +1880,12 @@
     }
     .max-sm\:text-\[1\.25rem\] {
       font-size: 1.25rem;
+    }
+    .max-sm\:text-\[1\.063rem\] {
+      font-size: 1.063rem;
+    }
+    .max-sm\:text-\[1\.125rem\] {
+      font-size: 1.125rem;
     }
     .max-sm\:text-\[1rem\] {
       font-size: 1rem;
@@ -1907,6 +1964,9 @@
     .tablet\:w-auto {
       width: auto;
     }
+    .tablet\:w-full {
+      width: 100%;
+    }
     .tablet\:max-w-\[26\.375rem\] {
       max-width: 26.375rem;
     }
@@ -1921,6 +1981,9 @@
     }
     .tablet\:max-w-\[42\.3125rem\] {
       max-width: 42.3125rem;
+    }
+    .tablet\:max-w-full {
+      max-width: 100%;
     }
     .tablet\:flex-auto {
       flex: auto;
@@ -1989,8 +2052,17 @@
     }
   }
   @media (width >= 40rem) {
+    .sm\:block {
+      display: block;
+    }
+    .sm\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
     .sm\:px-7 {
       padding-inline: calc(var(--spacing) * 7);
+    }
+    .sm\:py-2 {
+      padding-block: calc(var(--spacing) * 2);
     }
   }
   @media (width >= 48rem) {

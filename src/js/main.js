@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
           duration: duration / 1000,
           ease: 'power2.out',
           onComplete: () => {
-            element.style.height = 'auto'; // allow responsive resizing after expand
+            element.style.height = 'auto';
           },
         }
       );
@@ -121,28 +121,56 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!content || !content.classList.contains('mobile-accordion-content')) return;
 
     const svg = btn.querySelector('svg');
-    const isOpen = content.offsetHeight > 0 && window.getComputedStyle(content).display !== 'none';
+    const isVisible = window.getComputedStyle(content).display !== 'none';
 
-    // Close all open accordions first (Single active accordion pattern)
+    // 1. Close all other open accordions (Sibling items)
     document.querySelectorAll('.mobile-accordion-content').forEach((item) => {
       if (item !== content && window.getComputedStyle(item).display !== 'none') {
         animateCollapse.slideUp(item, 250);
       }
     });
+
     document.querySelectorAll('.mobile-accordion-btn svg').forEach((icon) => {
       if (icon !== svg) icon.classList.remove('rotate-90');
     });
 
-    if (isOpen) {
-      animateCollapse.slideUp(content, 250).eventCallback('onComplete', () => {
-        ScrollTrigger.refresh();
-      });
+    // 2. Toggle current item (Self item)
+    if (isVisible) {
+      // Closing the active item
       svg?.classList.remove('rotate-90');
-    } else {
-      svg?.classList.add('rotate-90');
-      animateCollapse.slideDown(content, 250).eventCallback('onComplete', () => {
-        ScrollTrigger.refresh();
+      
+      gsap.to(content, {
+        height: 0,
+        opacity: 0,
+        duration: 0.25,
+        ease: 'power2.out',
+        onComplete: () => {
+          content.style.display = 'none'; // Guarantee DOM state display: none
+          content.style.height = '';      // Clean up inline height inline override
+          ScrollTrigger.refresh();
+        },
       });
+    } else {
+      // Opening the target item
+      svg?.classList.add('rotate-90');
+      content.style.display = 'block';
+
+      const targetHeight = content.scrollHeight;
+
+      gsap.fromTo(
+        content,
+        { height: 0, opacity: 0 },
+        {
+          height: targetHeight,
+          opacity: 1,
+          duration: 0.25,
+          ease: 'power2.out',
+          onComplete: () => {
+            content.style.height = 'auto'; // Re-enable auto-height for responsive resizing
+            ScrollTrigger.refresh();
+          },
+        }
+      );
     }
   });
 
@@ -191,8 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     5. Accessible Dropdown Navigation
-     ========================================================================== */
+   5. Accessible Dropdown Navigation (Core Functional Only)
+   ========================================================================== */
   const dropdownItems = document.querySelectorAll('.nav-dropdown-item');
 
   const toggleDropdown = (item, forceOpen) => {
@@ -203,40 +231,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const isOpen = forceOpen !== undefined ? forceOpen : btn.getAttribute('aria-expanded') !== 'true';
 
     btn.setAttribute('aria-expanded', String(isOpen));
-
-    if (isOpen) {
-      menu.classList.remove('hidden');
-      menu.classList.add('block');
-      gsap.fromTo(menu, { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.2, ease: 'power2.out' });
-    } else {
-      gsap.to(menu, {
-        opacity: 0,
-        y: -8,
-        duration: 0.15,
-        ease: 'power2.in',
-        onComplete: () => {
-          menu.classList.add('hidden');
-          menu.classList.remove('block');
-        },
-      });
-    }
+    menu.classList.toggle('hidden', !isOpen);
+    menu.classList.toggle('block', isOpen);
   };
 
   dropdownItems.forEach((item) => {
     const btn = item.querySelector('.dropdown-toggle');
     const menu = item.querySelector('.dropdown-menu');
 
-    // Keydown navigation on main toggle
+    // 1. Click Handler for Toggle Button
+    btn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleDropdown(item);
+    });
+
+    // 2. Keydown Navigation on Toggle Button
     btn?.addEventListener('keydown', (e) => {
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
+      // Open and move focus on Enter, Space, or ArrowDown
       if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
         e.preventDefault();
         if (!isOpen) toggleDropdown(item, true);
 
-        // Focus first link in menu
+        // Shift focus to the first interactive menu item
         requestAnimationFrame(() => {
-          menu?.querySelector('a')?.focus();
+          menu?.querySelector('a, button')?.focus();
         });
       }
 
@@ -247,22 +267,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Keydown navigation inside dropdown menu items
+    // 3. Keydown Navigation Inside Menu Links
     menu?.addEventListener('keydown', (e) => {
-      const targetLink = e.target.closest('a');
-      if (!targetLink) return;
+      const targetItem = e.target.closest('a, button');
+      if (!targetItem) return;
 
-      const links = Array.from(menu.querySelectorAll('a'));
-      const currentIndex = links.indexOf(targetLink);
+      const items = Array.from(menu.querySelectorAll('a, button'));
+      const currentIndex = items.indexOf(targetItem);
 
       if (e.key === 'ArrowDown') {
         e.preventDefault();
-        const nextIndex = (currentIndex + 1) % links.length;
-        links[nextIndex]?.focus();
+        items[(currentIndex + 1) % items.length]?.focus();
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
-        const prevIndex = (currentIndex - 1 + links.length) % links.length;
-        links[prevIndex]?.focus();
+        items[(currentIndex - 1 + items.length) % items.length]?.focus();
       } else if (e.key === 'Escape') {
         e.preventDefault();
         toggleDropdown(item, false);
@@ -270,9 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Focusout handling to auto-close when tabbing away
+    // 4. Focusout Handling (Auto-close when tabbing out of the component)
     item.addEventListener('focusout', () => {
-      // Small timeout allows document.activeElement to update correctly
       setTimeout(() => {
         if (!item.contains(document.activeElement)) {
           toggleDropdown(item, false);
@@ -280,4 +297,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 10);
     });
   });
+
 });
