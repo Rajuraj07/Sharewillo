@@ -10,7 +10,16 @@
       content="Build an employee incentive plan that motivates your team to act like owners. ShareWillow’s platform makes it easy to unite your team around a single goal."
     />
     <!-- Open Graph -->
-    <meta content="./src/assets/og-image.jpg" property="og:image" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ShareWillow - Incentive Plans Made Simple" />
+    <meta property="og:description" content="Build an employee incentive plan that motivates your team to act like owners. ShareWillow’s platform makes it easy to unite your team around a single goal." />
+    <meta property="og:url" content="https://rajuraj07.github.io/Sharewillo/" />
+    <meta property="og:image" content="./src/assets/og-image.jpg" />
+    <!-- Social Share: Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ShareWillow - Incentive Plans Made Simple" />
+    <meta name="twitter:description" content="Build an employee incentive plan that motivates your team to act like owners. ShareWillow’s platform makes it easy to unite your team around a single goal." />
+    <meta name="twitter:image" content="./src/assets/og-image.jpg" />
     <!-- Standard Favicon -->
     <link
       rel="icon"
@@ -36,6 +45,13 @@
   </head>
   <body class="font-body">
     <div class="page-wrapper overflow-clip">
+      <a 
+      data-target="skip-link" 
+      href="#main-content" 
+      class="fixed top-0 left-0 w-full text-center z-[9999] -translate-y-[200%] focus:translate-y-0 bg-brand-espresso-500 text-white font-semibold px-6 py-3 shadow-xl transition-transform duration-200"
+    >
+      Skip to Main
+    </a>
       <header
         id="main-header"
         class="nav-component fixed lg:top-4 lg:pt-0 pt-6 inset-x-0 z-50 w-full px-4 sm:px-6"
@@ -550,7 +566,7 @@
           </div>
         </div>
       </header>
-      <main id="main">
+      <main id="main-content">
         <section
           class="px-8 max-sm:px-4 pt-44 max-sm:pt-33 pb-8 bg-brand-ivory mb-[-100vh] hero-section transition-colors duration-300 will-change-[background-color]"
         >
@@ -1860,7 +1876,7 @@
                     <li class="my-0 pl-0">
                       <a href="#" class="max-w-[1.125rem] relative"
                         ><img src="./src/assets/x-logo.svg" alt="" />
-                        <span class="sr-only">Icon X/twitter</span></a
+                        <span class="sr-only">Connect us on twitter</span></a
                       >
                     </li>
                     <li class="my-0 pl-0">
@@ -1868,7 +1884,7 @@
                         ><img
                           src="./src/assets/icons-linkedin.svg"
                           alt=""
-                        /><span class="sr-only">Icon linkedin</span></a
+                        /><span class="sr-only">Connect us on Linkedin</span></a
                       >
                     </li>
                     <li class="my-0 pl-0">
@@ -1885,7 +1901,7 @@
                             fill="CurrentColor"
                           ></path>
                         </svg>
-                        <span class="sr-only">Icon Facebook</span>
+                        <span class="sr-only">Connect us on Facebook</span>
                       </a>
                     </li>
                     <li class="my-0 pl-0">
@@ -1904,7 +1920,7 @@
                             fill="CurrentColor"
                           ></path>
                         </svg>
-                        <span class="sr-only">Icon Instagram</span>
+                        <span class="sr-only">Connect us on Instagram</span>
                       </a>
                     </li>
                   </ul>
